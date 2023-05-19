@@ -19,35 +19,30 @@
 					:move="onMove"
 				>
 					<template #item="{ element }">
-						<div class="group-list">
-							<div class="item move">
-								<component
-									:is="element.icons"
-									style="width: 20px; height: 20px"
-								></component>
-								<p>{{ element.name }}</p>
-							</div>
+						<div class="l-list move">
+							<component
+								:is="element.icons"
+								style="width: 20px; height: 20px"
+							></component>
+							<p>{{ element.name }}</p>
 						</div>
 					</template>
 				</draggable>
 			</div>
 		</section>
 		<section class="c">
-			<div
-				class="top-nav"
-				@click="selectType(0)"
-			>
+			<div class="top-nav">
 				<img src="@/assets/topNavBlack.png">
 				<span class="tit">{{ topInfo.title }}</span>
 			</div>
 			<div class="view-content">
 				<draggable
 					:list="state.modules.arr2"
-					ghost-class="ghost"
+					ghost-class="end-ghost"
 					handle=".move"
 					filter=".forbid"
 					:force-fallback="true"
-					chosen-class="chosenClass"
+					chosen-class="endClass"
 					animation="300"
 					:group="state.groupB"
 					:fallback-class="true"
@@ -57,7 +52,7 @@
 					:move="onMove"
 				>
 					<template #item="{ element }">
-						<div>
+						<div class="r-list move">
 							<component :is="element.com"></component>
 						</div>
 					</template>
@@ -69,7 +64,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive, computed, cloneVNode } from "vue";
+import { ref, reactive, computed } from "vue";
 import Banner from "@/components/View/Banner.vue";
 import Images from "@/components/View/Images.vue";
 import Product from "@/components/View/Product.vue";
@@ -123,31 +118,10 @@ const state = reactive({
 	},
 });
 
-const className = {
-	1: 'one',
-	2: 'two',
-	3: 'three'
-}
 
-function dragStart (e) {
-	console.log(e);
-
-}
-function dragEnd (e) {
-	console.log(e);
-
-}
-function selectType (sum) {
-
-}
-function drop (e) {
-	console.log(e);
-}
-function dragOver (e) {
-	console.log(e);
-
-}
 const onMove = (e, originalEvent) => {
+	console.log(e, originalEvent);
+
 	//不允许停靠
 	if (e.relatedContext.element.disabledPark == true) return false;
 
@@ -156,17 +130,13 @@ const onMove = (e, originalEvent) => {
 </script>
 
 <style lang="scss" scoped>
-.ghost {
-	border: solid 1px rgb(19, 41, 239) !important;
+.end-ghost {
+	border: 2px solid #409EFF;
+	box-shadow: 2px 2px 2px #333;
 }
 
-.chosenClass {
-	opacity: 1;
-	border: solid 1px red;
-}
-
-.fallbackClass {
-	background-color: aquamarine;
+.r-list {
+	cursor: move;
 }
 
 .decoration-edit {
@@ -187,11 +157,11 @@ const onMove = (e, originalEvent) => {
 	}
 
 	.l {
-		.group-list {
+		.group {
 			margin: 0;
 			padding: 0;
 
-			.item {
+			.l-list {
 				width: 80px;
 				height: 80px;
 				display: flex;
