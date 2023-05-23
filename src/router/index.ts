@@ -7,7 +7,7 @@ NProgress.configure({ showSpinner: false }); // NProgress Configuration
 const routes: Array<RouteRecordRaw> = [
 	{
 		path: '/:pathMatch(.*)*',
-		component: () => import('@/visual-editor/index.vue'),
+		component: () => import('@/layout/index.vue'),
 	},
 ];
 
