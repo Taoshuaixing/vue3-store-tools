@@ -29,6 +29,13 @@ defineOptions({
   name: 'RightPanel',
 });
 const activeName = ref('first')
+const list: any = defineProps({
+  list: {
+    type: Array,
+    default: () => []
+  }
+})
+console.log(list);
 
 const handleClick = (tab: TabsPaneContext, event: Event) => {
   console.log(tab, event)

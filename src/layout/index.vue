@@ -61,18 +61,18 @@
           @end="onEnd"
         >
           <template #item="{ element }">
-            <div class="r-list move">
-              <component
-                :is="element.com"
-                @click="onClick(element)"
-              ></component>
+            <div
+              class="r-list move"
+              @click="onClick(element, state.modules.arr2)"
+            >
+              <component :is="element.com"></component>
             </div>
           </template>
         </draggable>
       </div>
     </section>
     <section class="r">
-      <RightPanel></RightPanel>
+      <RightPanel :list="list"></RightPanel>
     </section>
   </section>
 </template>
@@ -91,6 +91,7 @@ const view = reactive([{
 const topInfo = computed(() => {
   return view[0]
 })
+let list: any = reactive([])
 const state = reactive({
   groupA: {
     name: "itxst",
@@ -146,14 +147,10 @@ const onEnd = () => {
 };
 const onMove = (e, originalEvent) => {
   console.log(e, originalEvent);
-
-  //不允许停靠
-  if (e.relatedContext.element.disabledPark == true) return false;
-
-  return true;
 };
-function onClick (e) {
-  console.log(e);
+function onClick (e, data) {
+  console.log(e.name, data);
+  list = e
 
 }
 
