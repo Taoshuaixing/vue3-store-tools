@@ -50,3 +50,4 @@ const handleClick = (tab: TabsPaneContext, event: Event) => {
   font-weight: 600;
 }
 </style>
+
