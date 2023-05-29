@@ -48,7 +48,7 @@
   font-size: 12px;
   font-weight: 700;
   color: white;
-  background-color: #006eff;
+  background-color: #fc5757;
   border-radius: 3px;
   content: attr(data-label);
 }
@@ -58,7 +58,7 @@
 */
 
 @mixin showSoliOutline($width: 2px) {
-  outline: $width solid #006eff;
+  outline: $width solid #fc5757;
   outline-offset: -2px;
 }
 

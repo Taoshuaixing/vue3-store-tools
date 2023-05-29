@@ -158,7 +158,7 @@ const runPreview = () => {
   width: 100%;
 
   .logo {
-    width: 40%;
+    width: 25%;
     height: 100%;
     background-image: url('@/assets/h5store.png');
     background-repeat: no-repeat;
