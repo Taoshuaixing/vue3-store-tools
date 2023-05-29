@@ -1,15 +1,31 @@
 import { createApp } from 'vue';
-import './style.css';
 import App from './App.vue';
-import ElementPlus from 'element-plus';
-import 'element-plus/dist/index.css';
+
+import { setupElementPlus } from './plugins/element-plus';
+import { setupVant } from './plugins/vant';
+
+import 'normalize.css';
+import 'virtual:windi.css';
+import 'virtual:windi-devtools';
+import 'animate.css';
+
 import router from './router/';
-import * as ElementPlusIconsVue from '@element-plus/icons-vue';
+import { setupStore } from './store/';
 
 const app = createApp(App);
-for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
-	app.component(key, component);
-}
-app.use(ElementPlus);
+
+// 配置store
+setupStore(app);
+// 使用element-plus插件
+setupElementPlus(app);
+// 使用vant插件
+setupVant(app);
+
+app.config.globalProperties.$$refs = {};
+
+// if (import.meta.env.DEV) {
+window.$$refs = app.config.globalProperties.$$refs;
+// }
 app.use(router);
-app.mount('#app');
+// 路由准备完毕再挂载
+router.isReady().then(() => app.mount('#app'));
