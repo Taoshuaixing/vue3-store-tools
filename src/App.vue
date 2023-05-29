@@ -7,9 +7,15 @@
 </template>
 
 <script setup lang="ts">
-  import { provide } from 'vue';
+  import { provide, onMounted } from 'vue';
   import zhCn from 'element-plus/lib/locale/lang/zh-cn';
   import { initVisualData, injectKey, localKey } from '@/visual-editor/hooks/useVisualData';
+
+  onMounted(() => {
+    document.body.style.setProperty('--el-color-primary', '#fc5757');
+    document.body.style.setProperty('--el-color-primary-light-9', '#fff0f0');
+    document.body.style.setProperty('--el-color-primary-light-3', '#fecdcd');
+  });
 
   const visualData = initVisualData();
   // 注入可视化编辑器所有配置
