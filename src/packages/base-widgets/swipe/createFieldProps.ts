@@ -1,8 +1,8 @@
 /*
- * @Author: 卜启缘
+ * @Author: 陶帅星
  * @Date: 2021-06-14 12:24:12
  * @LastEditTime: 2021-06-21 23:04:42
- * @LastEditors: 卜启缘
+ * @LastEditors: 陶帅星
  * @Description:
  * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\swipe\createFieldProps.ts
  */

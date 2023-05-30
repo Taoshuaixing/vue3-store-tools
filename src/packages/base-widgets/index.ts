@@ -1,6 +1,7 @@
 import { VisualEditorComponent } from '@/visual-editor/visual-editor.utils';
 
 const modules = import.meta.globEager('./*/index.tsx');
+console.log(modules);
 
 const components: Record<string, VisualEditorComponent> = {};
 

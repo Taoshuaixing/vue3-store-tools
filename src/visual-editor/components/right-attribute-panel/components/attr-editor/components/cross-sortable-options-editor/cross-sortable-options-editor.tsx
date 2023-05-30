@@ -1,8 +1,8 @@
 /*
- * @Author: 卜启缘
+ * @Author: 陶帅星
  * @Date: 2021-06-14 15:00:45
  * @LastEditTime: 2021-07-12 14:44:29
- * @LastEditors: 卜启缘
+ * @LastEditors: 陶帅星
  * @Description: 可以拖拽排序的选项列表
  * @FilePath: \vite-vue3-lowcode\src\visual-editor\components\right-attribute-panel\components\attr-editor\components\cross-sortable-options-editor\cross-sortable-options-editor.tsx
  */

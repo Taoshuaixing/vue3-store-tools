@@ -1,8 +1,8 @@
 /*
- * @Author: 卜启缘
+ * @Author: 陶帅星
  * @Date: 2021-06-14 12:24:12
  * @LastEditTime: 2021-07-13 17:14:20
- * @LastEditors: 卜启缘
+ * @LastEditors: 陶帅星
  * @Description:
  * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\notice-bar\index.tsx
  */

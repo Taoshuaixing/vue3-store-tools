@@ -26,7 +26,7 @@ export function useCommander() {
 
   /**
    * 注册一个命令
-   * @author  卜启缘
+   * @author  陶帅星
    * @date    2021/4/22 11:33 下午
    */
   const registry = (command: Command) => {
@@ -83,7 +83,7 @@ export function useCommander() {
 
   /**
    * useCommander初始化函数，负责初始化键盘监听事件，调用命令的初始化逻辑
-   * @author  卜启缘
+   * @author  陶帅星
    * @date    2021/4/22 11:35 下午
    */
   const init = () => {
@@ -100,7 +100,7 @@ export function useCommander() {
 
   /**
    * 注册撤回命令（撤回命令执行结果不需要进入命令队列）
-   * @author  卜启缘
+   * @author  陶帅星
    * @date    2021/4/22 11:36 下午
    */
   registry({
@@ -126,7 +126,7 @@ export function useCommander() {
 
   /**
    * 注册重做命令（重做命令执行结果不需要进入命令队列）
-   * @author  卜启缘
+   * @author  陶帅星
    * @date    2021/4/22 11:36 下午
    */
   registry({

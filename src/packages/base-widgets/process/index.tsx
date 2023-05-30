@@ -1,8 +1,8 @@
 /*
- * @Author: 卜启缘
+ * @Author: 陶帅星
  * @Date: 2021-06-12 22:18:48
  * @LastEditTime: 2021-07-13 17:14:47
- * @LastEditors: 卜启缘
+ * @LastEditors: 陶帅星
  * @Description: 进度条
  * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\process\index.tsx
  */

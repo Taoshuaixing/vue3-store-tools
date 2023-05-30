@@ -1,8 +1,8 @@
 /*
- * @Author: 卜启缘
+ * @Author: 陶帅星
  * @Date: 2021-06-01 09:45:21
  * @LastEditTime: 2021-07-13 18:20:55
- * @LastEditors: 卜启缘
+ * @LastEditors: 陶帅星
  * @Description: 表单项类型 - 开关
  * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\switch\index.tsx
  */

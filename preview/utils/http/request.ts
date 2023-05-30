@@ -1,8 +1,8 @@
 /*
- * @Author: 卜启缘
+ * @Author: 陶帅星
  * @Date: 2021-06-24 23:19:48
  * @LastEditTime: 2021-06-24 23:35:57
- * @LastEditors: 卜启缘
+ * @LastEditors: 陶帅星
  * @Description: axios简单的封装
  * @FilePath: \vite-vue3-lowcode\src\utils\http\request.ts
  */

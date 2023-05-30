@@ -1,8 +1,8 @@
 /*
- * @Author: 卜启缘
+ * @Author: 陶帅星
  * @Date: 2021-06-01 09:45:21
  * @LastEditTime: 2021-07-13 18:51:58
- * @LastEditors: 卜启缘
+ * @LastEditors: 陶帅星
  * @Description: 分割线
  * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\divider\index.tsx
  */

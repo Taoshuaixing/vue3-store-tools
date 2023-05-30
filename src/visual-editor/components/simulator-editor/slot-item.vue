@@ -12,19 +12,23 @@
         class="list-group-item inner"
         :data-label="innerElement.label"
         :class="{
-          focus: innerElement.focus,
-          focusWithChild: innerElement.focusWithChild,
-        }"
+            focus: innerElement.focus,
+            focusWithChild: innerElement.focusWithChild,
+          }"
         @contextmenu.stop.prevent="onContextmenuBlock($event, innerElement, slotChildren)"
         @mousedown.stop="selectComp(innerElement)"
       >
         <comp-render
           :element="innerElement"
           :style="{
-            pointerEvents: Object.keys(innerElement.props?.slots || {}).length ? 'auto' : 'none',
-          }"
+              pointerEvents: Object.keys(innerElement.props?.slots || {}).length ? 'auto' : 'none',
+            }"
         >
-          <template v-for="(value, key) in innerElement.props?.slots" :key="key" #[key]>
+          <template
+            v-for="(value, key) in innerElement.props?.slots"
+            :key="key"
+            #[key]
+          >
             <SlotItem
               v-model:children="value.children"
               v-model:drag="isDrag"
@@ -40,110 +44,109 @@
 </template>
 
 <script lang="ts" setup>
-  /**
-   * @name: slot-item
-   * @author:卜启缘
-   * @date: 2021/5/2 22:36
-   * @description：slot-item
-   * @update: 2021/5/2 22:36
-   */
+/**
+ * @name: slot-item
+ * @author:陶帅星
+ * @date: 2021/5/2 22:36
+ * @description：slot-item
+ * @update: 2021/5/2 22:36
+ */
 
-  import { PropType } from 'vue';
-  import { useVModel } from '@vueuse/core';
-  import DraggableTransitionGroup from './draggable-transition-group.vue';
-  import CompRender from './comp-render';
-  import type { VisualEditorBlockData } from '@/visual-editor/visual-editor.utils';
+import { PropType } from 'vue';
+import { useVModel } from '@vueuse/core';
+import DraggableTransitionGroup from './draggable-transition-group.vue';
+import CompRender from './comp-render';
+import type { VisualEditorBlockData } from '@/visual-editor/visual-editor.utils';
 
-  defineOptions({
-    name: 'SlotItem',
-  });
+defineOptions({
+  name: 'SlotItem',
+});
 
-  const props = defineProps({
-    slotKey: {
-      type: String as PropType<string | number>,
-      default: '',
-    },
-    drag: {
-      type: Boolean as PropType<boolean>,
-      default: false,
-    },
-    children: {
-      type: Array as PropType<VisualEditorBlockData[]>,
-      default: () => [],
-    },
-    selectComp: {
-      type: Function as PropType<(comp: VisualEditorBlockData) => void>,
-      required: true,
-    },
-    onContextmenuBlock: {
-      type: Function as PropType<
-        (
-          e: MouseEvent,
-          block: VisualEditorBlockData,
-          parentBlocks?: VisualEditorBlockData[],
-        ) => void
-      >,
-      required: true,
-    },
-  });
-  const emit = defineEmits(['update:children', 'on-selected', 'update:drag']);
+const props = defineProps({
+  slotKey: {
+    type: String as PropType<string | number>,
+    default: '',
+  },
+  drag: {
+    type: Boolean as PropType<boolean>,
+    default: false,
+  },
+  children: {
+    type: Array as PropType<VisualEditorBlockData[]>,
+    default: () => [],
+  },
+  selectComp: {
+    type: Function as PropType<(comp: VisualEditorBlockData) => void>,
+    required: true,
+  },
+  onContextmenuBlock: {
+    type: Function as PropType<
+      (
+        e: MouseEvent,
+        block: VisualEditorBlockData,
+        parentBlocks?: VisualEditorBlockData[],
+      ) => void
+    >,
+    required: true,
+  },
+});
+const emit = defineEmits(['update:children', 'on-selected', 'update:drag']);
 
-  const isDrag = useVModel(props, 'drag', emit);
-  const slotChildren = useVModel(props, 'children', emit);
+const isDrag = useVModel(props, 'drag', emit);
+const slotChildren = useVModel(props, 'children', emit);
 
-  // 初始化时设置上次选中的组件
-  props.children.some((item) => item.focus && props.selectComp(item));
+// 初始化时设置上次选中的组件
+props.children.some((item) => item.focus && props.selectComp(item));
 </script>
 
 <style lang="scss" scoped>
-  @import './func.scss';
+@import './func.scss';
 
-  .inner-draggable {
-    position: relative;
+.inner-draggable {
+  position: relative;
+}
+
+.inner-draggable.slot::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  height: auto;
+  min-height: 40px;
+  font-size: 12px;
+  color: #8591a2;
+  text-align: center;
+  background: rgba(246, 247, 249, 0.5);
+  content: attr(data-slot);
+  outline: 1px dashed #dedede;
+  outline-offset: -1px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.list-group-item {
+  position: relative;
+  padding: 3px;
+  cursor: move;
+
+  &.focusWithChild {
+    @include showContainerBorder;
   }
 
-  .inner-draggable.slot::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    height: auto;
-    min-height: 40px;
-    font-size: 12px;
-    color: #8591a2;
-    text-align: center;
-    background: rgba(246, 247, 249, 0.5);
-    content: attr(data-slot);
-    outline: 1px dashed #dedede;
-    outline-offset: -1px;
-    flex-direction: column;
-    justify-content: center;
-  }
+  &.focus {
+    @include showSoliOutline;
 
-  .list-group-item {
-    position: relative;
-    padding: 3px;
-    cursor: move;
+    &::after {
+      @include showCompLabel(top);
 
-    &.focusWithChild {
-      @include showContainerBorder;
+      opacity: 0;
+      transition: opacity 0.2s;
     }
 
-    &.focus {
-      @include showSoliOutline;
-
-      &::after {
-        @include showCompLabel(top);
-
-        opacity: 0;
-        transition: opacity 0.2s;
-      }
-
-      &:hover::after {
-        opacity: 1;
-      }
+    &:hover::after {
+      opacity: 1;
     }
   }
-</style>
+}</style>

@@ -1,8 +1,8 @@
 /*
- * @Author: 卜启缘
+ * @Author: 陶帅星
  * @Date: 2021-06-01 13:22:14
  * @LastEditTime: 2021-07-11 11:04:06
- * @LastEditors: 卜启缘
+ * @LastEditors: 陶帅星
  * @Description:
  * @FilePath: \vite-vue3-lowcode\src\visual-editor\components\left-aside\components\container-component\index.tsx
  */

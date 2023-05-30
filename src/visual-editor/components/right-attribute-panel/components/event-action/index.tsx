@@ -1,8 +1,8 @@
 /*
- * @Author: 卜启缘
+ * @Author: 陶帅星
  * @Date: 2021-06-24 11:01:45
  * @LastEditTime: 2022-07-02 18:29:25
- * @LastEditors: 卜启缘
+ * @LastEditors: 陶帅星
  * @Description: 事件-动作
  * @FilePath: /vite-vue3-lowcode/src/visual-editor/components/right-attribute-panel/components/event-action/index.tsx
  */

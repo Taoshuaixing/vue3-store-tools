@@ -1,8 +1,8 @@
 /*
- * @Author: 卜启缘
+ * @Author: 陶帅星
  * @Date: 2021-07-05 10:51:09
  * @LastEditTime: 2022-07-02 22:46:59
- * @LastEditors: 卜启缘
+ * @LastEditors: 陶帅星
  * @Description: 表单规则
  * @FilePath: /vite-vue3-lowcode/src/visual-editor/components/right-attribute-panel/components/form-rule/index.tsx
  */

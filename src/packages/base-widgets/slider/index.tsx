@@ -1,8 +1,8 @@
 /*
- * @Author: 卜启缘
+ * @Author: 陶帅星
  * @Date: 2021-06-01 09:45:21
  * @LastEditTime: 2021-07-13 17:15:15
- * @LastEditors: 卜启缘
+ * @LastEditors: 陶帅星
  * @Description: 表单项类型 - 滑块
  * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\slider\index.tsx
  */

@@ -1,6 +1,6 @@
 /**
  * @name: MonacoEditor
- * @author: 卜启缘
+ * @author: 陶帅星
  * @date: 2021/4/30 0:01
  * @description：MonacoEditor
  * @update: 2021/4/30 0:01

@@ -1,8 +1,8 @@
 /*
- * @Author: 卜启缘
+ * @Author: 陶帅星
  * @Date: 2021-06-27 13:15:19
  * @LastEditTime: 2022-07-02 23:12:37
- * @LastEditors: 卜启缘
+ * @LastEditors: 陶帅星
  * @Description:
  * @FilePath: /vite-vue3-lowcode/src/visual-editor/components/left-aside/components/data-source/utils.tsx
  */

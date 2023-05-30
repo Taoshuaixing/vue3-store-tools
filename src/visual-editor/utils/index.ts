@@ -1,8 +1,8 @@
 /*
- * @Author: 卜启缘
+ * @Author: 陶帅星
  * @Date: 2021-06-01 09:45:21
  * @LastEditTime: 2021-07-14 09:09:02
- * @LastEditors: 卜启缘
+ * @LastEditors: 陶帅星
  * @Description: 公用的工具函数
  * @FilePath: \vite-vue3-lowcode\src\visual-editor\utils\index.ts
  */
