@@ -9,31 +9,32 @@
 <template>
   <el-collapse
     v-model="activeName"
-    @change="handleChange"
     class="left-aside"
   >
-    <template
-      v-for="tabItem in tabs"
-      :key="tabItem.name"
-    >
-      <el-collapse-item
-        :title="tabItem.label"
-        :name="tabItem.order"
+    <el-scrollbar height="90vh">
+      <template
+        v-for="tabItem in tabs"
+        :key="tabItem.name"
       >
-        <template #label>
-          <div class="tab-item">
-            <el-icon :size="26">
-              <component :is="tabItem.icon" />
-            </el-icon>
-            {{ tabItem.label }}
-          </div>
-        </template>
-        <component
-          :is="tabItem.comp"
-          v-bind="$attrs"
-        />
-      </el-collapse-item>
-    </template>
+        <el-collapse-item
+          :name="tabItem.name"
+          @click="handleChange(tabItem.name)"
+        >
+          <template #title>
+            <div class="collapse-item">
+              <el-icon :size="26">
+                <component :is="tabItem.icon" />
+              </el-icon>
+              {{ tabItem.label }}
+            </div>
+          </template>
+          <component
+            :is="tabItem.comp"
+            v-bind="$attrs"
+          />
+        </el-collapse-item>
+      </template>
+    </el-scrollbar>
   </el-collapse>
 </template>
 
@@ -55,37 +56,37 @@ const tabs = Object.entries(components)
   })
   .sort((a, b) => a.order - b.order);
 console.log(tabs);
-const handleChange = (val: string[]) => {
-  console.log(val)
+const handleChange = (val: string) => {
 }
-const activeName = ref(tabs[0].name);
+const activeName = ref(tabs[1].name);
 </script>
 
 <style lang="scss" scoped>
 .left-aside {
   height: 100%;
   contain: layout;
+  padding-left: 5%;
 
-  > :deep(.el-tabs__header) {
-    margin-right: 0;
+  .collapse-item {
+    font-size: 15px;
+    @apply flex flex-row items-center justify-center;
 
-    .el-tabs__item {
-      height: 80px;
-      padding: 20px 16px;
-
-      .tab-item {
-        @apply flex flex-col items-center justify-center;
-
-        [class^='el-icon-'] {
-          font-size: 20px;
-        }
-      }
+    [class^='el-icon'] {
+      font-size: 20px;
+      margin-right: 10px;
     }
+
+    :hover {
+      color: #fc5757;
+    }
+
+    transition: all 0.3s;
   }
 
-  > :deep(.el-tabs__content) {
-    height: 100%;
-    overflow-y: auto;
+  :hover {
+    color: #fc5757;
   }
 }
+
+// :color="'#fc5757'"
 </style>

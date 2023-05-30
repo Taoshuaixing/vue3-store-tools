@@ -9,7 +9,7 @@
 import { defineComponent } from 'vue';
 import { cloneDeep } from 'lodash-es';
 import Draggable from 'vuedraggable';
-import { Suitcase } from '@element-plus/icons-vue';
+import { Box } from '@element-plus/icons-vue';
 import styles from './index.module.scss';
 import type { VisualEditorComponent } from '@/visual-editor/visual-editor.utils';
 import { visualConfig } from '@/visual.config';
@@ -18,7 +18,7 @@ import { createNewBlock } from '@/visual-editor/visual-editor.utils';
 export default defineComponent({
   name: 'ContainerComponent',
   label: '容器组件',
-  icon: Suitcase,
+  icon: Box,
   order: 4,
   setup() {
     const log = (evt) => {
