@@ -17,7 +17,7 @@
       class="flex items-center"
       :span="12"
     >
-      <template
+      <!-- <template
         v-for="(toolItem, toolIndex) in tools"
         :key="toolIndex"
       >
@@ -35,7 +35,7 @@
             <div class="title">{{ toolItem.title }}</div>
           </div>
         </div>
-      </template>
+      </template> -->
     </el-col>
     <!--    中间操作页面部分 end-->
     <!--    右侧工具栏 start-->
