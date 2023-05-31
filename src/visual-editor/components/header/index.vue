@@ -43,6 +43,7 @@
       :span="6"
       class="right-tools flex flex-row-reverse items-center"
     >
+      <!-- runtime -->
       <el-tooltip
         class="item"
         effect="dark"
@@ -58,12 +59,26 @@
           @click="runPreview"
         />
       </el-tooltip>
-      <!--      <el-tooltip class="item" effect="dark" content="github" placement="bottom">-->
-      <!--        <a href="https://github.com/buqiyuan/vite-vue3-lowcode" target="_blank">-->
-      <!--          <img :src="`${BASE_URL}github.svg`" width="40" height="40" alt="" />-->
-      <!--        </a>-->
-      <!--      </el-tooltip>-->
-      <el-popover
+      <!-- github -->
+      <el-tooltip
+        class="item"
+        effect="dark"
+        content="github"
+        placement="bottom"
+      >
+        <a
+          href="https://github.com/Taoshuaixing/vue3-store-tools"
+          target="_blank"
+        >
+          <img
+            :src="`${BASE_URL}github.svg`"
+            width="40"
+            height="40"
+            alt=""
+          />
+        </a>
+      </el-tooltip>
+      <!-- <el-popover
         placement="bottom"
         :width="140"
         trigger="hover"
@@ -122,7 +137,7 @@
             alt=""
           />
         </template>
-      </el-popover>
+      </el-popover> -->
     </el-col>
     <!--    右侧工具栏 end-->
   </el-row>

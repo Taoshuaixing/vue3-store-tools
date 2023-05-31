@@ -1,6 +1,6 @@
 <!--
  * @Author: 陶帅星
- * @Date: 2021-06-24 00:35:17
+ * @Date: 2022-10-24 00:35:17
  * @LastEditTime: 2021-06-27 14:31:28
  * @LastEditors: 陶帅星
  * @Description: 可视化编辑器
@@ -69,4 +69,5 @@ import SimulatorEditor from './components/simulator-editor/simulator-editor.vue'
   @media (min-width: 1111px) {
     overflow-x: hidden;
   }
-}</style>
+}
+</style>
