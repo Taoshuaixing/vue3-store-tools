@@ -88,7 +88,7 @@ const dragOptions = computed(() => ({
 }
 
 .ghost {
-  background: #c8ebfb;
+  background: #FFF2F3;
   opacity: 0.5;
 }
 
