@@ -16,6 +16,7 @@
     "allowJs": true,
     "checkJs": true,
     "suppressImplicitAnyIndexErrors": true,
+    "ignoreDeprecations": "5.0",
     "strictPropertyInitialization": false,
     "downlevelIteration": true,
     "noUnusedLocals": false,

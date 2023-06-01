@@ -1,3 +1,11 @@
+/**
+ * @Descripttion:
+ * @version: 2.30
+ * @Author: 陶帅星
+ * @Date: 2023-06-01 13:52:15
+ * @LastEditors: 陶帅星
+ * @LastEditTime: Do not Edit
+ */
 import { DefineComponent } from 'vue';
 
 const modules = import.meta.globEager('./*/index.(tsx|vue)');
