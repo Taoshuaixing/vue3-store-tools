@@ -291,6 +291,8 @@ export const VisualDragProvider = (() => {
 export type ComponentModules = {
   baseWidgets: VisualEditorComponent[]; // 基础组件
   containerComponents: VisualEditorComponent[]; // 容器组件
+  propertyComponents: VisualEditorComponent[]; //资产组件
+  productComponents: VisualEditorComponent[]; //图片组件
 };
 /**
  * @description 创建编辑器配置
@@ -300,6 +302,8 @@ export function createVisualEditorConfig() {
   const componentModules: ComponentModules = {
     baseWidgets: [],
     containerComponents: [],
+    propertyComponents: [],
+    productComponents: [],
   };
   // const componentList: VisualEditorComponent[] = []
   const componentMap: Record<string, VisualEditorComponent> = {};
