@@ -2,7 +2,7 @@ import { createVisualEditorConfig } from './visual-editor/visual-editor.utils';
 import baseWidgets from '@/packages/base-widgets';
 import containerComponent from '@/packages/container-component';
 import propertyComponent from '@/packages/property-component';
-import productComponent from '@/packages/product-component';
+import pictureComponent from '@/packages/picture-component';
 
 export const visualConfig = createVisualEditorConfig();
 // 注册基础控件
@@ -18,7 +18,7 @@ Object.entries(propertyComponent).forEach(([name, widget]) =>
   visualConfig.registry('propertyComponents', name, widget),
 );
 // 注册图片组件
-Object.entries(productComponent).forEach(([name, widget]) =>
+Object.entries(pictureComponent).forEach(([name, widget]) =>
   visualConfig.registry('productComponents', name, widget),
 );
 
