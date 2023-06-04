@@ -1,7 +1,7 @@
 /*
  * @Author: 陶帅星
  * @Date: 2022-10-01 13:22:14
- * @LastEditTime: 2023-06-02 16:25:44
+ * @LastEditTime: 2023-06-02 19:19:16
  * @LastEditors: 陶帅星
  * @Description:
  * @FilePath: \vite-vue3-lowcode\src\visual-editor\components\left-aside\components\container-component\index.tsx
@@ -37,7 +37,7 @@ export default defineComponent({
           class={styles.listGroup}
           sort={false}
           forceFallback={false}
-          list={visualConfig.componentModules.containerComponents}
+          list={visualConfig.componentModules.propertyComponents}
           group={{ name: 'components', pull: 'clone', put: false }}
           clone={cloneDog}
           item-key="_vid"

@@ -3,6 +3,7 @@ import baseWidgets from '@/packages/base-widgets';
 import containerComponent from '@/packages/container-component';
 import propertyComponent from '@/packages/property-component';
 import pictureComponent from '@/packages/picture-component';
+import productComponent from '@/packages/product-component';
 
 export const visualConfig = createVisualEditorConfig();
 // 注册基础控件
@@ -17,11 +18,14 @@ Object.entries(containerComponent).forEach(([name, widget]) =>
 Object.entries(propertyComponent).forEach(([name, widget]) =>
   visualConfig.registry('propertyComponents', name, widget),
 );
-// 注册图片组件
-Object.entries(pictureComponent).forEach(([name, widget]) =>
+// 注册商品组件
+Object.entries(productComponent).forEach(([name, widget]) =>
   visualConfig.registry('productComponents', name, widget),
 );
-
+// 注册图片组件
+Object.entries(pictureComponent).forEach(([name, widget]) =>
+  visualConfig.registry('pictureComponents', name, widget),
+);
 console.log(
   `%c成功加载组件数量:${Object.keys(visualConfig.componentMap).length}`,
   'color:#409EFF;background-color:#ecf5ff;padding:0 10px;line-height:2;margin-bottom:4px;',
