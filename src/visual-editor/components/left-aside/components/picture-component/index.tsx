@@ -1,24 +1,24 @@
 /*
  * @Author: 陶帅星
  * @Date: 2022-10-01 13:22:14
- * @LastEditTime: 2023-06-02 16:58:21
+ * @LastEditTime: 2023-06-05 16:46:47
  * @LastEditors: 陶帅星
  * @Description:
- * @FilePath: \vite-vue3-lowcode\src\visual-editor\components\left-aside\components\container-component\index.tsx
+ * @FilePath: \vite-vue3-lowcode\src\visual-editor\components\left-aside\components\picture-component\index.tsx
  */
 import { defineComponent } from 'vue';
 import { cloneDeep } from 'lodash-es';
 import Draggable from 'vuedraggable';
-import { Box } from '@element-plus/icons-vue';
+import { Picture } from '@element-plus/icons-vue';
 import styles from '../base-widgets/index.module.scss';
 import type { VisualEditorComponent } from '@/visual-editor/visual-editor.utils';
 import { visualConfig } from '@/visual.config';
 import { createNewBlock } from '@/visual-editor/visual-editor.utils';
 
 export default defineComponent({
-  name: 'ContainerComponent',
+  name: 'PictureComponent',
   label: '图片组件',
-  icon: Box,
+  icon: Picture,
   order: 7,
   setup() {
     const log = (evt) => {

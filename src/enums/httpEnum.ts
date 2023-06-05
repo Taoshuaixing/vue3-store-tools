@@ -1,3 +1,11 @@
+/*
+ * @Descripttion:枚举
+ * @version:
+ * @Author: 陶帅星
+ * @Date: 2023-03-23 14:42:54
+ * @LastEditors: 陶帅星
+ * @LastEditTime: 2023-06-05 14:35:32
+ */
 /**
  * @description: 请求结果集
  */

@@ -149,4 +149,5 @@ props.children.some((item) => item.focus && props.selectComp(item));
       opacity: 1;
     }
   }
-}</style>
+}
+</style>

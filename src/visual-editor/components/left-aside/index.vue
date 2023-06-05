@@ -1,7 +1,7 @@
 <!--
  * @Author: 陶帅星
  * @Date: 2022-10-24 00:35:17
- * @LastEditTime: 2023-06-01 18:10:03
+ * @LastEditTime: 2023-06-05 18:17:48
  * @LastEditors: 陶帅星
  * @Description: 左侧边栏
  * @FilePath: /vite-vue3-lowcode/src/visual-editor/components/left-aside/index.vue
@@ -86,6 +86,10 @@ const activeName = ref(tabs[2].name);
   :hover {
     color: #fc5757;
   }
+}
+
+.is-active .collapse-item {
+  color: #fc5757;
 }
 
 // :color="'#fc5757'"
