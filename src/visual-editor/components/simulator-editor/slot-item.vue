@@ -47,9 +47,9 @@
 /**
  * @name: slot-item
  * @author:陶帅星
- * @date: 2021/5/2 22:36
+ * @date: 2022/5/2 22:36
  * @description：slot-item
- * @update: 2021/5/2 22:36
+ * @update: 2022/5/2 22:36
  */
 
 import { PropType } from 'vue';

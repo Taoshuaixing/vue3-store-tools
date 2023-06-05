@@ -32,9 +32,9 @@
 /**
  * @name: draggable-transition-group
  * @author:陶帅星
- * @date: 2021/5/1 23:15
+ * @date: 2022/5/1 23:15
  * @description：draggable-transition-group
- * @update: 2021/5/1 23:15
+ * @update: 2022/5/1 23:15
  */
 import { computed } from 'vue';
 import draggable from 'vuedraggable';

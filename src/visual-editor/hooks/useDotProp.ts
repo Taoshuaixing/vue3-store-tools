@@ -1,9 +1,9 @@
 /**
  * @name: useDotProp
  * @author: 陶帅星
- * @date: 2021/5/2 19:54
+ * @date: 2022/5/2 19:54
  * @description：useDotProp
- * @update: 2021/5/2 19:54
+ * @update: 2022/5/2 19:54
  */
 export const useDotProp = (originObj, propName) => {
   const props: string[] = propName.split('.');

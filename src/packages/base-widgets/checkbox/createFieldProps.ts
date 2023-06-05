@@ -7,9 +7,9 @@ import {
 /**
  * @name: createFieldProps
  * @author: 陶帅星
- * @date: 2021/5/4 13:57
+ * @date: 2022/5/4 13:57
  * @description：createFieldProps
- * @update: 2021/5/4 13:57
+ * @update: 2022/5/4 13:57
  */
 export const createFieldProps = () => ({
   colon: createEditorSwitchProp({ label: '是否在 label 后面添加冒号' }),

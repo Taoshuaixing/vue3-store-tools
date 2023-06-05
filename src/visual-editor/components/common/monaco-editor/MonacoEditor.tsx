@@ -1,9 +1,9 @@
 /**
  * @name: MonacoEditor
  * @author: 陶帅星
- * @date: 2021/4/30 0:01
+ * @date: 2022/4/30 0:01
  * @description：MonacoEditor
- * @update: 2021/4/30 0:01
+ * @update: 2022/4/30 0:01
  */
 import { defineComponent, onMounted, PropType, shallowRef, ref, onBeforeUnmount, watch } from 'vue';
 import { Monaco } from './monaco';
