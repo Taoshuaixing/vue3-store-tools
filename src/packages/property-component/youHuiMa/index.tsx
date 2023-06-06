@@ -7,9 +7,8 @@
  * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\image\index.tsx
  */
 import { Image } from 'vant';
-import styles from '../index.module.scss';
-
-// import { Picture } from '@element-plus/icons-vue';
+// import styles from '../index.module.scss';
+import { Picture } from '@element-plus/icons-vue';
 import type { VisualEditorComponent } from '@/visual-editor/visual-editor.utils';
 import {
   createEditorInputProp,
@@ -27,15 +26,22 @@ export default {
     height: true,
   },
   preview: () => (
-    <div class={styles.liQuan}>
-      <div class={styles.left}>
-        <span>金额</span>
-        <span>使用门槛</span>
-      </div>
-      <div class={styles.line}></div>
-      <div class={styles.right}>
-        <span> 优惠码：XXXXXX </span>
-        <div>点击复制</div>
+    // <div class={styles.liQuan}>
+    //   <div class={styles.left}>
+    //     <span>金额</span>
+    //     <span>使用门槛</span>
+    //   </div>
+    //   <div class={styles.line}></div>
+    //   <div class={styles.right}>
+    //     <span> 优惠码：XXXXXX </span>
+    //     <div>点击复制</div>
+    //   </div>
+    // </div>
+    <div style="text-align:center;">
+      <div style="font-size:20px;background-color:#f2f2f2;color:#ccc;display:inline-flex;width:100px;height:50px;align-items:center;justify-content:center">
+        <el-icon>
+          <Picture></Picture>
+        </el-icon>
       </div>
     </div>
   ),

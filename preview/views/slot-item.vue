@@ -1,7 +1,7 @@
 <!--
  * @Author: 陶帅星
  * @Date: 2022-10-12 22:18:48
- * @LastEditTime: 2021-07-14 10:17:34
+ * @LastEditTime: 2023-06-06 19:02:26
  * @LastEditors: 陶帅星
  * @Description:
  * @FilePath: \vite-vue3-lowcode\preview\views\slot-item.vue
@@ -113,4 +113,8 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.__slot-item {
+  margin: 2% 0;
+}
+</style>

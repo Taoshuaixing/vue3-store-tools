@@ -1,21 +1,18 @@
 /*
  * @Author: 陶帅星
  * @Date: 2022-10-01 09:45:21
- * @LastEditTime: 2023-06-06 14:57:53
+ * @LastEditTime: 2023-06-06 17:49:39
  * @LastEditors: 陶帅星
  * @Description: 图片组件
  * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\image\index.tsx
  */
-import { Image } from 'vant';
-import styles from '../index.module.scss';
+// import { Image } from 'vant';
+// import styles from '../index.module.scss';
+import ZiChanComponent from '../components/index.vue';
 
 // import { Picture } from '@element-plus/icons-vue';
 import type { VisualEditorComponent } from '@/visual-editor/visual-editor.utils';
-import {
-  createEditorInputProp,
-  createEditorSelectProp,
-  createEditorSwitchProp,
-} from '@/visual-editor/visual-editor.props';
+import { createEditorInputProp, createEditorSwitchProp } from '@/visual-editor/visual-editor.props';
 import { useGlobalProperties } from '@/hooks/useGlobalProperties';
 
 export default {
@@ -26,62 +23,20 @@ export default {
     width: true,
     height: true,
   },
-  preview: () => (
-    <div class={styles.liQuan}>
-      <div class={styles.left}>
-        <span>金额</span>
-        <span>使用门槛</span>
-      </div>
-      <div class={styles.line}></div>
-      <div class={styles.right}>
-        <span> 抢券时间:xx号 xx/ xx/ xx点 </span>
-        <div>立即领取</div>
-      </div>
-    </div>
-  ),
-  render: ({ props, block, styles }) => {
+  preview: () => <ZiChanComponent></ZiChanComponent>,
+  render: ({ props, block }) => {
     const { registerRef } = useGlobalProperties();
-
-    return () => (
-      <div style={styles}>
-        <Image ref={(el) => registerRef(el, block._vid)} {...props} />
-      </div>
-    );
+    return () => <ZiChanComponent ref={(el) => registerRef(el, block._vid)} {...props} />;
   },
   props: {
-    src: createEditorInputProp({
-      label: '图片链接',
-      defaultValue: '//img61.ddimg.cn/upload_img/00858/cms_shop/dd-product-default-1598151693.png',
+    price: createEditorInputProp({
+      label: '金额',
+      defaultValue: '100',
     }),
-    width: createEditorInputProp({ label: '宽度', defaultValue: 100 }),
-    height: createEditorInputProp({ label: '高度', defaultValue: 100 }),
-    errorIcon: createEditorInputProp({ label: '失败时提示的图标名称或图片链接' }),
-    fit: createEditorSelectProp({
-      label: '图片填充模式',
-      options: [
-        {
-          label: '保持宽高缩放图片，使图片的长边能完全显示出来',
-          value: 'contain',
-        },
-        {
-          label: '保持宽高缩放图片，使图片的短边能完全显示出来，裁剪长边',
-          value: 'cover',
-        },
-        {
-          label: '拉伸图片，使图片填满元素',
-          value: 'fill',
-        },
-        {
-          label: '保持图片原有尺寸',
-          value: 'none',
-        },
-        {
-          label: '取 none 或 contain 中较小的一个',
-          value: 'scale-down',
-        },
-      ],
-      defaultValue: 'fill',
-    }),
+    menKan: createEditorInputProp({ label: '使用门槛', defaultValue: '每满300-100' }),
+    startTime: createEditorInputProp({ label: '抢券时间', defaultValue: 'XXXXXX' }),
+    btnText: createEditorInputProp({ label: '按钮文字', defaultValue: '立即购买' }),
+
     iconPrefix: createEditorInputProp({
       label: '图标类名前缀',
       tips: '图标类名前缀，同 Icon 组件的 class-prefix 属性',

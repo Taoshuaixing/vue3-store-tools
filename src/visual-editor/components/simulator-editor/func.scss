@@ -60,6 +60,8 @@
 @mixin showSoliOutline($width: 2px) {
   outline: $width solid #fc5757;
   outline-offset: -2px;
+  -webkit-animation: shadowBlink 2s 0s infinite alternate;
+  animation: shadowBlink 2s 0s infinite alternate;
 }
 
 /**
@@ -69,4 +71,21 @@
 @mixin showDashedOutline($width: 2px) {
   outline: $width dashed #b0c1d7;
   outline-offset: -2px;
+}
+
+@keyframes shadowBlink {
+  0% {
+    box-shadow: 0 0 0 #020202;
+  }
+  to {
+    box-shadow: 4px 1px 10px #fc5757;
+  }
+}
+@-webkit-keyframes shadowBlink {
+  0% {
+    box-shadow: 0 0 0 #020202;
+  }
+  to {
+    box-shadow: 4px 1px 10px #fc5757;
+  }
 }
