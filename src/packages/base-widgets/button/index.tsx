@@ -6,12 +6,12 @@ import {
   createEditorSwitchProp,
 } from '@/visual-editor/visual-editor.props';
 import { useGlobalProperties } from '@/hooks/useGlobalProperties';
-
+const btn = 'cbb';
 export default {
   key: 'button',
   moduleName: 'baseWidgets',
   label: '按钮',
-  preview: () => <Button type={'primary'}>按钮</Button>,
+  preview: () => <Button type={'primary'}>{btn}</Button>,
   render: ({ props, block, styles }) => {
     const { registerRef } = useGlobalProperties();
 

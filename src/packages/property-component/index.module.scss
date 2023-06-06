@@ -1,0 +1,50 @@
+.li-quan {
+  width: calc(100% - 70px);
+  height: calc(100% - 20px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  background: #ffebea;
+  color: #f3414c;
+  padding: 13px;
+  border-radius: 10px;
+  margin-left: 30px;
+  font-size: 12px;
+  .left {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+    span:first-child {
+      font-size: 20px;
+    }
+  }
+  .line {
+    width: 1px;
+    height: 100%;
+    border-right: 1px dashed #f3414c;
+    opacity: 0.3;
+    margin-left: 2px;
+  }
+  .right {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 20px;
+    box-sizing: border-box;
+    div {
+      background-color: #f3414c;
+      border-radius: 20px;
+      padding: 0px 20px;
+      color: #fff;
+      margin-top: 8px;
+    }
+  }
+}

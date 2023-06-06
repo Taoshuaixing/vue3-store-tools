@@ -1,7 +1,7 @@
 /*
  * @Author: 陶帅星
  * @Date: 2022-10-01 09:45:21
- * @LastEditTime: 2023-06-06 14:57:53
+ * @LastEditTime: 2023-06-06 14:59:24
  * @LastEditors: 陶帅星
  * @Description: 图片组件
  * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\image\index.tsx
@@ -21,7 +21,7 @@ import { useGlobalProperties } from '@/hooks/useGlobalProperties';
 export default {
   key: 'image',
   moduleName: 'baseWidgets',
-  label: '礼券',
+  label: '优惠码',
   resize: {
     width: true,
     height: true,
@@ -34,8 +34,8 @@ export default {
       </div>
       <div class={styles.line}></div>
       <div class={styles.right}>
-        <span> 抢券时间:xx号 xx/ xx/ xx点 </span>
-        <div>立即领取</div>
+        <span> 优惠码：XXXXXX </span>
+        <div>点击复制</div>
       </div>
     </div>
   ),
