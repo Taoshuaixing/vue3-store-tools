@@ -1,7 +1,7 @@
 /*
  * @Author: 陶帅星
  * @Date: 2022-11-11 17:53:54
- * @LastEditTime: 2022-07-02 22:58:55
+ * @LastEditTime: 2023-06-07 16:33:36
  * @LastEditors: 陶帅星
  * @Description: 组件属性配置
  * @FilePath: /vite-vue3-lowcode/src/visual-editor/components/right-attribute-panel/components/attr-editor/components/prop-config/index.tsx
@@ -20,6 +20,7 @@ import {
   ElTooltip,
   ElIcon,
   ExpandTrigger,
+  ElDatePicker,
 } from 'element-plus';
 import { cloneDeep } from 'lodash-es';
 import { Warning } from '@element-plus/icons-vue';
@@ -99,6 +100,15 @@ export const PropConfig = defineComponent({
             v-model={propObj[prop]}
             options={[...models.value]}
           ></ElCascader>
+        ),
+        [VisualEditorPropsType.datePicker]: () => (
+          <ElDatePicker
+            v-model={propObj[prop]}
+            type="datetime"
+            placeholder="Select date and time"
+            format="YYYY/MM/DD hh:mm:ss"
+            value-format="YYYY-MM-DD hh:mm:ss a"
+          />
         ),
       }[propConfig.type]();
     };

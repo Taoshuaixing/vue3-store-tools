@@ -4,7 +4,7 @@
  * @Author: 陶帅星
  * @Date: 2023-06-06 15:43:06
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-06-06 16:41:02
+ * @LastEditTime: 2023-06-07 19:15:29
 -->
 <template>
   <div class='li-quan'>
@@ -14,13 +14,14 @@
     </div>
     <div class='line'></div>
     <div class='right'>
-      <span>{{ startTime }} </span>
+      <p><span v-if="isComponent">领券时间：</span><span>{{ isComponent ? startTime : yhmText }} </span></p>
       <div>{{ btnText }}</div>
     </div>
   </div>
 </template>
 
 <script setup lang='ts'>
+import { computed } from 'vue'
 
 defineOptions({
   name: "ziChanComponents"
@@ -37,26 +38,63 @@ const props = defineProps({
   },
   startTime: {
     type: String,
-    default: '抢券时间:xx号 xx/ xx/ xx点'
+    default: 'xx号 xx/ xx/ xx点'
   },
   btnText: {
     type: String,
     default: '立即领取'
+  },
+  bgColor: {
+    type: String,
+    default: '#ffebea'
+  },
+  wordColor: {
+    type: String,
+    default: '#f3414c'
+  },
+  btnBgColor: {
+    type: String,
+    default: '#f3414c'
+  },
+  lineBorderColor: {
+    type: String,
+    default: '#f3414c'
+  },
+  priceBold: {
+    type: Boolean,
+    default: false
+  },
+  isComponent: {
+    type: Boolean,
+    default: true
+  },
+  yhmText: {
+    type: String,
+    default: 'XXXXXXXXXX'
   }
 })
-
+const isBold = computed(() => {
+  return props.priceBold ? 'bold' : 'normal'
+})
 </script>
 
 <style lang='scss' scoped>
+$bgColor: v-bind(bgColor);
+$wordColor: v-bind(wordColor);
+$btnBgColor: v-bind(btnBgColor);
+$lineBorderColor: v-bind(lineBorderColor);
+$isBold: v-bind(isBold);
+
 .li-quan {
-  width: calc(100% - 70px);
+  width: calc(100% - 20%);
+  height: 100px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   z-index: 2;
-  background: #ffebea;
-  color: #f3414c;
-  padding: 13px;
+  background: $bgColor;
+  color: $wordColor;
+  padding: 0 10px;
   border-radius: 10px;
   font-size: 12px;
   margin: 0 auto;
@@ -67,19 +105,19 @@ const props = defineProps({
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-right: 15px;
+    padding: 20px;
 
     span:first-child {
-      font-size: 20px;
+      font-size: 30px;
+      font-weight: $isBold;
     }
   }
 
   .line {
     width: 1px;
     height: 100%;
-    border-right: 1px dashed #f3414c;
-    opacity: 0.3;
-    margin-left: 2px;
+    border-right: 1px dashed $lineBorderColor;
+    opacity: 0.5;
   }
 
   .right {
@@ -89,15 +127,16 @@ const props = defineProps({
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 20px;
+    padding: 20px;
     box-sizing: border-box;
+    word-break: break-all;
 
     div {
-      background-color: #f3414c;
+      background: $btnBgColor;
       border-radius: 20px;
-      padding: 0px 20px;
+      padding: 3px 20px;
       color: #fff;
-      margin-top: 8px;
+      margin-top: 10px;
     }
   }
 }

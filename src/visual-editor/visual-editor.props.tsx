@@ -15,6 +15,8 @@ export enum VisualEditorPropsType {
   modelBind = 'ModelBind',
   /** 可拖拽项 */
   crossSortable = 'CrossSortable',
+  /** 日期选择器 */
+  datePicker = 'DatePicker',
 }
 
 export type VisualEditorProps = {
@@ -96,6 +98,27 @@ export function createEditorInputProp({
 }: EditorInputProp): VisualEditorProps {
   return {
     type: VisualEditorPropsType.input,
+    label,
+    tips,
+    defaultValue,
+  };
+}
+
+/*---------------------------------------datePicker-------------------------------------------*/
+
+interface EditorDatePickerProp {
+  label: string;
+  defaultValue?: any;
+  tips?: string;
+}
+
+export function createEditorDatePickerProp({
+  label,
+  defaultValue,
+  tips,
+}: EditorDatePickerProp): VisualEditorProps {
+  return {
+    type: VisualEditorPropsType.datePicker,
     label,
     tips,
     defaultValue,

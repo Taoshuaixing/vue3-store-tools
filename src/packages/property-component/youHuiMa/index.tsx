@@ -1,112 +1,67 @@
 /*
  * @Author: 陶帅星
  * @Date: 2022-10-01 09:45:21
- * @LastEditTime: 2023-06-06 14:59:24
+ * @LastEditTime: 2023-06-07 19:20:24
  * @LastEditors: 陶帅星
  * @Description: 图片组件
  * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\image\index.tsx
  */
-import { Image } from 'vant';
-// import styles from '../index.module.scss';
-import { Picture } from '@element-plus/icons-vue';
+import ZiChanComponent from '../components/index.vue';
+
 import type { VisualEditorComponent } from '@/visual-editor/visual-editor.utils';
-import {
-  createEditorInputProp,
-  createEditorSelectProp,
-  createEditorSwitchProp,
-} from '@/visual-editor/visual-editor.props';
+import { createEditorInputProp, createEditorSwitchProp } from '@/visual-editor/visual-editor.props';
 import { useGlobalProperties } from '@/hooks/useGlobalProperties';
 
 export default {
-  key: 'image',
+  key: 'yhm',
   moduleName: 'baseWidgets',
   label: '优惠码',
   resize: {
     width: true,
     height: true,
   },
-  preview: () => (
-    // <div class={styles.liQuan}>
-    //   <div class={styles.left}>
-    //     <span>金额</span>
-    //     <span>使用门槛</span>
-    //   </div>
-    //   <div class={styles.line}></div>
-    //   <div class={styles.right}>
-    //     <span> 优惠码：XXXXXX </span>
-    //     <div>点击复制</div>
-    //   </div>
-    // </div>
-    <div style="text-align:center;">
-      <div style="font-size:20px;background-color:#f2f2f2;color:#ccc;display:inline-flex;width:100px;height:50px;align-items:center;justify-content:center">
-        <el-icon>
-          <Picture></Picture>
-        </el-icon>
-      </div>
-    </div>
-  ),
+  preview: () => <ZiChanComponent isComponent={false}></ZiChanComponent>,
   render: ({ props, block, styles }) => {
     const { registerRef } = useGlobalProperties();
-
     return () => (
       <div style={styles}>
-        <Image ref={(el) => registerRef(el, block._vid)} {...props} />
+        <ZiChanComponent isComponent={false} ref={(el) => registerRef(el, block._vid)} {...props} />
       </div>
     );
   },
   props: {
-    src: createEditorInputProp({
-      label: '图片链接',
-      defaultValue: '//img61.ddimg.cn/upload_img/00858/cms_shop/dd-product-default-1598151693.png',
+    price: createEditorInputProp({
+      label: '金额',
+      defaultValue: '100',
     }),
-    width: createEditorInputProp({ label: '宽度', defaultValue: 100 }),
-    height: createEditorInputProp({ label: '高度', defaultValue: 100 }),
-    errorIcon: createEditorInputProp({ label: '失败时提示的图标名称或图片链接' }),
-    fit: createEditorSelectProp({
-      label: '图片填充模式',
-      options: [
-        {
-          label: '保持宽高缩放图片，使图片的长边能完全显示出来',
-          value: 'contain',
-        },
-        {
-          label: '保持宽高缩放图片，使图片的短边能完全显示出来，裁剪长边',
-          value: 'cover',
-        },
-        {
-          label: '拉伸图片，使图片填满元素',
-          value: 'fill',
-        },
-        {
-          label: '保持图片原有尺寸',
-          value: 'none',
-        },
-        {
-          label: '取 none 或 contain 中较小的一个',
-          value: 'scale-down',
-        },
-      ],
-      defaultValue: 'fill',
+    priceBold: createEditorSwitchProp({
+      label: '金额是否加粗显示',
     }),
-    iconPrefix: createEditorInputProp({
-      label: '图标类名前缀',
-      tips: '图标类名前缀，同 Icon 组件的 class-prefix 属性',
+    menKan: createEditorInputProp({ label: '使用门槛', defaultValue: '每满300-100' }),
+    yhmText: createEditorInputProp({
+      label: '填写优惠码',
+      defaultValue: 'BDGSJXJFDF',
     }),
-    iconSize: createEditorInputProp({ label: '加载图标和失败图标的大小' }),
-    lazyLoad: createEditorSwitchProp({
-      label: '是否开启图片懒加载',
-      tips: '须配合 Lazyload 组件使用',
+    btnText: createEditorInputProp({ label: '按钮文字', defaultValue: '立即购买' }),
+    bgColor: createEditorInputProp({
+      label: '背景颜色',
+      defaultValue: '#ffebea',
+      tips: '使用十六进制颜色时开头必须加 ‘#’ 号，支持linear-gradient()渐变色。',
     }),
-    loadingIcon: createEditorInputProp({ label: '加载时提示的图标名称或图片链接' }),
-    radius: createEditorInputProp({ label: '圆角大小', tips: '默认单位为 px' }),
-    round: createEditorSwitchProp({ label: '是否显示为圆形' }),
-    'show-error': createEditorSwitchProp({ label: '是否展示图片加载失败提示' }),
-    'show-loading': createEditorSwitchProp({ label: '是否展示图片加载中提示' }),
-    alt: createEditorInputProp({ label: '替代文本' }),
+    wordColor: createEditorInputProp({
+      label: '文字颜色',
+      defaultValue: '#f3414c',
+      tips: '使用十六进制颜色时开头必须加 ‘#’ 号，支持linear-gradient()渐变色。',
+    }),
+    btnBgColor: createEditorInputProp({
+      label: '按钮背景颜色',
+      defaultValue: '#f3414c',
+      tips: '使用十六进制颜色时开头必须加 ‘#’ 号，支持linear-gradient()渐变色。',
+    }),
+    lineBorderColor: createEditorInputProp({
+      label: '分割线背景颜色',
+      defaultValue: '#f3414c',
+      tips: '使用十六进制颜色时开头必须加 ‘#’ 号，支持linear-gradient()渐变色。',
+    }),
   },
-  events: [
-    { label: '点击图片时触发', value: 'click' },
-    { label: '图片加载完毕时触发', value: 'load' },
-    { label: '图片加载失败时触发', value: 'error' },
-  ],
 } as VisualEditorComponent;

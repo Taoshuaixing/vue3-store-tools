@@ -255,10 +255,10 @@ const onContextmenuBlock = (
 }
 
 .simulator-editor {
-  width: 660px;
-  height: 740px;
-  min-width: 660px;
-  padding: 60px 150px 0;
+  width: 900px;
+  height: 100%;
+  min-width: 900px;
+  padding: 0 200px 0;
   overflow: hidden auto;
   background: #fafafa;
   border-radius: 5px;
