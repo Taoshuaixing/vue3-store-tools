@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-07-08 16:47:34
  * @LastEditors: 陶帅星
  * @Description: 全局声明文件
- * @FilePath: \vite-vue3-lowcode\src\visual-editor\types\index.d.ts
+ * @FilePath: \vue3-store-tools\src\visual-editor\types\index.d.ts
  */
 
 declare global {

@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-06-21 23:04:42
  * @LastEditors: 陶帅星
  * @Description:
- * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\swipe\createFieldProps.ts
+ * @FilePath: \vue3-store-tools\src\packages\base-widgets\swipe\createFieldProps.ts
  */
 import {
   createEditorInputProp,

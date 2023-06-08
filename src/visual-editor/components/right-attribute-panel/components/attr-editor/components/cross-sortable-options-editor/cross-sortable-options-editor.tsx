@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-07-12 14:44:29
  * @LastEditors: 陶帅星
  * @Description: 可以拖拽排序的选项列表
- * @FilePath: \vite-vue3-lowcode\src\visual-editor\components\right-attribute-panel\components\attr-editor\components\cross-sortable-options-editor\cross-sortable-options-editor.tsx
+ * @FilePath: \vue3-store-tools\src\visual-editor\components\right-attribute-panel\components\attr-editor\components\cross-sortable-options-editor\cross-sortable-options-editor.tsx
  */
 
 import { defineComponent, reactive, computed, PropType } from 'vue';

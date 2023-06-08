@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-07-14 10:32:21
  * @LastEditors: 陶帅星
  * @Description: '表单项类型 - 步进器
- * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\stepper\index.tsx
+ * @FilePath: \vue3-store-tools\src\packages\base-widgets\stepper\index.tsx
  */
 import { watchEffect } from 'vue';
 import { Field, Stepper } from 'vant';

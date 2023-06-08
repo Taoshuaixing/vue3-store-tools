@@ -4,7 +4,7 @@
  * @LastEditTime: 2023-06-07 19:10:10
  * @LastEditors: 陶帅星
  * @Description: 图片组件
- * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\image\index.tsx
+ * @FilePath: \vue3-store-tools\src\packages\base-widgets\image\index.tsx
  */
 import ZiChanComponent from '../components/index.vue';
 

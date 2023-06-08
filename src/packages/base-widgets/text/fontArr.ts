@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-06-14 00:55:55
  * @LastEditors: 陶帅星
  * @Description: 可用字体集
- * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\text\fontArr.ts
+ * @FilePath: \vue3-store-tools\src\packages\base-widgets\text\fontArr.ts
  */
 export const fontArr = [
   { label: '宋体', value: 'SimSun' },

@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-07-13 17:14:20
  * @LastEditors: 陶帅星
  * @Description:
- * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\notice-bar\index.tsx
+ * @FilePath: \vue3-store-tools\src\packages\base-widgets\notice-bar\index.tsx
  */
 import { NoticeBar } from 'vant';
 import { createFieldProps } from './createFieldProps';

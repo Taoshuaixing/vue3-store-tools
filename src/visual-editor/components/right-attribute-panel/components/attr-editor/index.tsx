@@ -1,10 +1,10 @@
 /*
  * @Author: 陶帅星
  * @Date: 2022-10-10 16:23:06
- * @LastEditTime: 2021-07-11 18:36:24
+ * @LastEditTime: 2023-06-08 16:26:44
  * @LastEditors: 陶帅星
  * @Description: 组件属性编辑器
- * @FilePath: \vite-vue3-lowcode\src\visual-editor\components\right-attribute-panel\components\attr-editor\index.tsx
+ * @FilePath: \vue3-store-tools\src\visual-editor\components\right-attribute-panel\components\attr-editor\index.tsx
  */
 import { defineComponent, computed, watch } from 'vue';
 import { ElForm, ElFormItem, ElPopover, ElRadioGroup, ElRadioButton, ElIcon } from 'element-plus';

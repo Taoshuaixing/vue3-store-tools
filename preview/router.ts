@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-06-25 08:47:07
  * @LastEditors: 陶帅星
  * @Description: 路由表
- * @FilePath: \vite-vue3-lowcode\preview\router.ts
+ * @FilePath: \vue3-store-tools\preview\router.ts
  */
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 import type { VisualEditorModelValue } from '@/visual-editor/visual-editor.utils';

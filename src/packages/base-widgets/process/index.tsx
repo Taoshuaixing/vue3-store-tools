@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-07-13 17:14:47
  * @LastEditors: 陶帅星
  * @Description: 进度条
- * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\process\index.tsx
+ * @FilePath: \vue3-store-tools\src\packages\base-widgets\process\index.tsx
  */
 import { Progress } from 'vant';
 import type { VisualEditorComponent } from '@/visual-editor/visual-editor.utils';

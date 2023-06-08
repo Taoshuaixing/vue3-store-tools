@@ -4,7 +4,7 @@
  * @LastEditTime: 2023-06-06 18:23:55
  * @LastEditors: 陶帅星
  * @Description: 效果预览页面
- * @FilePath: \vite-vue3-lowcode\preview\views\preview.vue
+ * @FilePath: \vue3-store-tools\preview\views\preview.vue
 -->
 <template>
   <div class="preview">

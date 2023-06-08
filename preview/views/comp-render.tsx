@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-07-13 17:18:23
  * @LastEditors: 陶帅星
  * @Description:
- * @FilePath: \vite-vue3-lowcode\preview\views\comp-render.tsx
+ * @FilePath: \vue3-store-tools\preview\views\comp-render.tsx
  */
 import { defineComponent, PropType } from 'vue';
 import type { VisualEditorBlockData } from '@/visual-editor/visual-editor.utils';

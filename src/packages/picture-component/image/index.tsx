@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-07-13 17:14:05
  * @LastEditors: 陶帅星
  * @Description: 图片组件
- * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\image\index.tsx
+ * @FilePath: \vue3-store-tools\src\packages\base-widgets\image\index.tsx
  */
 import { Image } from 'vant';
 import { Picture } from '@element-plus/icons-vue';

@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-07-07 16:32:50
  * @LastEditors: 陶帅星
  * @Description:
- * @FilePath: \vite-vue3-lowcode\src\visual-editor\components\common\format-input-number\index.tsx
+ * @FilePath: \vue3-store-tools\src\visual-editor\components\common\format-input-number\index.tsx
  */
 import { defineComponent } from 'vue';
 import { ElInput, ElIcon } from 'element-plus';

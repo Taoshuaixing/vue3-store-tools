@@ -1,15 +1,19 @@
 /*
  * @Author: 陶帅星
  * @Date: 2022-10-01 09:45:21
- * @LastEditTime: 2023-06-07 19:20:24
+ * @LastEditTime: 2023-06-08 14:16:10
  * @LastEditors: 陶帅星
  * @Description: 图片组件
- * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\image\index.tsx
+ * @FilePath: \vue3-store-tools\src\packages\base-widgets\image\index.tsx
  */
 import ZiChanComponent from '../components/index.vue';
 
 import type { VisualEditorComponent } from '@/visual-editor/visual-editor.utils';
-import { createEditorInputProp, createEditorSwitchProp } from '@/visual-editor/visual-editor.props';
+import {
+  createEditorInputProp,
+  createEditorSwitchProp,
+  createEditorInputNumberProp,
+} from '@/visual-editor/visual-editor.props';
 import { useGlobalProperties } from '@/hooks/useGlobalProperties';
 
 export default {
@@ -20,7 +24,7 @@ export default {
     width: true,
     height: true,
   },
-  preview: () => <ZiChanComponent isComponent={false}></ZiChanComponent>,
+  preview: () => <ZiChanComponent isComponent={false} btnText={'点击复制'}></ZiChanComponent>,
   render: ({ props, block, styles }) => {
     const { registerRef } = useGlobalProperties();
     return () => (
@@ -42,7 +46,7 @@ export default {
       label: '填写优惠码',
       defaultValue: 'BDGSJXJFDF',
     }),
-    btnText: createEditorInputProp({ label: '按钮文字', defaultValue: '立即购买' }),
+    btnText: createEditorInputProp({ label: '按钮文字', defaultValue: '点击复制' }),
     bgColor: createEditorInputProp({
       label: '背景颜色',
       defaultValue: '#ffebea',
@@ -62,6 +66,13 @@ export default {
       label: '分割线背景颜色',
       defaultValue: '#f3414c',
       tips: '使用十六进制颜色时开头必须加 ‘#’ 号，支持linear-gradient()渐变色。',
+    }),
+    yhmFontSize: createEditorInputNumberProp({
+      label: '优惠码字体大小',
+      defaultValue: 18,
+      min: 12,
+      max: 22,
+      tips: '优惠码字体可选范围12-22px',
     }),
   },
 } as VisualEditorComponent;

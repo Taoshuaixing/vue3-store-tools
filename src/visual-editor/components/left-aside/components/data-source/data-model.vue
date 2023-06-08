@@ -1,10 +1,10 @@
 <!--
  * @Author: 陶帅星
  * @Date: 2022-10-24 18:36:03
- * @LastEditTime: 2021-07-07 21:55:53
+ * @LastEditTime: 2023-06-08 16:28:16
  * @LastEditors: 陶帅星
  * @Description: 数据模型管理
- * @FilePath: \vite-vue3-lowcode\src\visual-editor\components\left-aside\components\data-source\data-model.vue
+ * @FilePath: \vue3-store-tools\src\visual-editor\components\left-aside\components\data-source\data-model.vue
 -->
 <template>
   <div class="!mb-10px">
@@ -110,7 +110,7 @@ const { showImportSwaggerJsonModal } = useImportSwaggerJsonModal();
 /**
  * @description 模型集合
  */
-const models = computed(() => cloneDeep(jsonData.models));
+const models: any = computed(() => cloneDeep(jsonData.models));
 
 /**
  * @description 是否处于编辑状态

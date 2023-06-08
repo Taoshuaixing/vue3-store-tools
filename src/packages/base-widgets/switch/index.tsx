@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-07-13 18:20:55
  * @LastEditors: 陶帅星
  * @Description: 表单项类型 - 开关
- * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\switch\index.tsx
+ * @FilePath: \vue3-store-tools\src\packages\base-widgets\switch\index.tsx
  */
 import { Field, Switch } from 'vant';
 import { createFieldProps } from './createFieldProps';

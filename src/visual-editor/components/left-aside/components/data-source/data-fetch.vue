@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-07-09 20:00:22
  * @LastEditors: 陶帅星
  * @Description: 接口请求
- * @FilePath: \vite-vue3-lowcode\src\visual-editor\components\left-aside\components\data-source\data-fetch.vue
+ * @FilePath: \vue3-store-tools\src\visual-editor\components\left-aside\components\data-source\data-fetch.vue
 -->
 <template>
   <div class="!mb-10px">

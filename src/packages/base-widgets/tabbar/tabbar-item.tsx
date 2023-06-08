@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-07-13 18:20:44
  * @LastEditors: 陶帅星
  * @Description: 导航栏项
- * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\tabbar\tabbar-item.tsx
+ * @FilePath: \vue3-store-tools\src\packages\base-widgets\tabbar\tabbar-item.tsx
  */
 import type { VisualEditorComponent } from '@/visual-editor/visual-editor.utils';
 import { createEditorInputProp, createEditorSwitchProp } from '@/visual-editor/visual-editor.props';

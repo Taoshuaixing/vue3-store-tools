@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-07-13 17:15:05
  * @LastEditors: 陶帅星
  * @Description: 表单项类型 - 评分
- * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\rate\index.tsx
+ * @FilePath: \vue3-store-tools\src\packages\base-widgets\rate\index.tsx
  */
 import { Field, Rate } from 'vant';
 import { createFieldProps } from './createFieldProps';

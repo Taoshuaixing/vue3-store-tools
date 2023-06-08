@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-07-13 18:51:58
  * @LastEditors: 陶帅星
  * @Description: 分割线
- * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\divider\index.tsx
+ * @FilePath: \vue3-store-tools\src\packages\base-widgets\divider\index.tsx
  */
 import { computed } from 'vue';
 import { Divider } from 'vant';

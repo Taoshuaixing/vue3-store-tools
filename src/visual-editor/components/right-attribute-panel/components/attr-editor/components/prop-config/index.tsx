@@ -65,7 +65,14 @@ export const PropConfig = defineComponent({
         [VisualEditorPropsType.inputNumber]: () => {
           const parseRes = parseFloat(propObj[prop]);
           propObj[prop] = Number.isNaN(parseRes) ? 0 : parseRes;
-          return <ElInputNumber v-model={propObj[prop]} />;
+          return (
+            <ElInputNumber
+              min={propConfig.min}
+              max={propConfig.max}
+              placeholder={propConfig.tips}
+              v-model={propObj[prop]}
+            />
+          );
         },
         [VisualEditorPropsType.switch]: () => <ElSwitch v-model={propObj[prop]} />,
         [VisualEditorPropsType.color]: () => <ElColorPicker v-model={propObj[prop]} />,

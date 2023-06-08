@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-07-13 17:15:31
  * @LastEditors: 陶帅星
  * @Description: 文本
- * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\text\index.tsx
+ * @FilePath: \vue3-store-tools\src\packages\base-widgets\text\index.tsx
  */
 import { fontArr } from './fontArr';
 import type { VisualEditorComponent } from '@/visual-editor/visual-editor.utils';

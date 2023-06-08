@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-07-14 09:09:02
  * @LastEditors: 陶帅星
  * @Description: 公用的工具函数
- * @FilePath: \vite-vue3-lowcode\src\visual-editor\utils\index.ts
+ * @FilePath: \vue3-store-tools\src\visual-editor\utils\index.ts
  */
 import { customAlphabet } from 'nanoid';
 

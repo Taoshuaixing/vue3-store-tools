@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-07-03 09:35:21
  * @LastEditors: 陶帅星
  * @Description:
- * @FilePath: \vite-vue3-lowcode\src\packages\container-component\form\compProps.ts
+ * @FilePath: \vue3-store-tools\src\packages\container-component\form\compProps.ts
  */
 
 import {

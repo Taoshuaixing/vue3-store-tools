@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-07-13 20:34:46
  * @LastEditors: 陶帅星
  * @Description: 导航栏
- * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\tabbar\index.tsx
+ * @FilePath: \vue3-store-tools\src\packages\base-widgets\tabbar\index.tsx
  */
 import { onMounted, onBeforeUnmount } from 'vue';
 import { Tabbar, TabbarItem } from 'vant';

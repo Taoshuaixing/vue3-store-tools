@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-06-24 18:31:54
  * @LastEditors: 陶帅星
  * @Description: 统一导出组件
- * @FilePath: \vite-vue3-lowcode\src\visual-editor\components\right-attribute-panel\components\attr-editor\components\index.ts
+ * @FilePath: \vue3-store-tools\src\visual-editor\components\right-attribute-panel\components\attr-editor\components\index.ts
  */
 
 export { CrossSortableOptionsEditor } from './cross-sortable-options-editor/cross-sortable-options-editor';

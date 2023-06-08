@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-07-13 17:14:55
  * @LastEditors: 陶帅星
  * @Description: 表单项类型 - 单选框
- * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\radio\index.tsx
+ * @FilePath: \vue3-store-tools\src\packages\base-widgets\radio\index.tsx
  */
 import { Field, Radio, RadioGroup } from 'vant';
 import { createFieldProps } from './createFieldProps';

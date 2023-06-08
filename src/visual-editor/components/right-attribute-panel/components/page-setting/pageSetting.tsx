@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-07-13 21:25:59
  * @LastEditors: 陶帅星
  * @Description: 当前页面配置
- * @FilePath: \vite-vue3-lowcode\src\visual-editor\components\right-attribute-panel\components\page-setting\pageSetting.tsx
+ * @FilePath: \vue3-store-tools\src\visual-editor\components\right-attribute-panel\components\page-setting\pageSetting.tsx
  */
 import { defineComponent } from 'vue';
 import { ElForm, ElFormItem, ElInput, ElUpload, ElColorPicker, ElSwitch } from 'element-plus';

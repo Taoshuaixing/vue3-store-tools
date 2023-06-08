@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-07-13 17:15:15
  * @LastEditors: 陶帅星
  * @Description: 表单项类型 - 滑块
- * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\slider\index.tsx
+ * @FilePath: \vue3-store-tools\src\packages\base-widgets\slider\index.tsx
  */
 import { Field, Slider } from 'vant';
 import { omit } from 'lodash-es';

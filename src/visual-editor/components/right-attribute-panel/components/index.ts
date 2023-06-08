@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-07-11 18:05:22
  * @LastEditors: 陶帅星
  * @Description: 统一导出组件
- * @FilePath: \vite-vue3-lowcode\src\visual-editor\components\right-attribute-panel\components\index.ts
+ * @FilePath: \vue3-store-tools\src\visual-editor\components\right-attribute-panel\components\index.ts
  */
 
 export { AttrEditor } from './attr-editor';

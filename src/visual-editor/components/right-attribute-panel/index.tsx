@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-07-05 11:06:49
  * @LastEditors: 陶帅星
  * @Description: 属性编辑器
- * @FilePath: \vite-vue3-lowcode\src\visual-editor\components\right-attribute-panel\index.tsx
+ * @FilePath: \vue3-store-tools\src\visual-editor\components\right-attribute-panel\index.tsx
  * RightAttributePanel
  */
 

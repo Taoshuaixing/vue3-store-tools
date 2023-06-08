@@ -4,7 +4,7 @@
  * @LastEditTime: 2023-06-01 16:23:59
  * @LastEditors: 陶帅星
  * @Description: 可视化编辑器
- * @FilePath: \vite-vue3-lowcode\src\visual-editor\index.vue
+ * @FilePath: \vue3-store-tools\src\visual-editor\index.vue
 -->
 <template>
   <el-container>

@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-07-13 17:12:11
  * @LastEditors: 陶帅星
  * @Description: 轮播图组件
- * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\swipe\index.tsx
+ * @FilePath: \vue3-store-tools\src\packages\base-widgets\swipe\index.tsx
  */
 import { Swipe, SwipeItem } from 'vant';
 import { createFieldProps } from './createFieldProps';

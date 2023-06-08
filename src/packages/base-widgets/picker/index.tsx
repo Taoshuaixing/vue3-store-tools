@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-07-13 21:12:46
  * @LastEditors: 陶帅星
  * @Description: 表单项类型 - 选择器
- * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\picker\index.tsx
+ * @FilePath: \vue3-store-tools\src\packages\base-widgets\picker\index.tsx
  */
 import { reactive, useAttrs } from 'vue';
 import { Field, Popup, Picker } from 'vant';

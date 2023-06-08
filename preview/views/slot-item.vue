@@ -4,7 +4,7 @@
  * @LastEditTime: 2023-06-06 19:02:26
  * @LastEditors: 陶帅星
  * @Description:
- * @FilePath: \vite-vue3-lowcode\preview\views\slot-item.vue
+ * @FilePath: \vue3-store-tools\preview\views\slot-item.vue
 -->
 <template>
   <div class="__slot-item">

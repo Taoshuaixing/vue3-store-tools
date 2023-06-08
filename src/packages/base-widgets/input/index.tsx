@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-07-14 10:31:10
  * @LastEditors: 陶帅星
  * @Description: 表单项类型 - 输入框
- * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\input\index.tsx
+ * @FilePath: \vue3-store-tools\src\packages\base-widgets\input\index.tsx
  */
 import { Field } from 'vant';
 import { createFieldProps } from './createFieldProps';

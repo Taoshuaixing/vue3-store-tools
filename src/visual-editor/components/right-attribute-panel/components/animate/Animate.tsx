@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-07-07 21:53:06
  * @LastEditors: 陶帅星
  * @Description: 动画组件
- * @FilePath: \vite-vue3-lowcode\src\visual-editor\components\right-attribute-panel\components\animate\Animate.tsx
+ * @FilePath: \vue3-store-tools\src\visual-editor\components\right-attribute-panel\components\animate\Animate.tsx
  */
 import { defineComponent, reactive, ref, watchEffect } from 'vue';
 import { ElTabs, ElTabPane, ElRow, ElCol, ElButton, ElSwitch, ElAlert, ElIcon } from 'element-plus';

@@ -4,7 +4,7 @@
  * @LastEditTime: 2023-06-02 19:19:16
  * @LastEditors: 陶帅星
  * @Description:
- * @FilePath: \vite-vue3-lowcode\src\visual-editor\components\left-aside\components\container-component\index.tsx
+ * @FilePath: \vue3-store-tools\src\visual-editor\components\left-aside\components\container-component\index.tsx
  */
 import { defineComponent } from 'vue';
 import { cloneDeep } from 'lodash-es';

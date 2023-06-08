@@ -4,7 +4,7 @@
  * @LastEditTime: 2023-06-05 16:46:47
  * @LastEditors: 陶帅星
  * @Description:
- * @FilePath: \vite-vue3-lowcode\src\visual-editor\components\left-aside\components\picture-component\index.tsx
+ * @FilePath: \vue3-store-tools\src\visual-editor\components\left-aside\components\picture-component\index.tsx
  */
 import { defineComponent } from 'vue';
 import { cloneDeep } from 'lodash-es';

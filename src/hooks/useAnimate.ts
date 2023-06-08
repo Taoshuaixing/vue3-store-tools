@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-06-25 08:48:30
  * @LastEditors: 陶帅星
  * @Description: 执行组件动画
- * @FilePath: \vite-vue3-lowcode\src\hooks\useAnimate.ts
+ * @FilePath: \vue3-store-tools\src\hooks\useAnimate.ts
  */
 
 import type { Animation } from '@/visual-editor/visual-editor.utils';

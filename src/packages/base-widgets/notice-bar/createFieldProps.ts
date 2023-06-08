@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-06-14 12:38:02
  * @LastEditors: 陶帅星
  * @Description:
- * @FilePath: \vite-vue3-lowcode\src\packages\base-widgets\notice-bar\createFieldProps.ts
+ * @FilePath: \vue3-store-tools\src\packages\base-widgets\notice-bar\createFieldProps.ts
  */
 import {
   createEditorInputProp,
