@@ -17,6 +17,8 @@ export enum VisualEditorPropsType {
   crossSortable = 'CrossSortable',
   /** 日期选择器 */
   datePicker = 'DatePicker',
+  /** 单选框 */
+  radio = 'Radio',
 }
 
 export type VisualEditorProps = {
@@ -29,6 +31,7 @@ export type VisualEditorProps = {
   labelPosition?: string;
   /** 表单项默认值 */
   defaultValue?: any;
+  types?: any;
 } & {
   /** 可选项 */
   options?: VisualEditorSelectOptions;
@@ -110,18 +113,21 @@ interface EditorDatePickerProp {
   label: string;
   defaultValue?: any;
   tips?: string;
+  types?: string;
 }
 
 export function createEditorDatePickerProp({
   label,
   defaultValue,
   tips,
+  types,
 }: EditorDatePickerProp): VisualEditorProps {
   return {
     type: VisualEditorPropsType.datePicker,
     label,
     tips,
     defaultValue,
+    types,
   };
 }
 /*---------------------------------------InputNumber -------------------------------------------*/
@@ -252,5 +258,28 @@ export function createEditorCrossSortableProp({
     showItemPropsConfig,
     labelPosition,
     defaultValue,
+  };
+}
+/*---------------------------------------radio-------------------------------------------*/
+
+interface EditorInputProp {
+  label: string;
+  defaultValue?: any;
+  tips?: string;
+  options?: any;
+}
+
+export function createEditorRadioProp({
+  label,
+  defaultValue,
+  tips,
+  options,
+}: EditorInputProp): VisualEditorProps {
+  return {
+    type: VisualEditorPropsType.radio,
+    label,
+    tips,
+    defaultValue,
+    options,
   };
 }

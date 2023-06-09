@@ -304,8 +304,8 @@ export function createVisualEditorConfig() {
     baseWidgets: [],
     containerComponents: [],
     propertyComponents: [],
-    productComponents: [],
     pictureComponents: [],
+    productComponents: [],
   };
   // const componentList: VisualEditorComponent[] = []
   const componentMap: Record<string, VisualEditorComponent> = {};

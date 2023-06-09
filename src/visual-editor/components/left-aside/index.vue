@@ -1,7 +1,7 @@
 <!--
  * @Author: 陶帅星
  * @Date: 2022-10-24 00:35:17
- * @LastEditTime: 2023-06-05 18:17:48
+ * @LastEditTime: 2023-06-08 17:39:44
  * @LastEditors: 陶帅星
  * @Description: 左侧边栏
  * @FilePath: /vite-vue3-lowcode/src/visual-editor/components/left-aside/index.vue
@@ -58,7 +58,7 @@ const tabs = Object.entries(components)
 console.log(tabs);
 const handleChange = (val: string) => {
 }
-const activeName = ref(tabs[2].name);
+const activeName = ref(tabs[3].name);
 </script>
 
 <style lang="scss" scoped>

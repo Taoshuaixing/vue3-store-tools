@@ -37,6 +37,7 @@
     "@vueuse/integrations": "^8.9.1",
     "animate.css": "^4.1.1",
     "axios": "^0.27.2",
+    "cheerio": "^1.0.0-rc.12",
     "dayjs": "^1.11.3",
     "dexie": "^3.2.2",
     "element-plus": "2.2.9",

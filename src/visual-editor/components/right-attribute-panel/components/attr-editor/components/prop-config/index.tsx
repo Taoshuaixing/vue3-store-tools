@@ -1,7 +1,7 @@
 /*
  * @Author: 陶帅星
  * @Date: 2022-11-11 17:53:54
- * @LastEditTime: 2023-06-07 16:33:36
+ * @LastEditTime: 2023-06-09 18:20:18
  * @LastEditors: 陶帅星
  * @Description: 组件属性配置
  * @FilePath: /vite-vue3-lowcode/src/visual-editor/components/right-attribute-panel/components/attr-editor/components/prop-config/index.tsx
@@ -21,6 +21,8 @@ import {
   ElIcon,
   ExpandTrigger,
   ElDatePicker,
+  ElRadioGroup,
+  ElRadio,
 } from 'element-plus';
 import { cloneDeep } from 'lodash-es';
 import { Warning } from '@element-plus/icons-vue';
@@ -111,11 +113,20 @@ export const PropConfig = defineComponent({
         [VisualEditorPropsType.datePicker]: () => (
           <ElDatePicker
             v-model={propObj[prop]}
-            type="datetime"
+            type={propConfig.types}
+            start-placeholder="Start date"
+            end-placeholder="End date"
             placeholder="Select date and time"
             format="YYYY/MM/DD hh:mm:ss"
             value-format="YYYY-MM-DD hh:mm:ss a"
           />
+        ),
+        [VisualEditorPropsType.radio]: () => (
+          <ElRadioGroup v-model={propObj[prop]} label={propConfig.defaultValue}>
+            {propConfig.options?.map((opt) => (
+              <ElRadio label={opt.label}>{opt.value}</ElRadio>
+            ))}
+          </ElRadioGroup>
         ),
       }[propConfig.type]();
     };

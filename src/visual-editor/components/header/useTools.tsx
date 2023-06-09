@@ -34,6 +34,7 @@ export const useTools = () => {
   const importJsonChange = (value) => {
     state.importJsonValue = value;
   };
+  console.log(jsonData);
 
   return [
     {

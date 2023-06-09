@@ -1,7 +1,7 @@
 /*
  * @Author: 陶帅星
  * @Date: 2022-10-01 09:45:21
- * @LastEditTime: 2023-06-07 19:10:10
+ * @LastEditTime: 2023-06-09 18:26:40
  * @LastEditors: 陶帅星
  * @Description: 图片组件
  * @FilePath: \vue3-store-tools\src\packages\base-widgets\image\index.tsx
@@ -45,6 +45,7 @@ export default {
     startTime: createEditorDatePickerProp({
       label: '抢券时间',
       defaultValue: '2023-06-09 11:00:00 am',
+      types: 'datetime',
     }),
     btnText: createEditorInputProp({ label: '按钮文字', defaultValue: '立即购买' }),
     bgColor: createEditorInputProp({

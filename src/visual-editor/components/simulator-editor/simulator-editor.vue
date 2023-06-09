@@ -181,7 +181,7 @@ const onContextmenuBlock = (
     content: () => (
       <>
         <DropdownOption
-          label="复制节点"
+          label="复制组件"
           icon="el-icon-document-copy"
           {...{
             onClick: () => {
@@ -206,12 +206,12 @@ const onContextmenuBlock = (
           }}
         />
         <DropdownOption
-          label="查看节点"
+          label="查看组件"
           icon="el-icon-view"
           {...{
             onClick: () =>
               useModal({
-                title: '节点信息',
+                title: '组件信息',
                 footer: null,
                 props: {
                   width: 600,
@@ -227,7 +227,7 @@ const onContextmenuBlock = (
           }}
         />
         <DropdownOption
-          label="删除节点"
+          label="删除组件"
           icon="el-icon-delete"
           {...{
             onClick: () => deleteComp(block, parentBlocks),

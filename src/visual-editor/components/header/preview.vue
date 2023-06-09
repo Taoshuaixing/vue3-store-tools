@@ -4,7 +4,7 @@
  * @Author: 陶帅星
  * @Date: 2023-03-23 14:42:54
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-06-06 18:57:44
+ * @LastEditTime: 2023-06-09 17:35:45
 -->
 <template>
   <el-dialog
@@ -54,7 +54,7 @@ const previewUrl = `${BASE_URL}preview/${location.hash}`;
   .el-dialog__body {
     width: 390px;
     height: 844px;
-    padding: 0 5px;
+    padding: 0;
   }
 
   .el-dialog__header {

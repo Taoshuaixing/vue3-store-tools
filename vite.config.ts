@@ -27,7 +27,7 @@ export default ({ mode }: ConfigEnv): UserConfig => {
       preprocessorOptions: {
         scss: {
           charset: false,
-          additionalData:`@use './src/style/vant.scss'as *;@use './src/style/element.scss'as *;`
+          additionalData: `@use './src/style/vant.scss'as *;@use './src/style/element.scss'as *;`,
         },
         less: {
           charset: false,

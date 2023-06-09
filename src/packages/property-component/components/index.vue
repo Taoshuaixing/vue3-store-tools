@@ -4,7 +4,7 @@
  * @Author: 陶帅星
  * @Date: 2023-06-06 15:43:06
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-06-08 14:42:46
+ * @LastEditTime: 2023-06-09 10:00:04
 -->
 <template>
   <div class='li-quan'>
@@ -134,19 +134,22 @@ $isFontSize: v-bind(isFontSize);
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 20px;
+    padding-left: 20px;
     box-sizing: border-box;
     word-break: break-all;
+    overflow: hidden;
 
     p {
       font-size: $isFontSize;
+      overflow: hidden;
+      margin: 4px 0;
     }
 
     div {
       background: $btnBgColor;
       border-radius: 20px;
       padding: 2px 20px;
-      margin-top: 5px;
+      // margin-top: 5px;
       color: #fff;
     }
   }

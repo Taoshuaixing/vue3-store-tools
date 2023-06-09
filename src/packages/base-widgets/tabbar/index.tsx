@@ -1,7 +1,7 @@
 /*
  * @Author: 陶帅星
  * @Date: 2021-05-04 05:36:58
- * @LastEditTime: 2021-07-13 20:34:46
+ * @LastEditTime: 2023-06-09 14:49:52
  * @LastEditors: 陶帅星
  * @Description: 导航栏
  * @FilePath: \vue3-store-tools\src\packages\base-widgets\tabbar\index.tsx
@@ -26,8 +26,16 @@ const defaultTabbarItems = [
     title: '首页',
   },
   {
-    icon: 'apps-o',
-    title: '导航',
+    icon: 'orders-o',
+    title: '分类',
+  },
+  {
+    icon: 'coupon-o',
+    title: '当读',
+  },
+  {
+    icon: 'cart-o',
+    title: '购物车',
   },
   {
     icon: 'user-o',
@@ -117,7 +125,7 @@ export default {
     border: createEditorSwitchProp({ label: '是否显示外边框', defaultValue: true }),
     zIndex: createEditorInputProp({ label: '元素 z-index', defaultValue: '1' }),
     baseUrl: createEditorInputProp({ label: '路由路径前缀', defaultValue: '/preview/#/' }),
-    activeColor: createEditorColorProp({ label: '选中标签的颜色', defaultValue: '#1989fa' }),
+    activeColor: createEditorColorProp({ label: '选中标签的颜色', defaultValue: '#fc5757' }),
     inactiveColor: createEditorColorProp({ label: '未选中标签的颜色', defaultValue: '#7d7e80' }),
     route: createEditorSwitchProp({ label: '是否开启路由模式', defaultValue: false }),
     // placeholder: createEditorSwitchProp({

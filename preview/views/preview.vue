@@ -1,17 +1,17 @@
 <!--
  * @Author: 陶帅星
  * @Date: 2022-10-01 09:45:21
- * @LastEditTime: 2023-06-06 18:23:55
+ * @LastEditTime: 2023-06-09 13:47:28
  * @LastEditors: 陶帅星
  * @Description: 效果预览页面
  * @FilePath: \vue3-store-tools\preview\views\preview.vue
 -->
 <template>
   <div class="preview">
-    <div class="preview-header"><img
+    <!-- <div class="preview-header"><img
         src="@/assets/topNavBlack.png"
         alt="topNavBlack"
-      ></div>
+      ></div> -->
     <template
       v-for="outItem in blocks"
       :key="outItem._vid"
