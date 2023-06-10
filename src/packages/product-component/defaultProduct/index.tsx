@@ -4,7 +4,7 @@
  * @Author: 陶帅星
  * @Date: 2023-06-09 15:37:36
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-06-09 18:52:44
+ * @LastEditTime: 2023-06-11 00:27:20
  */
 import DefaultComponents from './default.vue';
 import type { VisualEditorComponent } from '@/visual-editor/visual-editor.utils';
@@ -12,6 +12,7 @@ import {
   createEditorInputProp,
   createEditorDatePickerProp,
   createEditorRadioProp,
+  createEditorColorProp,
 } from '@/visual-editor/visual-editor.props';
 import { useGlobalProperties } from '@/hooks/useGlobalProperties';
 export default {
@@ -37,7 +38,6 @@ export default {
     { label: '开始触摸按钮时触发', value: 'touchstart' },
   ],
   props: {
-    text: createEditorInputProp({ label: '按钮文字', defaultValue: '按钮' }),
     floorEnd: createEditorDatePickerProp({
       label: '楼层上下线时间 ',
       defaultValue: '',
@@ -46,21 +46,66 @@ export default {
     }),
     blockStyle: createEditorRadioProp({
       label: '坑位样式',
-      defaultValue: '一行三列',
+      defaultValue: 8,
       options: [
         {
           label: '一行三列',
-          value: '一行三列',
+          value: 8,
         },
         {
           label: '一行两列',
-          value: '一行两列',
+          value: 12,
         },
         {
-          value: '一行一列',
           label: '一行一列',
+          value: 24,
         },
       ],
+    }),
+    isTitle: createEditorRadioProp({
+      label: '是否显示标题',
+      defaultValue: true,
+      options: [
+        {
+          label: '显示',
+          value: true,
+        },
+        {
+          label: '不显示',
+          value: false,
+        },
+      ],
+    }),
+    text: createEditorInputProp({ label: '标题内容', defaultValue: '楼层标题' }),
+    bgColor: createEditorColorProp({
+      label: '标题背景颜色',
+      defaultValue: '#fff',
+    }),
+    textColor: createEditorColorProp({
+      label: '标题文字颜色',
+      defaultValue: '#fc5757',
+    }),
+    isFillet: createEditorRadioProp({
+      label: '标题是否圆角',
+      defaultValue: '1rem',
+      options: [
+        {
+          label: '圆角',
+          value: '1rem',
+        },
+        {
+          label: '不圆角',
+          value: '0',
+        },
+      ],
+    }),
+    titleImg: createEditorInputProp({
+      label: '标题背景图',
+      defaultValue: '',
+    }),
+    titleLink: createEditorInputProp({
+      label: '标题跳转链接',
+      defaultValue: '',
     }),
   },
 } as VisualEditorComponent;

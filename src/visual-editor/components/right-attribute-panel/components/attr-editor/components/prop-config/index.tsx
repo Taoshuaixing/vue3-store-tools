@@ -1,7 +1,7 @@
 /*
  * @Author: 陶帅星
  * @Date: 2022-11-11 17:53:54
- * @LastEditTime: 2023-06-09 18:20:18
+ * @LastEditTime: 2023-06-10 23:22:02
  * @LastEditors: 陶帅星
  * @Description: 组件属性配置
  * @FilePath: /vite-vue3-lowcode/src/visual-editor/components/right-attribute-panel/components/attr-editor/components/prop-config/index.tsx
@@ -123,8 +123,10 @@ export const PropConfig = defineComponent({
         ),
         [VisualEditorPropsType.radio]: () => (
           <ElRadioGroup v-model={propObj[prop]} label={propConfig.defaultValue}>
-            {propConfig.options?.map((opt) => (
-              <ElRadio label={opt.label}>{opt.value}</ElRadio>
+            {propConfig.options?.map((opt: any) => (
+              <ElRadio model-value={opt.value} label={opt.value}>
+                {opt.label}
+              </ElRadio>
             ))}
           </ElRadioGroup>
         ),

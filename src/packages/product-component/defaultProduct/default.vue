@@ -4,7 +4,7 @@
  * @Author: 陶帅星
  * @Date: 2023-06-09 15:51:21
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-06-09 19:35:25
+ * @LastEditTime: 2023-06-11 00:25:31
 -->
 <template>
   <Row
@@ -12,15 +12,21 @@
     justify="space-around"
     style="padding: 0 0.3rem;"
   >
-    <Col span="24">
-    <div class="product-title"><span>{{ floorTitle }}</span><a href="">更多></a></div>
+    <Col
+      span="24"
+      v-if="isTitle"
+    >
+    <div class="product-title"><span>{{ text }}</span><a :href="titleLink">更多></a></div>
     </Col>
     <Col
-      span="8"
+      :span="blockStyle"
       v-for="(item, key) of defaultData"
       :key="key"
     >
-    <a class="product">
+    <a
+      class="product"
+      :href="'http://product.m.dangdang.com/' + item.imgId + '.html'"
+    >
       <div class="product-header">
         <Image
           lazy-load
@@ -45,13 +51,13 @@
 </template>
 
 <script setup lang='ts'>
-import { Col, Row, Image, Lazyload } from 'vant'
-import { ref, reactive } from 'vue'
+import { Col, Row, Image } from 'vant'
+// import { ref, reactive } from 'vue'
 
 defineOptions({
   name: "defaultComponents"
 })
-const floorTitle = ref('楼层标题')
+
 const defaultData: Array<any> = [
   {
     imgId: 29353542,
@@ -84,7 +90,35 @@ const defaultData: Array<any> = [
 const props = defineProps({
   text: {
     type: String,
-    default: '金额'
+    default: '楼层标题'
+  },
+  isTitle: {
+    type: String,
+    default: true
+  },
+  bgColor: {
+    type: String,
+    default: '#fff'
+  },
+  textColor: {
+    type: String,
+    default: '#fc5757'
+  },
+  isFillet: {
+    type: String,
+    default: '1rem'
+  },
+  blockStyle: {
+    type: Number,
+    default: 8
+  },
+  titleImg: {
+    type: String,
+    default: ''
+  },
+  titleLink: {
+    type: String,
+    default: ''
   },
 })
 
@@ -94,21 +128,27 @@ function getProductImg (_pid: any) {
     'http://img3m{0}.ddimg.cn/{1}/{2}/{3}-{4}_{5}_{6}.jpg';
   return varImgURL = varImgURL.replace('{0}', _pid % 10).replace('{1}', _pid % 99).replace('{2}', _pid % 37).replace('{3}', _pid).replace('{4}', '1').replace('{5}', 'h').replace('{6}', _pid % 10);
 }
-// console.log(getProductImg(23323691))
 
 </script>
 
-<style lang='less' scoped>
+<style lang='scss' scoped>
+$bgColor: v-bind(bgColor);
+$textColor: v-bind(textColor);
+$isFillet: v-bind(isFillet);
+$titleUrl: v-bind(titleImg);
+
 .product-title {
   position: relative;
-  padding: 0.5rem 2rem;
-  background: #fff;
-  border-radius: 1rem;
+  padding: 0.4rem 2rem;
+  background: $bgColor;
+  border-radius: $isFillet;
   margin-bottom: 0.5rem;
   text-align: center;
+  color: $textColor;
+  // background: url($titleUrl) no-repeat center center/100% auto;
 
   span {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 700;
   }
 
@@ -117,6 +157,8 @@ function getProductImg (_pid: any) {
     top: 50%;
     transform: translateY(-50%);
     right: 0.5rem;
+    cursor: pointer;
+    color: inherit;
   }
 }
 

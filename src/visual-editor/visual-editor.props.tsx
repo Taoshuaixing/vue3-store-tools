@@ -261,12 +261,15 @@ export function createEditorCrossSortableProp({
   };
 }
 /*---------------------------------------radio-------------------------------------------*/
-
-interface EditorInputProp {
+export type VisualEditorRadioOptions = {
+  label: string;
+  value: any;
+}[];
+interface EditorRadioProp {
   label: string;
   defaultValue?: any;
   tips?: string;
-  options?: any;
+  options?: VisualEditorRadioOptions;
 }
 
 export function createEditorRadioProp({
@@ -274,7 +277,7 @@ export function createEditorRadioProp({
   defaultValue,
   tips,
   options,
-}: EditorInputProp): VisualEditorProps {
+}: EditorRadioProp): VisualEditorProps {
   return {
     type: VisualEditorPropsType.radio,
     label,
