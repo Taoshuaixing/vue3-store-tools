@@ -4,7 +4,7 @@
  * @Author: 陶帅星
  * @Date: 2023-06-09 15:51:21
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-06-11 00:25:31
+ * @LastEditTime: 2023-06-11 19:28:54
 -->
 <template>
   <Row
@@ -52,41 +52,75 @@
 
 <script setup lang='ts'>
 import { Col, Row, Image } from 'vant'
-// import { ref, reactive } from 'vue'
+import { ref, reactive, computed } from 'vue'
 
 defineOptions({
   name: "defaultComponents"
 })
 
-const defaultData: Array<any> = [
-  {
-    imgId: 29353542,
-    title: '小鸡球球触感玩具书:全5册（升级点读版，纸板书、触摸发声书、翻翻书、洞洞书）',
-    price: '146.30',
-    oldPrice: '325.00',
-    tag: [
-      '自营', '券', '预售'
-    ]
-  },
-  {
-    imgId: 25214219,
-    title: '原声触摸发声书：听，什么声音（套装全6册）',
-    price: '132.00',
-    oldPrice: '330.00',
-    tag: [
-      '自营', '券',
-    ]
-  },
-  {
-    imgId: 25344877,
-    title: '我的第一套自然认知书（第一辑，全20册）',
-    price: '120.00',
-    oldPrice: '240.00',
-    tag: [
-      '券',
-    ]
-  }
-]
+// interface DefaultData{
+// imgId:Number,
+// title:String,
+// price:String,
+// oldPrice:String,
+// tag:Array<any>
+// }
+// const defaultData: Array<any> = reactive([
+//   {
+//     imgId: 29353542,
+//     title: '小鸡球球触感玩具书:全5册（升级点读版，纸板书、触摸发声书、翻翻书、洞洞书）',
+//     price: '146.30',
+//     oldPrice: '325.00',
+//     tag: [
+//       '自营', '券', '预售'
+//     ]
+//   },
+//   {
+//     imgId: 25214219,
+//     title: '原声触摸发声书：听，什么声音（套装全6册）',
+//     price: '132.00',
+//     oldPrice: '330.00',
+//     tag: [
+//       '自营', '券',
+//     ]
+//   },
+//   {
+//     imgId: 25344877,
+//     title: '我的第一套自然认知书（第一辑，全20册）',
+//     price: '120.00',
+//     oldPrice: '240.00',
+//     tag: [
+//       '券',
+//     ]
+//   },
+//   {
+//     imgId: 29353542,
+//     title: '小鸡球球触感玩具书:全5册（升级点读版，纸板书、触摸发声书、翻翻书、洞洞书）',
+//     price: '146.30',
+//     oldPrice: '325.00',
+//     tag: [
+//       '自营', '券', '预售'
+//     ]
+//   },
+//   {
+//     imgId: 25214219,
+//     title: '原声触摸发声书：听，什么声音（套装全6册）',
+//     price: '132.00',
+//     oldPrice: '330.00',
+//     tag: [
+//       '自营', '券',
+//     ]
+//   },
+//   {
+//     imgId: 25344877,
+//     title: '我的第一套自然认知书（第一辑，全20册）',
+//     price: '120.00',
+//     oldPrice: '240.00',
+//     tag: [
+//       '券',
+//     ]
+//   },
+// ])
 const props = defineProps({
   text: {
     type: String,
@@ -120,8 +154,33 @@ const props = defineProps({
     type: String,
     default: ''
   },
+  productId: {
+    type: String,
+    default: '29353542,25214219,25344877'
+  },
+  iscenter: {
+    type: String,
+    default: 'center'
+  }
 })
-
+const defaultData = computed(() => {
+  const toArr = props.productId.split(',')
+  const res: any = []
+  toArr.map((item) => {
+    res.push(
+      {
+        imgId: item,
+        title: '小鸡球球触感玩具书:全5册（升级点读版，纸板书、触摸发声书、翻翻书、洞洞书）',
+        price: '146.30',
+        oldPrice: '325.00',
+        tag: [
+          '自营', '券', '预售'
+        ]
+      }
+    )
+  })
+  return res
+})
 // 通过商品id获取图片
 function getProductImg (_pid: any) {
   let varImgURL: any =
@@ -136,6 +195,7 @@ $bgColor: v-bind(bgColor);
 $textColor: v-bind(textColor);
 $isFillet: v-bind(isFillet);
 $titleUrl: v-bind(titleImg);
+$iscenter: v-bind(iscenter);
 
 .product-title {
   position: relative;
@@ -143,7 +203,7 @@ $titleUrl: v-bind(titleImg);
   background: $bgColor;
   border-radius: $isFillet;
   margin-bottom: 0.5rem;
-  text-align: center;
+  text-align: $iscenter;
   color: $textColor;
   // background: url($titleUrl) no-repeat center center/100% auto;
 
@@ -168,6 +228,7 @@ $titleUrl: v-bind(titleImg);
   overflow: hidden;
   background: #fff;
   padding: 0.3rem;
+  margin-bottom: 0.5rem;
 
   .product-header {
     h2 {

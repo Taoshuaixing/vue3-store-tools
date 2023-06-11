@@ -245,7 +245,7 @@ const onContextmenuBlock = (
   display: flex;
   width: 100%;
   height: 100%;
-  padding-right: 380px;
+  padding-right: 460px;
   align-items: center;
   justify-content: center;
 

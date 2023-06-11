@@ -1,7 +1,7 @@
 /*
  * @Author: 陶帅星
  * @Date: 2022-11-11 17:53:54
- * @LastEditTime: 2023-06-10 23:22:02
+ * @LastEditTime: 2023-06-11 15:37:40
  * @LastEditors: 陶帅星
  * @Description: 组件属性配置
  * @FilePath: /vite-vue3-lowcode/src/visual-editor/components/right-attribute-panel/components/attr-editor/components/prop-config/index.tsx
@@ -61,7 +61,12 @@ export const PropConfig = defineComponent({
             propObj[prop] = `${propObj[prop]}`;
           }
           return (
-            <ElInput v-model={propObj[prop]} placeholder={propConfig.tips || propConfig.label} />
+            <ElInput
+              v-model={propObj[prop]}
+              autosize={{ minRows: 2, maxRows: 10 }}
+              type={propConfig.types}
+              placeholder={propConfig.tips || propConfig.label}
+            />
           );
         },
         [VisualEditorPropsType.inputNumber]: () => {

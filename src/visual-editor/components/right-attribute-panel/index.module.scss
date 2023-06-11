@@ -13,7 +13,7 @@ $boxShadow: -2px 0 4px 0 rgb(0 0 0 / 10%);
   right: 0;
   bottom: 0;
   z-index: 20;
-  width: 390px;
+  width: 460px;
   background-color: white;
   transform: translateX(100%);
   box-shadow: $boxShadow;
@@ -69,7 +69,8 @@ $boxShadow: -2px 0 4px 0 rgb(0 0 0 / 10%);
       }
 
       .el-form-item__label {
-        font-size: 12px;
+        font-size: 15px;
+        color: #000;
       }
 
       .el-form-item .el-form-item__content {

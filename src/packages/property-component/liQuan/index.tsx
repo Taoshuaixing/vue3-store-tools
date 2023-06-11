@@ -18,7 +18,7 @@ import { useGlobalProperties } from '@/hooks/useGlobalProperties';
 
 export default {
   key: 'lq',
-  moduleName: 'baseWidgets',
+  moduleName: 'propertyComponents',
   label: '礼券',
   resize: {
     width: true,

@@ -4,7 +4,7 @@
  * @Author: 陶帅星
  * @Date: 2023-06-09 15:37:36
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-06-11 00:27:20
+ * @LastEditTime: 2023-06-11 18:17:14
  */
 import DefaultComponents from './default.vue';
 import type { VisualEditorComponent } from '@/visual-editor/visual-editor.utils';
@@ -16,9 +16,9 @@ import {
 } from '@/visual-editor/visual-editor.props';
 import { useGlobalProperties } from '@/hooks/useGlobalProperties';
 export default {
-  key: 'button',
-  moduleName: 'baseWidgets',
-  label: '按钮',
+  key: 'defaultProduct',
+  moduleName: 'productComponents',
+  label: '普通商品',
   preview: () => <DefaultComponents></DefaultComponents>,
   render: ({ props, block, styles }) => {
     const { registerRef } = useGlobalProperties();
@@ -76,14 +76,19 @@ export default {
         },
       ],
     }),
-    text: createEditorInputProp({ label: '标题内容', defaultValue: '楼层标题' }),
-    bgColor: createEditorColorProp({
-      label: '标题背景颜色',
-      defaultValue: '#fff',
-    }),
-    textColor: createEditorColorProp({
-      label: '标题文字颜色',
-      defaultValue: '#fc5757',
+    iscenter: createEditorRadioProp({
+      label: '标题居中或靠左显示',
+      defaultValue: 'center',
+      options: [
+        {
+          label: '居中',
+          value: 'center',
+        },
+        {
+          label: '靠左',
+          value: 'left',
+        },
+      ],
     }),
     isFillet: createEditorRadioProp({
       label: '标题是否圆角',
@@ -99,6 +104,16 @@ export default {
         },
       ],
     }),
+    bgColor: createEditorColorProp({
+      label: '标题背景颜色',
+      defaultValue: '#fff',
+    }),
+    textColor: createEditorColorProp({
+      label: '标题文字颜色',
+      defaultValue: '#fc5757',
+    }),
+    text: createEditorInputProp({ label: '标题内容', defaultValue: '楼层标题' }),
+
     titleImg: createEditorInputProp({
       label: '标题背景图',
       defaultValue: '',
@@ -106,6 +121,12 @@ export default {
     titleLink: createEditorInputProp({
       label: '标题跳转链接',
       defaultValue: '',
+    }),
+    productId: createEditorInputProp({
+      label: '商品ID',
+      defaultValue: '29353542,25214219,25344877',
+      types: 'textarea',
+      tips: '商品id之间逗号隔开，每个楼层30个品展示效果最佳',
     }),
   },
 } as VisualEditorComponent;

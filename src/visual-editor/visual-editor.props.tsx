@@ -92,18 +92,21 @@ interface EditorInputProp {
   label: string;
   defaultValue?: any;
   tips?: string;
+  types?: any;
 }
 
 export function createEditorInputProp({
   label,
   defaultValue,
   tips,
+  types,
 }: EditorInputProp): VisualEditorProps {
   return {
     type: VisualEditorPropsType.input,
     label,
     tips,
     defaultValue,
+    types,
   };
 }
 
