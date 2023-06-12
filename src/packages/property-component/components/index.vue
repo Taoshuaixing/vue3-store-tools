@@ -4,7 +4,7 @@
  * @Author: 陶帅星
  * @Date: 2023-06-06 15:43:06
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-06-09 10:00:04
+ * @LastEditTime: 2023-06-12 19:30:25
 -->
 <template>
   <div class='li-quan'>
@@ -15,13 +15,17 @@
     <div class='line'></div>
     <div class='right'>
       <p><span>{{ isComponent ? '领券时间：' : '优惠码：' }}</span><span>{{ isComponent ? startTime : yhmText }} </span></p>
-      <div>{{ btnText }}</div>
+      <div @click="copyYHM(btnText)">{{ btnText }}</div>
     </div>
   </div>
 </template>
 
 <script setup lang='ts'>
+import { useClipboard } from '@vueuse/core'
+// import { ElMessage } from 'element-plus'
 import { computed } from 'vue'
+import { Notify } from 'vant';
+import { SuccessFilled } from '@element-plus/icons-vue/dist/types';
 
 defineOptions({
   name: "ziChanComponents"
@@ -83,6 +87,17 @@ const isBold = computed(() => {
 const isFontSize = computed(() => {
   return props.yhmFontSize + 'px'
 })
+function copyYHM (params: string) {
+  console.log(params);
+  if (params === '点击复制') {
+    const { copy } = useClipboard({ source: props.yhmText });
+
+    copy()
+      .then(() => Notify({ type: 'success', message: '复制成功' }))
+      .catch((err) => Notify({ type: 'danger', message: err }));
+  }
+
+}
 </script>
 
 <style lang='scss' scoped>
@@ -151,6 +166,8 @@ $isFontSize: v-bind(isFontSize);
       padding: 2px 20px;
       // margin-top: 5px;
       color: #fff;
+      cursor: pointer;
+
     }
   }
 }

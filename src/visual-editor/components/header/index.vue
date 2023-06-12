@@ -47,7 +47,7 @@
       <el-tooltip
         class="item"
         effect="dark"
-        content="运行"
+        content="预览"
         placement="bottom"
       >
         <el-button

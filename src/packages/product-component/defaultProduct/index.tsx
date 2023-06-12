@@ -4,7 +4,7 @@
  * @Author: 陶帅星
  * @Date: 2023-06-09 15:37:36
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-06-11 18:17:14
+ * @LastEditTime: 2023-06-12 14:57:36
  */
 import DefaultComponents from './default.vue';
 import type { VisualEditorComponent } from '@/visual-editor/visual-editor.utils';
@@ -104,6 +104,7 @@ export default {
         },
       ],
     }),
+
     bgColor: createEditorColorProp({
       label: '标题背景颜色',
       defaultValue: '#fff',
@@ -127,6 +128,34 @@ export default {
       defaultValue: '29353542,25214219,25344877',
       types: 'textarea',
       tips: '商品id之间逗号隔开，每个楼层30个品展示效果最佳',
+    }),
+    isSlider: createEditorRadioProp({
+      label: '商品是否为滑动显示',
+      defaultValue: 'wrap',
+      options: [
+        {
+          label: '不滑动',
+          value: 'wrap',
+        },
+        {
+          label: '滑动',
+          value: 'nowrap',
+        },
+      ],
+    }),
+    productIsFillet: createEditorRadioProp({
+      label: '商品是否圆角',
+      defaultValue: '1rem',
+      options: [
+        {
+          label: '圆角',
+          value: '1rem',
+        },
+        {
+          label: '不圆角',
+          value: '0',
+        },
+      ],
     }),
   },
 } as VisualEditorComponent;

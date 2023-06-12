@@ -1,53 +1,51 @@
 <!--
- * @Descripttion: 
- * @version: 
+ * @Descripttion:
+ * @version:
  * @Author: 陶帅星
  * @Date: 2023-06-09 15:51:21
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-06-11 19:28:54
+ * @LastEditTime: 2023-06-12 19:00:14
 -->
 <template>
-  <Row
-    gutter="10"
-    justify="space-around"
-    style="padding: 0 0.3rem;"
-  >
-    <Col
-      span="24"
+  <div class="layout">
+    <div
+      class="product-title"
       v-if="isTitle"
-    >
-    <div class="product-title"><span>{{ text }}</span><a :href="titleLink">更多></a></div>
-    </Col>
-    <Col
-      :span="blockStyle"
-      v-for="(item, key) of defaultData"
-      :key="key"
-    >
-    <a
-      class="product"
-      :href="'http://product.m.dangdang.com/' + item.imgId + '.html'"
-    >
-      <div class="product-header">
-        <Image
-          lazy-load
-          :src="getProductImg(item.imgId)"
-          :alt="item.title"
-          fit="cover"
-        />
-        <h2>{{ item.title }}</h2>
-      </div>
-      <div class="product-content">
-        <span
-          v-for="t of item.tag"
-          :style="t === '券' ? { border: 'none', background: '#fc5757', color: ' #fff' } : {}"
-        >{{ t }}</span>
-      </div>
-      <div class="product-footer">
-        <span>{{ item.price }}</span><span>{{ item.oldPrice }}</span>
-      </div>
-    </a>
-    </Col>
-  </Row>
+    ><span>{{ text }}</span><a :href="titleLink">更多></a></div>
+    <Row justify="start">
+      <Col
+        :span="blockStyle"
+        v-for="(item, key) of defaultData"
+        :key="key"
+      >
+      <a
+        class="product"
+        :href="'http://product.m.dangdang.com/' + item.imgId + '.html'"
+      >
+        <div class="product-header">
+          <Image
+            lazy-load
+            :src="getProductImg(item.imgId)"
+            :alt="item.title"
+            fit="cover"
+            :radius="productIsFillet"
+            :style="{ transition: 'all 0.5s ease-in-out' }"
+          />
+          <h2>{{ item.title }}</h2>
+        </div>
+        <div class="product-content">
+          <span
+            v-for="t of item.tag"
+            :style="t === '券' ? { border: 'none', background: '#fc5757', color: ' #fff' } : {}"
+          >{{ t }}</span>
+        </div>
+        <div class="product-footer">
+          <span>{{ item.price }}</span><span>{{ item.oldPrice }}</span>
+        </div>
+      </a>
+      </Col>
+    </Row>
+  </div>
 </template>
 
 <script setup lang='ts'>
@@ -58,69 +56,6 @@ defineOptions({
   name: "defaultComponents"
 })
 
-// interface DefaultData{
-// imgId:Number,
-// title:String,
-// price:String,
-// oldPrice:String,
-// tag:Array<any>
-// }
-// const defaultData: Array<any> = reactive([
-//   {
-//     imgId: 29353542,
-//     title: '小鸡球球触感玩具书:全5册（升级点读版，纸板书、触摸发声书、翻翻书、洞洞书）',
-//     price: '146.30',
-//     oldPrice: '325.00',
-//     tag: [
-//       '自营', '券', '预售'
-//     ]
-//   },
-//   {
-//     imgId: 25214219,
-//     title: '原声触摸发声书：听，什么声音（套装全6册）',
-//     price: '132.00',
-//     oldPrice: '330.00',
-//     tag: [
-//       '自营', '券',
-//     ]
-//   },
-//   {
-//     imgId: 25344877,
-//     title: '我的第一套自然认知书（第一辑，全20册）',
-//     price: '120.00',
-//     oldPrice: '240.00',
-//     tag: [
-//       '券',
-//     ]
-//   },
-//   {
-//     imgId: 29353542,
-//     title: '小鸡球球触感玩具书:全5册（升级点读版，纸板书、触摸发声书、翻翻书、洞洞书）',
-//     price: '146.30',
-//     oldPrice: '325.00',
-//     tag: [
-//       '自营', '券', '预售'
-//     ]
-//   },
-//   {
-//     imgId: 25214219,
-//     title: '原声触摸发声书：听，什么声音（套装全6册）',
-//     price: '132.00',
-//     oldPrice: '330.00',
-//     tag: [
-//       '自营', '券',
-//     ]
-//   },
-//   {
-//     imgId: 25344877,
-//     title: '我的第一套自然认知书（第一辑，全20册）',
-//     price: '120.00',
-//     oldPrice: '240.00',
-//     tag: [
-//       '券',
-//     ]
-//   },
-// ])
 const props = defineProps({
   text: {
     type: String,
@@ -161,25 +96,39 @@ const props = defineProps({
   iscenter: {
     type: String,
     default: 'center'
+  },
+  isSlider: {
+    type: String,
+    default: 'wrap'
+  },
+  productIsFillet: {
+    type: String,
+    default: '1rem'
   }
 })
 const defaultData = computed(() => {
   const toArr = props.productId.split(',')
   const res: any = []
   toArr.map((item) => {
-    res.push(
-      {
-        imgId: item,
-        title: '小鸡球球触感玩具书:全5册（升级点读版，纸板书、触摸发声书、翻翻书、洞洞书）',
-        price: '146.30',
-        oldPrice: '325.00',
-        tag: [
-          '自营', '券', '预售'
-        ]
-      }
-    )
+    if (item && item.toString().length == 8) {
+      res.push(
+        {
+          imgId: item,
+          title: '小鸡球球触感玩具书:全5册（升级点读版，纸板书、触摸发声书、翻翻书、洞洞书）',
+          price: Math.floor(Math.random() * 100 + 100) + '.00',
+          oldPrice: Math.floor(Math.random() * 400 + 100) + '.00',
+          tag: [
+            '自营', '券', '预售'
+          ]
+        }
+      )
+    }
   })
+  // console.log(res);
   return res
+})
+const flexWidth = computed(() => {
+  return props.isSlider == 'wrap' ? '33.33333333%' : '30.33333333%'
 })
 // 通过商品id获取图片
 function getProductImg (_pid: any) {
@@ -196,15 +145,43 @@ $textColor: v-bind(textColor);
 $isFillet: v-bind(isFillet);
 $titleUrl: v-bind(titleImg);
 $iscenter: v-bind(iscenter);
+$isSlider: v-bind(isSlider);
+$flexWidth: v-bind(flexWidth);
+$productIsFillet: v-bind(productIsFillet);
+
+.van-row {
+  display: flex;
+  overflow: hidden;
+  flex-wrap: $isSlider;
+  overflow-x: auto;
+}
+
+.van-col--8 {
+  flex: 0 0 $flexWidth;
+  max-width: 33.33333333%;
+  // padding: 0 0.3rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.van-col--8,
+.van-col--12,
+.van-col--24 {
+  transition: all 0.5s ease-in-out;
+}
+
+.layout {
+  overflow: hidden;
+}
 
 .product-title {
   position: relative;
   padding: 0.4rem 2rem;
   background: $bgColor;
   border-radius: $isFillet;
-  margin-bottom: 0.5rem;
+  margin: 0 0.25rem 0.5rem;
   text-align: $iscenter;
   color: $textColor;
+  transition: all 0.5s ease-in-out;
   // background: url($titleUrl) no-repeat center center/100% auto;
 
   span {
@@ -224,11 +201,13 @@ $iscenter: v-bind(iscenter);
 
 .product {
   display: block;
-  border-radius: 1rem;
+  border-radius: $productIsFillet;
   overflow: hidden;
   background: #fff;
   padding: 0.3rem;
-  margin-bottom: 0.5rem;
+  margin: 0 0.3rem 0.5rem;
+  transition: all 0.5s ease-in-out;
+
 
   .product-header {
     h2 {

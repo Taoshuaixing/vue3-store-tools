@@ -1,7 +1,7 @@
 /*
  * @Author: 陶帅星
  * @Date: 2022-10-10 16:23:06
- * @LastEditTime: 2023-06-08 16:26:44
+ * @LastEditTime: 2023-06-12 15:16:51
  * @LastEditors: 陶帅星
  * @Description: 组件属性编辑器
  * @FilePath: \vue3-store-tools\src\visual-editor\components\right-attribute-panel\components\attr-editor\index.tsx
@@ -56,7 +56,7 @@ export const AttrEditor = defineComponent({
         console.log('props.block:', currentBlock.value);
         content.push(
           <>
-            <ElFormItem label="组件ID" labelWidth={'76px'}>
+            <ElFormItem label="组件ID">
               {currentBlock.value._vid}
               <ElPopover
                 width={200}
@@ -81,7 +81,7 @@ export const AttrEditor = defineComponent({
             {
               currentBlock.value.showStyleConfig &&
                 content.push(
-                  <ElFormItem label={'组件对齐方式'} labelWidth={'90px'}>
+                  <ElFormItem label={'组件对齐方式'}>
                     <ElRadioGroup v-model={currentBlock.value.styles.justifyContent}>
                       <ElRadioButton label="flex-start">{'左对齐'}</ElRadioButton>
                       <ElRadioButton label="center">{'居中'}</ElRadioButton>
