@@ -4,7 +4,7 @@
  * @Author: 陶帅星
  * @Date: 2023-06-09 15:37:36
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-06-12 14:57:36
+ * @LastEditTime: 2023-06-13 17:24:49
  */
 import DefaultComponents from './default.vue';
 import type { VisualEditorComponent } from '@/visual-editor/visual-editor.utils';
@@ -46,33 +46,33 @@ export default {
     }),
     blockStyle: createEditorRadioProp({
       label: '坑位样式',
-      defaultValue: 8,
+      defaultValue: '8',
       options: [
         {
           label: '一行三列',
-          value: 8,
+          value: '8',
         },
         {
           label: '一行两列',
-          value: 12,
+          value: '12',
         },
         {
           label: '一行一列',
-          value: 24,
+          value: '24',
         },
       ],
     }),
     isTitle: createEditorRadioProp({
       label: '是否显示标题',
-      defaultValue: true,
+      defaultValue: 'true',
       options: [
         {
           label: '显示',
-          value: true,
+          value: 'true',
         },
         {
           label: '不显示',
-          value: false,
+          value: 'false',
         },
       ],
     }),
@@ -127,7 +127,7 @@ export default {
       label: '商品ID',
       defaultValue: '29353542,25214219,25344877',
       types: 'textarea',
-      tips: '商品id之间逗号隔开，每个楼层30个品展示效果最佳',
+      tips: '商品id之间英文逗号隔开，每个楼层30个品展示效果最佳',
     }),
     isSlider: createEditorRadioProp({
       label: '商品是否为滑动显示',

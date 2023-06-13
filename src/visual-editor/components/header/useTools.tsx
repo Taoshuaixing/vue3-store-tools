@@ -33,6 +33,7 @@ export const useTools = () => {
   });
   const importJsonChange = (value) => {
     state.importJsonValue = value;
+    console.log(value);
   };
   console.log(jsonData);
 
@@ -67,6 +68,7 @@ export const useTools = () => {
                 oldPath: currentPage.value.path,
                 page: JSON.parse(state.importJsonValue),
               });
+              console.log(currentPage, state, JSON.parse(JSON.stringify(jsonData)));
             } else {
               // 覆盖整个项目
               overrideProject(JSON.parse(state.importJsonValue));

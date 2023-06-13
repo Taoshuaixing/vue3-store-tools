@@ -4,17 +4,18 @@
  * @Author: 陶帅星
  * @Date: 2023-06-09 15:51:21
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-06-12 19:00:14
+ * @LastEditTime: 2023-06-13 14:03:32
 -->
 <template>
   <div class="layout">
     <div
       class="product-title"
-      v-if="isTitle"
+      :style="{ background: `${props.bgColor} url(${props.titleImg}) no-repeat center center/100% auto` }"
+      v-if="isTitle == 'true' ? true : false"
     ><span>{{ text }}</span><a :href="titleLink">更多></a></div>
     <Row justify="start">
       <Col
-        :span="blockStyle"
+        :span="Number(blockStyle)"
         v-for="(item, key) of defaultData"
         :key="key"
       >
@@ -51,6 +52,7 @@
 <script setup lang='ts'>
 import { Col, Row, Image } from 'vant'
 import { ref, reactive, computed } from 'vue'
+import { getProductImg } from '@/hooks/default'
 
 defineOptions({
   name: "defaultComponents"
@@ -63,7 +65,7 @@ const props = defineProps({
   },
   isTitle: {
     type: String,
-    default: true
+    default: 'true'
   },
   bgColor: {
     type: String,
@@ -78,8 +80,8 @@ const props = defineProps({
     default: '1rem'
   },
   blockStyle: {
-    type: Number,
-    default: 8
+    type: String,
+    default: '8'
   },
   titleImg: {
     type: String,
@@ -128,25 +130,27 @@ const defaultData = computed(() => {
   return res
 })
 const flexWidth = computed(() => {
-  return props.isSlider == 'wrap' ? '33.33333333%' : '30.33333333%'
+  return props.isSlider == 'wrap' && props.blockStyle == '8' ? '33.33333333%' : '30.33333333%'
 })
-// 通过商品id获取图片
-function getProductImg (_pid: any) {
-  let varImgURL: any =
-    'http://img3m{0}.ddimg.cn/{1}/{2}/{3}-{4}_{5}_{6}.jpg';
-  return varImgURL = varImgURL.replace('{0}', _pid % 10).replace('{1}', _pid % 99).replace('{2}', _pid % 37).replace('{3}', _pid).replace('{4}', '1').replace('{5}', 'h').replace('{6}', _pid % 10);
-}
+const flexWidthNext = computed(() => {
+  return props.isSlider == 'wrap' && props.blockStyle == '12' ? '50%' : '40%'
+})
+const flexWidthLast = computed(() => {
+  return props.isSlider == 'wrap' && props.blockStyle == '24' ? '100%' : '80%'
+})
+
 
 </script>
 
 <style lang='scss' scoped>
-$bgColor: v-bind(bgColor);
 $textColor: v-bind(textColor);
 $isFillet: v-bind(isFillet);
 $titleUrl: v-bind(titleImg);
 $iscenter: v-bind(iscenter);
 $isSlider: v-bind(isSlider);
 $flexWidth: v-bind(flexWidth);
+$flexWidthNext: v-bind(flexWidthNext);
+$flexWidthLast: v-bind(flexWidthLast);
 $productIsFillet: v-bind(productIsFillet);
 
 .van-row {
@@ -156,33 +160,39 @@ $productIsFillet: v-bind(productIsFillet);
   overflow-x: auto;
 }
 
-.van-col--8 {
-  flex: 0 0 $flexWidth;
-  max-width: 33.33333333%;
-  // padding: 0 0.3rem;
-  transition: all 0.5s ease-in-out;
-}
-
 .van-col--8,
 .van-col--12,
 .van-col--24 {
   transition: all 0.5s ease-in-out;
 }
 
+.van-col--8 {
+  flex: 0 0 $flexWidth;
+}
+
+.van-col--12 {
+  flex: 0 0 $flexWidthNext;
+}
+
+.van-col--24 {
+  flex: 0 0 $flexWidthLast;
+}
+
 .layout {
   overflow: hidden;
+  width: 100%;
 }
 
 .product-title {
   position: relative;
   padding: 0.4rem 2rem;
-  background: $bgColor;
+  // background: $bgColor;
   border-radius: $isFillet;
   margin: 0 0.25rem 0.5rem;
   text-align: $iscenter;
   color: $textColor;
   transition: all 0.5s ease-in-out;
-  // background: url($titleUrl) no-repeat center center/100% auto;
+  // background-image: url(${$titleUrl}) no-repeat center center/100% auto;
 
   span {
     font-size: 1.2rem;

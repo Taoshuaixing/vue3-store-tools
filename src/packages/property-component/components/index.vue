@@ -25,7 +25,6 @@ import { useClipboard } from '@vueuse/core'
 // import { ElMessage } from 'element-plus'
 import { computed } from 'vue'
 import { Notify } from 'vant';
-import { SuccessFilled } from '@element-plus/icons-vue/dist/types';
 
 defineOptions({
   name: "ziChanComponents"

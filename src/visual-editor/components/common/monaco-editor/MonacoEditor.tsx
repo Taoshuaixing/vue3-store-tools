@@ -80,6 +80,7 @@ export default defineComponent({
         if (!preventTriggerChangeEvent) {
           // getValue: 获取编辑器中的所有文本
           props.onChange?.(editorRef.value!.getValue(), event);
+          console.log(editorRef.value!.getValue());
         }
       });
       formatCode();
