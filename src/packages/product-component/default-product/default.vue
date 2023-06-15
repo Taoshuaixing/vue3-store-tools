@@ -4,7 +4,7 @@
  * @Author: 陶帅星
  * @Date: 2023-06-09 15:51:21
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-06-13 14:03:32
+ * @LastEditTime: 2023-06-15 11:36:37
 -->
 <template>
   <div class="layout">
@@ -26,7 +26,7 @@
         <div class="product-header">
           <Image
             lazy-load
-            :src="getProductImg(item.imgId)"
+            :src="item.imgId.length == 8 ? getProductImg(item.imgId) : '//img61.ddimg.cn/upload_img/00858/cms_shop/dd-product-default-1598151693.png'"
             :alt="item.title"
             fit="cover"
             :radius="productIsFillet"
@@ -51,7 +51,7 @@
 
 <script setup lang='ts'>
 import { Col, Row, Image } from 'vant'
-import { ref, reactive, computed } from 'vue'
+import { computed } from 'vue'
 import { getProductImg } from '@/hooks/default'
 
 defineOptions({

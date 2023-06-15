@@ -19,6 +19,8 @@ export enum VisualEditorPropsType {
   datePicker = 'DatePicker',
   /** 单选框 */
   radio = 'Radio',
+  /** 标签栏 */
+  tabs = 'Tabs',
 }
 
 export type VisualEditorProps = {
@@ -287,5 +289,25 @@ export function createEditorRadioProp({
     tips,
     defaultValue,
     options,
+  };
+}
+
+/*---------------------------------------tabs-------------------------------------------*/
+interface EditorRadioProp {
+  label: string;
+  defaultValue?: any;
+  tips?: string;
+}
+
+export function createEditorTabsProp({
+  label,
+  defaultValue,
+  tips,
+}: EditorRadioProp): VisualEditorProps {
+  return {
+    type: VisualEditorPropsType.tabs,
+    label,
+    tips,
+    defaultValue,
   };
 }

@@ -1,7 +1,7 @@
 /*
  * @Author: 陶帅星
  * @Date: 2022-11-11 17:53:54
- * @LastEditTime: 2023-06-13 11:29:46
+ * @LastEditTime: 2023-06-14 17:59:14
  * @LastEditors: 陶帅星
  * @Description: 组件属性配置
  * @FilePath: /vite-vue3-lowcode/src/visual-editor/components/right-attribute-panel/components/attr-editor/components/prop-config/index.tsx
@@ -23,6 +23,8 @@ import {
   ElDatePicker,
   ElRadioGroup,
   ElRadio,
+  ElTabs,
+  ElTabPane,
 } from 'element-plus';
 import { cloneDeep } from 'lodash-es';
 import { Warning } from '@element-plus/icons-vue';
@@ -31,7 +33,10 @@ import { useDotProp } from '@/visual-editor/hooks/useDotProp';
 import { VisualEditorProps, VisualEditorPropsType } from '@/visual-editor/visual-editor.props';
 import { useVisualData } from '@/visual-editor/hooks/useVisualData';
 import { VisualEditorBlockData, VisualEditorComponent } from '@/visual-editor/visual-editor.utils';
-
+interface OptionItem extends LabelValue {
+  component?: VisualEditorComponent;
+  block?: VisualEditorBlockData;
+}
 export const PropConfig = defineComponent({
   props: {
     component: {
@@ -135,6 +140,15 @@ export const PropConfig = defineComponent({
               </ElRadio>
             ))}
           </ElRadioGroup>
+        ),
+        [VisualEditorPropsType.tabs]: () => (
+          <ElTabs type="border-card">
+            {propObj[prop].map((item: OptionItem) => (
+              <ElTabPane label={item.label} key={item.label}>
+                <PropConfig component={item.component} block={item.block} />
+              </ElTabPane>
+            ))}
+          </ElTabs>
         ),
       }[propConfig.type]();
     };

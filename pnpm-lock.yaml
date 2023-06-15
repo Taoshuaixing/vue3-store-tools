@@ -54,6 +54,7 @@ specifiers:
   stylelint-config-standard: ^26.0.0
   stylelint-order: ^5.0.0
   stylelint-scss: ^4.7.0
+  swiper: ^9.4.1
   typescript: ^4.9.5
   typescript-plugin-css-modules: ^5.0.1
   unplugin-auto-import: ^0.9.5
@@ -64,6 +65,7 @@ specifiers:
   vite-plugin-checker: ^0.4.9
   vite-plugin-windicss: ^1.9.0
   vue: 3.2.37
+  vue-awesome-swiper: ^5.0.1
   vue-eslint-parser: ^9.3.1
   vue-router: ^4.2.2
   vue-tsc: ^0.38.9
@@ -89,8 +91,10 @@ dependencies:
   pinia: registry.npmmirror.com/pinia/2.1.3_unh4zbcbdtxwiyxfcyc3jhuh5m
   qrcode: registry.npmmirror.com/qrcode/1.5.3
   qs: registry.npmmirror.com/qs/6.11.2
+  swiper: registry.npmmirror.com/swiper/9.4.1
   vant: registry.npmmirror.com/vant/3.5.2_vue@3.2.37
   vue: registry.npmmirror.com/vue/3.2.37
+  vue-awesome-swiper: registry.npmmirror.com/vue-awesome-swiper/5.0.1_swiper@9.4.1+vue@3.2.37
   vue-router: registry.npmmirror.com/vue-router/4.2.2_vue@3.2.37
   vuedraggable: registry.npmmirror.com/vuedraggable/4.1.0_vue@3.2.37
 
@@ -6970,6 +6974,12 @@ packages:
       readable-stream: registry.npmmirror.com/readable-stream/3.6.2
     dev: true
 
+  registry.npmmirror.com/ssr-window/4.0.2:
+    resolution: {integrity: sha512-ISv/Ch+ig7SOtw7G2+qkwfVASzazUnvlDTwypdLoPoySv+6MqlOV10VwPSE6EWkGjhW50lUmghPmpYZXMu/+AQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ssr-window/-/ssr-window-4.0.2.tgz}
+    name: ssr-window
+    version: 4.0.2
+    dev: false
+
   registry.npmmirror.com/string-argv/0.3.2:
     resolution: {integrity: sha512-aqD2Q0144Z+/RqG52NeHEkZauTAUWJO8c6yTftGJKO3Tja5tUgIfmIl6kExvhtxSDP7fXB6DvzkfMpCd/F3G+Q==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/string-argv/-/string-argv-0.3.2.tgz}
     name: string-argv
@@ -7302,6 +7312,15 @@ packages:
     name: svg-tags
     version: 1.0.0
     dev: true
+
+  registry.npmmirror.com/swiper/9.4.1:
+    resolution: {integrity: sha512-1nT2T8EzUpZ0FagEqaN/YAhRj33F2x/lN6cyB0/xoYJDMf8KwTFT3hMOeoB8Tg4o3+P/CKqskP+WX0Df046fqA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/swiper/-/swiper-9.4.1.tgz}
+    name: swiper
+    version: 9.4.1
+    engines: {node: '>= 4.7.0'}
+    dependencies:
+      ssr-window: registry.npmmirror.com/ssr-window/4.0.2
+    dev: false
 
   registry.npmmirror.com/systemjs/6.14.1:
     resolution: {integrity: sha512-8ftwWd+XnQtZ/aGbatrN4QFNGrKJzmbtixW+ODpci7pyoTajg4sonPP8aFLESAcuVxaC1FyDESt+SpfFCH9rZQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/systemjs/-/systemjs-6.14.1.tgz}
@@ -7948,6 +7967,19 @@ packages:
     name: vscode-uri
     version: 3.0.7
     dev: true
+
+  registry.npmmirror.com/vue-awesome-swiper/5.0.1_swiper@9.4.1+vue@3.2.37:
+    resolution: {integrity: sha512-mWjFJzUqA4lG+DmsmibvMpoiBnl+IH2SSeiiQ3i5M0t1y9FknTxnGT0DsMb2YdJLgjYMEK3sYOWzqgLnZMH8Lg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-awesome-swiper/-/vue-awesome-swiper-5.0.1.tgz}
+    id: registry.npmmirror.com/vue-awesome-swiper/5.0.1
+    name: vue-awesome-swiper
+    version: 5.0.1
+    peerDependencies:
+      swiper: ^7.0.0  || ^8.0.0
+      vue: 3.x
+    dependencies:
+      swiper: registry.npmmirror.com/swiper/9.4.1
+      vue: registry.npmmirror.com/vue/3.2.37
+    dev: false
 
   registry.npmmirror.com/vue-demi/0.14.5_vue@3.2.37:
     resolution: {integrity: sha512-o9NUVpl/YlsGJ7t+xuqJKx8EBGf1quRhCiT6D/J0pfwmk9zUwYkC7yrF4SZCe6fETvSM3UNL2edcbYrSyc4QHA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-demi/-/vue-demi-0.14.5.tgz}
