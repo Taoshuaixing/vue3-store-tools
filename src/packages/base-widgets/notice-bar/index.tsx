@@ -1,7 +1,7 @@
 /*
  * @Author: 陶帅星
  * @Date: 2022-10-14 12:24:12
- * @LastEditTime: 2021-07-13 17:14:20
+ * @LastEditTime: 2023-06-15 17:23:36
  * @LastEditors: 陶帅星
  * @Description:
  * @FilePath: \vue3-store-tools\src\packages\base-widgets\notice-bar\index.tsx
@@ -19,7 +19,7 @@ export default {
     <NoticeBar
       style={{ width: '180px' }}
       leftIcon={'volume-o'}
-      text={'在代码阅读过程中人们说脏话的频率是衡量代码质量的唯一标准。'}
+      text={'礼券说明:礼券领取渠道-限当当购物APP和小程序。'}
     />
   ),
   render: ({ block, props, styles }) => {

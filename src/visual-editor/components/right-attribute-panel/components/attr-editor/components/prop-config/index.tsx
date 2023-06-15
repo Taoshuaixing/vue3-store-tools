@@ -128,8 +128,6 @@ export const PropConfig = defineComponent({
             start-placeholder="Start date"
             end-placeholder="End date"
             placeholder="Select date and time"
-            format="YYYY/MM/DD hh:mm:ss"
-            value-format="YYYY-MM-DD hh:mm:ss a"
           />
         ),
         [VisualEditorPropsType.radio]: () => (

@@ -1,7 +1,7 @@
 <!--
  * @Author: 陶帅星
  * @Date: 2022-10-01 09:45:21
- * @LastEditTime: 2023-06-09 13:47:28
+ * @LastEditTime: 2023-06-15 17:02:44
  * @LastEditors: 陶帅星
  * @Description: 效果预览页面
  * @FilePath: \vue3-store-tools\preview\views\preview.vue
@@ -84,6 +84,7 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 .preview {
+
   .preview-header {
     padding: 20px 0 0;
 

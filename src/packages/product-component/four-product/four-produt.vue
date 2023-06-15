@@ -4,7 +4,7 @@
  * @Author: 陶帅星
  * @Date: 2023-06-13 16:24:13
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-06-15 13:53:25
+ * @LastEditTime: 2023-06-15 14:48:46
 -->
 <template>
   <div class="auto-play">

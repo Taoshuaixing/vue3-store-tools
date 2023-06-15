@@ -54,6 +54,8 @@
 </template>
 
 <script lang="tsx" setup>
+import { useModal } from '@/visual-editor/hooks/useModal';
+import { useVisualData } from '@/visual-editor/hooks/useVisualData';
 import { ref, watchEffect } from 'vue';
 import { cloneDeep } from 'lodash-es';
 import DraggableTransitionGroup from './draggable-transition-group.vue';
@@ -63,8 +65,6 @@ import type { VisualEditorBlockData } from '@/visual-editor/visual-editor.utils'
 import { $$dropdown, DropdownOption } from '@/visual-editor/utils/dropdown-service';
 import MonacoEditor from '@/visual-editor/components/common/monaco-editor/MonacoEditor';
 import { useGlobalProperties } from '@/hooks/useGlobalProperties';
-import { useVisualData } from '@/visual-editor/hooks/useVisualData';
-import { useModal } from '@/visual-editor/hooks/useModal';
 import { generateNanoid } from '@/visual-editor/utils';
 
 defineOptions({

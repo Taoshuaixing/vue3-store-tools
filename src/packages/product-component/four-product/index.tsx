@@ -15,24 +15,6 @@ import {
 } from '@/visual-editor/visual-editor.props';
 import { useGlobalProperties } from '@/hooks/useGlobalProperties';
 import { createNewBlock } from '@/visual-editor/visual-editor.utils';
-// const defaultCardItems = [
-//   {
-//     productId: '29353542',
-//     title: '坑位1',
-//   },
-//   {
-//     productId: '25214219',
-//     title: '坑位2',
-//   },
-//   {
-//     productId: '25344877',
-//     title: '坑位3',
-//   },
-//   {
-//     productId: '29353542',
-//     title: '坑位4',
-//   },
-// ];
 const defaultCardItems: any = [
   {
     label: '坑位1',
@@ -94,8 +76,6 @@ export default {
   preview: () => <FourProduct tabs={defaultCardItems}></FourProduct>,
   render: ({ props, block, styles }) => {
     const { registerRef } = useGlobalProperties();
-    console.log(JSON.parse(JSON.stringify(props.tabs)));
-
     return () => (
       <div style={styles}>
         <FourProduct ref={(el) => registerRef(el, block._vid)} {...props}></FourProduct>
