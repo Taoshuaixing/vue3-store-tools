@@ -20,22 +20,22 @@ import {
   Download,
   Upload,
 } from '@element-plus/icons-vue';
-import { useVisualData, localKey } from '@/visual-editor/hooks/useVisualData';
 import { useModal } from '@/visual-editor/hooks/useModal';
 import MonacoEditor from '@/visual-editor/components/common/monaco-editor/MonacoEditor';
 import 'element-plus/es/components/message/style/css';
+import { useVisualData, localKey } from '@/visual-editor/hooks/useVisualData';
 
 export const useTools = () => {
-  const { jsonData, updatePage, currentPage, overrideProject } = useVisualData();
   const state = reactive({
     coverRadio: 'current',
     importJsonValue: '',
   });
   const importJsonChange = (value) => {
     state.importJsonValue = value;
-    console.log(value);
+    // console.log(state.importJsonValue);
   };
-  console.log(jsonData);
+
+  const { updatePage, currentPage, overrideProject, jsonData } = useVisualData();
 
   return [
     {
@@ -69,9 +69,11 @@ export const useTools = () => {
                 page: JSON.parse(state.importJsonValue),
               });
               console.log(currentPage, state, JSON.parse(JSON.stringify(jsonData)));
+              console.log(JSON.parse(state.importJsonValue));
             } else {
               // 覆盖整个项目
               overrideProject(JSON.parse(state.importJsonValue));
+              console.log(JSON.parse(state.importJsonValue));
             }
             ElMessage({
               showClose: true,

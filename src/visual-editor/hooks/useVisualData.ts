@@ -101,14 +101,17 @@ export const initVisualData = () => {
 
   // 更新page
   const updatePage = ({ newPath = '', oldPath, page }) => {
-    console.log(state.jsonData.pages[oldPath], page);
+    console.log(page);
     if (newPath && newPath != oldPath) {
       page.path = newPath;
       // 如果传了新的路径，则认为是修改页面路由
       state.jsonData.pages[getPrefixPath(newPath)] = { ...state.jsonData.pages[oldPath], ...page };
       deletePage(oldPath, getPrefixPath(newPath));
     } else {
+      // console.log(state.jsonData.pages[oldPath], page);
       Object.assign(state.jsonData.pages[oldPath], page);
+      Object.assign(state.currentPage, page.pages[oldPath]);
+      // console.log(state, state.currentPage);
     }
   };
   // 添加page
