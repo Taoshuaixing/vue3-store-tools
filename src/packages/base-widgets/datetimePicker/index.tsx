@@ -24,7 +24,7 @@ const dateType = {
 export default {
   key: 'datetimePicker',
   moduleName: 'baseWidgets',
-  label: '表单项类型 - 时间选择器',
+  label: '时间选择器',
   preview: () => <Field name="datetimePicker" label="时间选择器" placeholder={'点击选择'}></Field>,
   render: ({ styles, block, props }) => {
     const { registerRef } = useGlobalProperties();

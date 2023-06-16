@@ -4,7 +4,7 @@
  * @Author: 陶帅星
  * @Date: 2023-06-09 15:51:21
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-06-15 11:36:37
+ * @LastEditTime: 2023-06-16 14:51:04
 -->
 <template>
   <div class="layout">
@@ -153,6 +153,11 @@ $flexWidthNext: v-bind(flexWidthNext);
 $flexWidthLast: v-bind(flexWidthLast);
 $productIsFillet: v-bind(productIsFillet);
 
+.van-image {
+  width: 100%;
+  height: 100%;
+}
+
 .van-row {
   display: flex;
   overflow: hidden;
@@ -186,13 +191,11 @@ $productIsFillet: v-bind(productIsFillet);
 .product-title {
   position: relative;
   padding: 0.4rem 2rem;
-  // background: $bgColor;
   border-radius: $isFillet;
   margin: 0 0.25rem 0.5rem;
   text-align: $iscenter;
   color: $textColor;
   transition: all 0.5s ease-in-out;
-  // background-image: url(${$titleUrl}) no-repeat center center/100% auto;
 
   span {
     font-size: 1.2rem;
@@ -236,7 +239,7 @@ $productIsFillet: v-bind(productIsFillet);
       font-size: 0.7rem;
       color: #fc5757;
       border: 1px solid #fc5757;
-      padding: 0.1rem 0.3rem;
+      padding: 0.1rem;
       border-radius: 0.2rem;
       margin-right: 0.2rem;
     }

@@ -70,7 +70,6 @@ import { generateNanoid } from '@/visual-editor/utils';
 defineOptions({
   name: 'SimulatorEditor',
 });
-
 const { currentPage, setCurrentBlock } = useVisualData();
 
 const { globalProperties } = useGlobalProperties();

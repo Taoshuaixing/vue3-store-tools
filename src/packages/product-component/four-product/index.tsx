@@ -4,7 +4,7 @@
  * @Author: 陶帅星
  * @Date: 2023-06-09 15:37:36
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-06-15 14:41:38
+ * @LastEditTime: 2023-06-15 20:36:34
  */
 import { getCardItem } from './card-item';
 import FourProduct from './four-produt.vue';
@@ -30,7 +30,7 @@ const defaultCardItems: any = [
     },
   },
   {
-    label: '坑位1',
+    label: '坑位2',
     value: '25214219',
     block: {
       props: {
@@ -43,7 +43,7 @@ const defaultCardItems: any = [
     },
   },
   {
-    label: '坑位1',
+    label: '坑位3',
     value: '25344877',
     block: {
       props: {
@@ -56,7 +56,7 @@ const defaultCardItems: any = [
     },
   },
   {
-    label: '坑位1',
+    label: '坑位4',
     value: '29353542',
     block: {
       props: {

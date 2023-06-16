@@ -64,6 +64,7 @@ export default {
         '.simulator-editor-content > .dragArea ',
       )!;
       const tabbarEl = draggableEl?.querySelector('.van-tabbar') as HTMLDivElement;
+
       if (draggableEl && tabbarEl && dragArea) {
         tabbarEl.style.position = 'unset';
         draggableEl.style.position = 'fixed';

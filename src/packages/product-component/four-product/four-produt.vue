@@ -4,10 +4,11 @@
  * @Author: 陶帅星
  * @Date: 2023-06-13 16:24:13
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-06-15 14:48:46
+ * @LastEditTime: 2023-06-16 14:47:00
 -->
 <template>
   <div class="auto-play">
+
     <template
       v-for="(item, key) of tabs"
       :key="key"
@@ -54,6 +55,11 @@ const props = defineProps({
 </script>
 
 <style lang='scss' scoped>
+.van-image {
+  width: 100%;
+  height: 100%;
+}
+
 .auto-play {
   display: flex;
   justify-content: center;
@@ -64,6 +70,8 @@ const props = defineProps({
     border-radius: 1rem;
     background: #d0d0d0;
     overflow: hidden;
+    flex: 0 0 25%;
+
 
     &:nth-child(even) {
       transform: scale(0.86);

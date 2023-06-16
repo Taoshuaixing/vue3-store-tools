@@ -4,7 +4,7 @@
  * @Author: 陶帅星
  * @Date: 2023-06-15 14:57:13
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-06-15 17:08:26
+ * @LastEditTime: 2023-06-16 11:21:39
 -->
 <template>
   <div class="list">
@@ -131,8 +131,11 @@ $isListRadio: v-bind(isListRadio);
       padding: 0.3rem;
       margin-left: 0.3rem;
       color: $textColor;
-      transition: all 0.5s ease-in-out;
+      transition: all 0.3s ease-in-out;
 
+      &:hover {
+        color: #fc5757;
+      }
     }
   }
 }
