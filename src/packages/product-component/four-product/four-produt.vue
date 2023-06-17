@@ -4,7 +4,7 @@
  * @Author: 陶帅星
  * @Date: 2023-06-13 16:24:13
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-06-16 14:47:00
+ * @LastEditTime: 2023-06-17 23:10:55
 -->
 <template>
   <div class="auto-play">
@@ -86,7 +86,7 @@ const props = defineProps({
       position: relative;
 
       span {
-        background: rgb(160 160 160 / 50%);
+        background: #eee;
         border-radius: 1rem;
         padding: 0.1rem 0.8rem;
         position: absolute;

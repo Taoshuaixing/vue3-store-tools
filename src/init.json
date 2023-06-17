@@ -3,10 +3,261 @@
     "/": {
       "title": "首页",
       "path": "/",
-      "config": { "bgColor": "", "bgImage": "", "keepAlive": false },
+      "config": { "bgColor": "#5D44FE", "bgImage": "", "keepAlive": false },
       "blocks": [
         {
-          "_vid": "vid_2898e08f8c",
+          "_vid": "vid_5c78397178",
+          "moduleName": "baseWidgets",
+          "componentKey": "nav-bar",
+          "label": "导航栏",
+          "adjustPosition": true,
+          "focus": false,
+          "styles": {
+            "display": "flex",
+            "justifyContent": "flex-start",
+            "paddingTop": "0",
+            "paddingRight": "0",
+            "paddingLeft": "0",
+            "paddingBottom": "0",
+            "tempPadding": "0"
+          },
+          "hasResize": false,
+          "props": {
+            "title": "图书五折包邮",
+            "fixed": true,
+            "leftText": "返回",
+            "rightText": "",
+            "leftArrow": true,
+            "border": false
+          },
+          "draggable": false,
+          "showStyleConfig": false,
+          "animations": [],
+          "actions": [],
+          "events": [
+            { "label": "点击左侧按钮时触发", "value": "click-left" },
+            { "label": "点击右侧按钮时触发", "value": "click-right" }
+          ],
+          "model": {},
+          "focusWithChild": false
+        },
+        {
+          "_vid": "vid_111679acad",
+          "moduleName": "pictureComponents",
+          "componentKey": "image",
+          "label": "图片",
+          "adjustPosition": true,
+          "focus": false,
+          "styles": {
+            "display": "flex",
+            "justifyContent": "flex-start",
+            "paddingTop": "0",
+            "paddingRight": "0",
+            "paddingLeft": "0",
+            "paddingBottom": "0",
+            "tempPadding": "0"
+          },
+          "hasResize": false,
+          "props": {
+            "src": "http://img63.ddimg.cn/upload_img/00754/ljp/yt_ljp0522_01-1684808120.jpg",
+            "width": "100%",
+            "height": "100%",
+            "fit": "fill",
+            "lazyLoad": true,
+            "isPadding": true
+          },
+          "draggable": true,
+          "showStyleConfig": true,
+          "animations": [],
+          "actions": [],
+          "events": [
+            { "label": "点击图片时触发", "value": "click" },
+            { "label": "图片加载完毕时触发", "value": "load" },
+            { "label": "图片加载失败时触发", "value": "error" }
+          ],
+          "model": {},
+          "focusWithChild": false
+        },
+        {
+          "_vid": "vid_986beda2f5",
+          "moduleName": "pictureComponents",
+          "componentKey": "image",
+          "label": "图片",
+          "adjustPosition": true,
+          "focus": false,
+          "styles": {
+            "display": "flex",
+            "justifyContent": "flex-start",
+            "paddingTop": "0",
+            "paddingRight": "0",
+            "paddingLeft": "0",
+            "paddingBottom": "0",
+            "tempPadding": "0"
+          },
+          "hasResize": false,
+          "props": {
+            "src": "http://img63.ddimg.cn/upload_img/00754/ljp/yt_ljp0522_02-1684808120.jpg",
+            "width": "100%",
+            "height": "100%",
+            "fit": "fill",
+            "lazyLoad": true,
+            "isPadding": true
+          },
+          "draggable": true,
+          "showStyleConfig": true,
+          "animations": [],
+          "actions": [],
+          "events": [
+            { "label": "点击图片时触发", "value": "click" },
+            { "label": "图片加载完毕时触发", "value": "load" },
+            { "label": "图片加载失败时触发", "value": "error" }
+          ],
+          "model": {},
+          "focusWithChild": false
+        },
+        {
+          "_vid": "vid_4c5e4ed05a",
+          "moduleName": "pictureComponents",
+          "componentKey": "image",
+          "label": "图片",
+          "adjustPosition": true,
+          "focus": false,
+          "styles": {
+            "display": "flex",
+            "justifyContent": "flex-start",
+            "paddingTop": "0",
+            "paddingRight": "0",
+            "paddingLeft": "0",
+            "paddingBottom": "0",
+            "tempPadding": "0"
+          },
+          "hasResize": false,
+          "props": {
+            "src": "http://img63.ddimg.cn/upload_img/00754/ljp/yt_ljp0522_03-1684808120.jpg",
+            "width": "100%",
+            "height": "100%",
+            "fit": "fill",
+            "lazyLoad": true,
+            "isPadding": true
+          },
+          "draggable": true,
+          "showStyleConfig": true,
+          "animations": [],
+          "actions": [],
+          "events": [
+            { "label": "点击图片时触发", "value": "click" },
+            { "label": "图片加载完毕时触发", "value": "load" },
+            { "label": "图片加载失败时触发", "value": "error" }
+          ],
+          "model": {},
+          "focusWithChild": false
+        },
+        {
+          "_vid": "vid_d52aa73403",
+          "moduleName": "pictureComponents",
+          "componentKey": "image",
+          "label": "图片",
+          "adjustPosition": true,
+          "focus": false,
+          "styles": {
+            "display": "flex",
+            "justifyContent": "flex-start",
+            "paddingTop": "0",
+            "paddingRight": "0",
+            "paddingLeft": "0",
+            "paddingBottom": "0",
+            "tempPadding": "0"
+          },
+          "hasResize": false,
+          "props": {
+            "src": "http://img63.ddimg.cn/upload_img/00754/ljp/yt_ljp0522_04-1684808120.jpg",
+            "width": "100%",
+            "height": "100%",
+            "fit": "fill",
+            "lazyLoad": true,
+            "isPadding": true
+          },
+          "draggable": true,
+          "showStyleConfig": true,
+          "animations": [],
+          "actions": [],
+          "events": [
+            { "label": "点击图片时触发", "value": "click" },
+            { "label": "图片加载完毕时触发", "value": "load" },
+            { "label": "图片加载失败时触发", "value": "error" }
+          ],
+          "model": {},
+          "focusWithChild": false
+        },
+        {
+          "_vid": "vid_9aedd9dd91",
+          "moduleName": "baseWidgets",
+          "componentKey": "divider",
+          "label": "分割线",
+          "adjustPosition": true,
+          "focus": false,
+          "styles": {
+            "display": "flex",
+            "justifyContent": "flex-start",
+            "paddingTop": "0",
+            "paddingRight": "0",
+            "paddingLeft": "0",
+            "paddingBottom": "0",
+            "tempPadding": "0"
+          },
+          "hasResize": false,
+          "props": {
+            "text": "活动时间：2023年05月29日—2023年06月5日",
+            "content-position": "center",
+            "text-color": "#FFFFFF"
+          },
+          "draggable": true,
+          "showStyleConfig": true,
+          "animations": [],
+          "actions": [],
+          "events": [],
+          "model": {},
+          "focusWithChild": false
+        },
+        {
+          "_vid": "vid_c99e1ea53c",
+          "moduleName": "pictureComponents",
+          "componentKey": "image",
+          "label": "图片",
+          "adjustPosition": true,
+          "focus": false,
+          "styles": {
+            "display": "flex",
+            "justifyContent": "flex-start",
+            "paddingTop": "0",
+            "paddingRight": "0",
+            "paddingLeft": "0",
+            "paddingBottom": "0",
+            "tempPadding": "0"
+          },
+          "hasResize": false,
+          "props": {
+            "src": "http://img60.ddimg.cn/upload_img/00880/new/kmh_tsx61_03-1687014950.jpg",
+            "width": "100%",
+            "height": "100%",
+            "fit": "fill",
+            "lazyLoad": true,
+            "isPadding": true
+          },
+          "draggable": true,
+          "showStyleConfig": true,
+          "animations": [],
+          "actions": [],
+          "events": [
+            { "label": "点击图片时触发", "value": "click" },
+            { "label": "图片加载完毕时触发", "value": "load" },
+            { "label": "图片加载失败时触发", "value": "error" }
+          ],
+          "model": {},
+          "focusWithChild": false
+        },
+        {
+          "_vid": "vid_5b27bf706f",
           "moduleName": "productComponents",
           "componentKey": "four-product",
           "label": "推荐商品",
@@ -59,7 +310,7 @@
                   }
                 },
                 "block": {
-                  "_vid": "vid_81228bc44b",
+                  "_vid": "vid_079c8c2f3b",
                   "moduleName": "productComponents",
                   "componentKey": "card-item",
                   "label": "推荐商品",
@@ -76,11 +327,11 @@
                   },
                   "hasResize": false,
                   "props": {
-                    "bottomText": "爆品推荐",
-                    "topText": "童书新书",
-                    "bgColor": "#ffc5da",
-                    "textColor": "#333",
-                    "productId": "29353542"
+                    "bottomText": "推荐榜单",
+                    "topText": "好书热卖",
+                    "bgColor": "#ff7b95",
+                    "textColor": "#fff",
+                    "productId": "29544295"
                   },
                   "draggable": true,
                   "showStyleConfig": true,
@@ -125,7 +376,7 @@
                   }
                 },
                 "block": {
-                  "_vid": "vid_571f89827f",
+                  "_vid": "vid_61ab7d41ca",
                   "moduleName": "productComponents",
                   "componentKey": "card-item",
                   "label": "推荐商品",
@@ -142,11 +393,11 @@
                   },
                   "hasResize": false,
                   "props": {
-                    "bottomText": "爆品推荐",
-                    "topText": "童书新书",
-                    "bgColor": "#ffc5da",
-                    "textColor": "#333",
-                    "productId": "25214219"
+                    "bottomText": "小说畅销",
+                    "topText": "畅销热卖",
+                    "bgColor": "#ffc771",
+                    "textColor": "#fff",
+                    "productId": "29510451"
                   },
                   "draggable": true,
                   "showStyleConfig": true,
@@ -191,7 +442,7 @@
                   }
                 },
                 "block": {
-                  "_vid": "vid_7dba6c19e6",
+                  "_vid": "vid_06160b56cb",
                   "moduleName": "productComponents",
                   "componentKey": "card-item",
                   "label": "推荐商品",
@@ -208,11 +459,11 @@
                   },
                   "hasResize": false,
                   "props": {
-                    "bottomText": "爆品推荐",
-                    "topText": "童书新书",
-                    "bgColor": "#ffc5da",
-                    "textColor": "#333",
-                    "productId": "25344877"
+                    "bottomText": "精选榜单",
+                    "topText": "场景读物",
+                    "bgColor": "#9a5efb",
+                    "textColor": "#fff",
+                    "productId": "29143683"
                   },
                   "draggable": true,
                   "showStyleConfig": true,
@@ -257,7 +508,7 @@
                   }
                 },
                 "block": {
-                  "_vid": "vid_841ca8e22b",
+                  "_vid": "vid_9f3047e29b",
                   "moduleName": "productComponents",
                   "componentKey": "card-item",
                   "label": "推荐商品",
@@ -274,11 +525,11 @@
                   },
                   "hasResize": false,
                   "props": {
-                    "bottomText": "爆品推荐",
-                    "topText": "童书新书",
-                    "bgColor": "#ffc5da",
-                    "textColor": "#333",
-                    "productId": "29353542"
+                    "bottomText": "童书爆品",
+                    "topText": "3.9折包邮",
+                    "bgColor": "#5cbd9c",
+                    "textColor": "#fff",
+                    "productId": "29510328"
                   },
                   "draggable": true,
                   "showStyleConfig": true,
@@ -288,7 +539,8 @@
                   "model": {}
                 }
               }
-            ]
+            ],
+            "floorEnd": ""
           },
           "draggable": true,
           "showStyleConfig": true,
@@ -298,7 +550,863 @@
             { "label": "点击按钮，且按钮状态不为加载或禁用时触发", "value": "click" },
             { "label": "开始触摸按钮时触发", "value": "touchstart" }
           ],
-          "model": {}
+          "model": {},
+          "focusWithChild": false
+        },
+        {
+          "_vid": "vid_685b4104a4",
+          "moduleName": "pictureComponents",
+          "componentKey": "image",
+          "label": "图片",
+          "adjustPosition": true,
+          "focus": false,
+          "styles": {
+            "display": "flex",
+            "justifyContent": "flex-start",
+            "paddingTop": "0",
+            "paddingRight": "0",
+            "paddingLeft": "0",
+            "paddingBottom": "0",
+            "tempPadding": "0"
+          },
+          "hasResize": false,
+          "props": {
+            "src": "http://img60.ddimg.cn/upload_img/00880/new/kmh_tsx61_09-1687014950.jpg",
+            "width": "100%",
+            "height": "100%",
+            "fit": "fill",
+            "lazyLoad": true,
+            "isPadding": true
+          },
+          "draggable": true,
+          "showStyleConfig": true,
+          "animations": [],
+          "actions": [],
+          "events": [
+            { "label": "点击图片时触发", "value": "click" },
+            { "label": "图片加载完毕时触发", "value": "load" },
+            { "label": "图片加载失败时触发", "value": "error" }
+          ],
+          "model": {},
+          "focusWithChild": false
+        },
+        {
+          "_vid": "vid_b5b980cf56",
+          "moduleName": "productComponents",
+          "componentKey": "default-product",
+          "label": "普通商品",
+          "adjustPosition": true,
+          "focus": false,
+          "styles": {
+            "display": "flex",
+            "justifyContent": "flex-start",
+            "paddingTop": "0",
+            "paddingRight": "0",
+            "paddingLeft": "0",
+            "paddingBottom": "0",
+            "tempPadding": "0"
+          },
+          "hasResize": false,
+          "props": {
+            "blockStyle": "8",
+            "isTitle": "false",
+            "iscenter": "center",
+            "isFillet": "1rem",
+            "bgColor": "#fff",
+            "textColor": "#fc5757",
+            "text": "楼层标题",
+            "productId": "29544295,27950678,29544951,29520770,29551383,29548229,28992419,29447297,29509161,28518419,29545773,29524289,29565815,29511005,29570065,23946177,29291396,29277917,26183267,29255520,27921780,29496733,29330259,29354270",
+            "isSlider": "nowrap",
+            "productIsFillet": "1rem",
+            "floorEnd": "",
+            "titleImg": "",
+            "titleLink": ""
+          },
+          "draggable": true,
+          "showStyleConfig": true,
+          "animations": [],
+          "actions": [],
+          "events": [
+            { "label": "点击按钮，且按钮状态不为加载或禁用时触发", "value": "click" },
+            { "label": "开始触摸按钮时触发", "value": "touchstart" }
+          ],
+          "model": {},
+          "focusWithChild": false
+        },
+        {
+          "_vid": "vid_22c18b6711",
+          "moduleName": "pictureComponents",
+          "componentKey": "image",
+          "label": "图片",
+          "adjustPosition": true,
+          "focus": false,
+          "styles": {
+            "display": "flex",
+            "justifyContent": "flex-start",
+            "paddingTop": "0",
+            "paddingRight": "0",
+            "paddingLeft": "0",
+            "paddingBottom": "0",
+            "tempPadding": "0"
+          },
+          "hasResize": false,
+          "props": {
+            "src": "http://img60.ddimg.cn/upload_img/00880/new/kmh_tsx61_05-1687014950.jpg",
+            "width": "100%",
+            "height": "100%",
+            "fit": "fill",
+            "lazyLoad": true,
+            "isPadding": true
+          },
+          "draggable": true,
+          "showStyleConfig": true,
+          "animations": [],
+          "actions": [],
+          "events": [
+            { "label": "点击图片时触发", "value": "click" },
+            { "label": "图片加载完毕时触发", "value": "load" },
+            { "label": "图片加载失败时触发", "value": "error" }
+          ],
+          "model": {},
+          "focusWithChild": false
+        },
+        {
+          "_vid": "vid_c05297f509",
+          "moduleName": "productComponents",
+          "componentKey": "book-list",
+          "label": "书单列表",
+          "adjustPosition": true,
+          "focus": false,
+          "styles": {
+            "display": "flex",
+            "justifyContent": "flex-start",
+            "paddingTop": "0px",
+            "paddingRight": "0px",
+            "paddingLeft": "0px",
+            "paddingBottom": "0px",
+            "tempPadding": "0px"
+          },
+          "hasResize": false,
+          "props": {
+            "tabs": [
+              {
+                "label": "人民日报推荐的40本好书",
+                "value": "http://m.dangdang.com/pages/ddReading/bookListSquare/bookListSquareDetail?article_id=545424&style=1"
+              },
+              {
+                "label": "罗翔老师2022年度书单",
+                "value": "http://m.dangdang.com/pages/ddReading/bookListSquare/bookListSquareDetail?article_id=548676&style=2"
+              },
+              {
+                "label": "豆瓣2022年度读书榜单",
+                "value": "http://m.dangdang.com/pages/ddReading/bookListSquare/bookListSquareDetail?article_id=548725&style=2"
+              },
+              {
+                "label": "这些桥梁书，每一本都值得珍藏",
+                "value": "http://m.dangdang.com/pages/ddReading/bookListSquare/bookListSquareDetail?article_id=552931&style=1"
+              },
+              {
+                "label": "茅盾文学奖评分最高的九本书",
+                "value": "http://m.dangdang.com/pages/ddReading/bookListSquare/bookListSquareDetail?article_id=552395&style=1"
+              },
+              {
+                "label": "985高校图书馆借阅排行榜丨文史类",
+                "value": "http://m.dangdang.com/pages/ddReading/bookListSquare/bookListSquareDetail?article_id=543527&style=1"
+              },
+              {
+                "label": "有趣易读适合小白的历史书",
+                "value": "http://m.dangdang.com/pages/ddReading/bookListSquare/bookListSquareDetail?article_id=552404&style=1"
+              },
+              {
+                "label": "哈佛大学图书馆借阅最多的书单",
+                "value": "http://m.dangdang.com/pages/ddReading/bookListSquare/bookListSquareDetail?article_id=542933&style=2"
+              }
+            ],
+            "listBgColor": "#fff",
+            "textColor": "#333",
+            "topImg": "http://img60.ddimg.cn/upload_img/00880/new/kmh_tsx61_06-1687014950.jpg",
+            "contentBgImg": "http://img60.ddimg.cn/upload_img/00880/new/kmh_tsx61_07-1687014950.jpg",
+            "bottomImg": "http://img60.ddimg.cn/upload_img/00880/new/kmh_tsx61_08-1687014950.jpg",
+            "bottomLink": "http://m.dangdang.com/pages/ddReading/bookListSquare/bookListSquareList",
+            "listRadio": false
+          },
+          "draggable": true,
+          "showStyleConfig": true,
+          "animations": [],
+          "actions": [],
+          "events": [],
+          "model": {},
+          "focusWithChild": false
+        },
+        {
+          "_vid": "vid_3cde34784d",
+          "moduleName": "pictureComponents",
+          "componentKey": "image",
+          "label": "图片",
+          "adjustPosition": true,
+          "focus": false,
+          "styles": {
+            "display": "flex",
+            "justifyContent": "flex-start",
+            "paddingTop": "0",
+            "paddingRight": "0",
+            "paddingLeft": "0",
+            "paddingBottom": "0",
+            "tempPadding": "0"
+          },
+          "hasResize": false,
+          "props": {
+            "src": "http://img60.ddimg.cn/upload_img/00880/new/banner_10-1687014950.jpg",
+            "width": "100%",
+            "height": "100%",
+            "fit": "fill",
+            "lazyLoad": true,
+            "isPadding": true
+          },
+          "draggable": true,
+          "showStyleConfig": true,
+          "animations": [],
+          "actions": [],
+          "events": [
+            { "label": "点击图片时触发", "value": "click" },
+            { "label": "图片加载完毕时触发", "value": "load" },
+            { "label": "图片加载失败时触发", "value": "error" }
+          ],
+          "model": {},
+          "focusWithChild": false
+        },
+        {
+          "_vid": "vid_6519c6786a",
+          "moduleName": "productComponents",
+          "componentKey": "default-product",
+          "label": "普通商品",
+          "adjustPosition": true,
+          "focus": false,
+          "styles": {
+            "display": "flex",
+            "justifyContent": "flex-start",
+            "paddingTop": "0",
+            "paddingRight": "0",
+            "paddingLeft": "0",
+            "paddingBottom": "0",
+            "tempPadding": "0"
+          },
+          "hasResize": false,
+          "props": {
+            "blockStyle": "8",
+            "isTitle": "true",
+            "iscenter": "center",
+            "isFillet": "1rem",
+            "bgColor": "#FFFFFF",
+            "textColor": "#FFFFFF",
+            "text": "童书&亲子",
+            "productId": "29524905,27859288,29353542,25276987,29499435,29524289,29565428,29564314,29576202,",
+            "isSlider": "wrap",
+            "productIsFillet": "1rem",
+            "floorEnd": "",
+            "titleImg": "http://img61.ddimg.cn/upload_img/00880/new/line-1687014950.png",
+            "titleLink": "http://z.dangdang.com/guan/index?page_id=793293"
+          },
+          "draggable": true,
+          "showStyleConfig": true,
+          "animations": [],
+          "actions": [],
+          "events": [
+            { "label": "点击按钮，且按钮状态不为加载或禁用时触发", "value": "click" },
+            { "label": "开始触摸按钮时触发", "value": "touchstart" }
+          ],
+          "model": {},
+          "focusWithChild": false
+        },
+        {
+          "_vid": "vid_b45f568dff",
+          "moduleName": "productComponents",
+          "componentKey": "default-product",
+          "label": "普通商品",
+          "adjustPosition": true,
+          "focus": false,
+          "styles": {
+            "display": "flex",
+            "justifyContent": "flex-start",
+            "paddingTop": "0",
+            "paddingRight": "0",
+            "paddingLeft": "0",
+            "paddingBottom": "0",
+            "tempPadding": "0"
+          },
+          "hasResize": false,
+          "props": {
+            "blockStyle": "8",
+            "isTitle": "true",
+            "iscenter": "center",
+            "isFillet": "1rem",
+            "bgColor": "#FFFFFF",
+            "textColor": "#FFFFFF",
+            "text": "小说文学",
+            "productId": "29413233,29559027,29447297,29562555,29555442,29526048,29560096,29576814,29568520,",
+            "isSlider": "wrap",
+            "productIsFillet": "1rem",
+            "floorEnd": "",
+            "titleImg": "http://img61.ddimg.cn/upload_img/00880/new/line-1687014950.png",
+            "titleLink": "http://z.dangdang.com/guan/index?page_id=805895"
+          },
+          "draggable": true,
+          "showStyleConfig": true,
+          "animations": [],
+          "actions": [],
+          "events": [
+            { "label": "点击按钮，且按钮状态不为加载或禁用时触发", "value": "click" },
+            { "label": "开始触摸按钮时触发", "value": "touchstart" }
+          ],
+          "model": {},
+          "focusWithChild": false
+        },
+        {
+          "_vid": "vid_db0a399949",
+          "moduleName": "productComponents",
+          "componentKey": "default-product",
+          "label": "普通商品",
+          "adjustPosition": true,
+          "focus": false,
+          "styles": {
+            "display": "flex",
+            "justifyContent": "flex-start",
+            "paddingTop": "0",
+            "paddingRight": "0",
+            "paddingLeft": "0",
+            "paddingBottom": "0",
+            "tempPadding": "0"
+          },
+          "hasResize": false,
+          "props": {
+            "blockStyle": "8",
+            "isTitle": "true",
+            "iscenter": "center",
+            "isFillet": "1rem",
+            "bgColor": "#FFFFFF",
+            "textColor": "#FFFFFF",
+            "text": "动漫幽默",
+            "productId": "29286348,29480482,29279949,29317307,29489743,29566291,",
+            "isSlider": "wrap",
+            "productIsFillet": "1rem",
+            "floorEnd": "",
+            "titleImg": "http://img61.ddimg.cn/upload_img/00880/new/line-1687014950.png",
+            "titleLink": "http://search.m.dangdang.com/category.php?cid=01.09.00.00.00.00"
+          },
+          "draggable": true,
+          "showStyleConfig": true,
+          "animations": [],
+          "actions": [],
+          "events": [
+            { "label": "点击按钮，且按钮状态不为加载或禁用时触发", "value": "click" },
+            { "label": "开始触摸按钮时触发", "value": "touchstart" }
+          ],
+          "model": {},
+          "focusWithChild": false
+        },
+        {
+          "_vid": "vid_8e0abee6b0",
+          "moduleName": "baseWidgets",
+          "componentKey": "tabbar",
+          "label": "底部标签栏",
+          "adjustPosition": true,
+          "focus": false,
+          "styles": {
+            "display": "flex",
+            "justifyContent": "flex-start",
+            "paddingTop": "0",
+            "paddingRight": "0",
+            "paddingLeft": "0",
+            "paddingBottom": "0",
+            "tempPadding": "0"
+          },
+          "hasResize": false,
+          "props": {
+            "tabs": [
+              {
+                "label": "首页",
+                "value": "home-o",
+                "component": {
+                  "key": "tabbar-item",
+                  "moduleName": "baseWidgets",
+                  "label": "底部标签栏",
+                  "props": {
+                    "icon": {
+                      "type": "input",
+                      "label": "图标名称或图片链接",
+                      "defaultValue": "home-o"
+                    },
+                    "iconPrefix": {
+                      "type": "input",
+                      "label": "图标类名前缀",
+                      "tips": "图标类名前缀，同 Icon 组件的 class-prefix 属性",
+                      "defaultValue": "van-icon"
+                    },
+                    "dot": {
+                      "type": "switch",
+                      "label": "是否显示图标右上角小红点",
+                      "defaultValue": false
+                    },
+                    "badge": {
+                      "type": "input",
+                      "label": "图标右上角徽标的内容",
+                      "defaultValue": ""
+                    },
+                    "url": { "type": "input", "label": "点击后跳转的链接地址", "defaultValue": "" },
+                    "replace": {
+                      "type": "switch",
+                      "label": "是否在跳转时替换当前页面历史",
+                      "defaultValue": false
+                    }
+                  },
+                  "events": [
+                    { "label": "点击左侧按钮时触发", "value": "click-left" },
+                    { "label": "点击右侧按钮时触发", "value": "click-right" }
+                  ],
+                  "draggable": false
+                },
+                "block": {
+                  "_vid": "vid_e0cfde0ef0",
+                  "moduleName": "baseWidgets",
+                  "componentKey": "tabbar-item",
+                  "label": "底部标签栏",
+                  "adjustPosition": true,
+                  "focus": false,
+                  "styles": {
+                    "display": "flex",
+                    "justifyContent": "flex-start",
+                    "paddingTop": "0",
+                    "paddingRight": "0",
+                    "paddingLeft": "0",
+                    "paddingBottom": "0",
+                    "tempPadding": "0"
+                  },
+                  "hasResize": false,
+                  "props": {
+                    "icon": "home-o",
+                    "iconPrefix": "van-icon",
+                    "dot": false,
+                    "badge": "",
+                    "url": "",
+                    "replace": false
+                  },
+                  "draggable": false,
+                  "showStyleConfig": true,
+                  "animations": [],
+                  "actions": [],
+                  "events": [
+                    { "label": "点击左侧按钮时触发", "value": "click-left" },
+                    { "label": "点击右侧按钮时触发", "value": "click-right" }
+                  ],
+                  "model": {}
+                }
+              },
+              {
+                "label": "分类",
+                "value": "orders-o",
+                "component": {
+                  "key": "tabbar-item",
+                  "moduleName": "baseWidgets",
+                  "label": "底部标签栏",
+                  "props": {
+                    "icon": {
+                      "type": "input",
+                      "label": "图标名称或图片链接",
+                      "defaultValue": "home-o"
+                    },
+                    "iconPrefix": {
+                      "type": "input",
+                      "label": "图标类名前缀",
+                      "tips": "图标类名前缀，同 Icon 组件的 class-prefix 属性",
+                      "defaultValue": "van-icon"
+                    },
+                    "dot": {
+                      "type": "switch",
+                      "label": "是否显示图标右上角小红点",
+                      "defaultValue": false
+                    },
+                    "badge": {
+                      "type": "input",
+                      "label": "图标右上角徽标的内容",
+                      "defaultValue": ""
+                    },
+                    "url": { "type": "input", "label": "点击后跳转的链接地址", "defaultValue": "" },
+                    "replace": {
+                      "type": "switch",
+                      "label": "是否在跳转时替换当前页面历史",
+                      "defaultValue": false
+                    }
+                  },
+                  "events": [
+                    { "label": "点击左侧按钮时触发", "value": "click-left" },
+                    { "label": "点击右侧按钮时触发", "value": "click-right" }
+                  ],
+                  "draggable": false
+                },
+                "block": {
+                  "_vid": "vid_d8b9b0c945",
+                  "moduleName": "baseWidgets",
+                  "componentKey": "tabbar-item",
+                  "label": "底部标签栏",
+                  "adjustPosition": true,
+                  "focus": false,
+                  "styles": {
+                    "display": "flex",
+                    "justifyContent": "flex-start",
+                    "paddingTop": "0",
+                    "paddingRight": "0",
+                    "paddingLeft": "0",
+                    "paddingBottom": "0",
+                    "tempPadding": "0"
+                  },
+                  "hasResize": false,
+                  "props": {
+                    "icon": "orders-o",
+                    "iconPrefix": "van-icon",
+                    "dot": false,
+                    "badge": "",
+                    "url": "",
+                    "replace": false
+                  },
+                  "draggable": false,
+                  "showStyleConfig": true,
+                  "animations": [],
+                  "actions": [],
+                  "events": [
+                    { "label": "点击左侧按钮时触发", "value": "click-left" },
+                    { "label": "点击右侧按钮时触发", "value": "click-right" }
+                  ],
+                  "model": {}
+                }
+              },
+              {
+                "label": "当读",
+                "value": "coupon-o",
+                "component": {
+                  "key": "tabbar-item",
+                  "moduleName": "baseWidgets",
+                  "label": "底部标签栏",
+                  "props": {
+                    "icon": {
+                      "type": "input",
+                      "label": "图标名称或图片链接",
+                      "defaultValue": "home-o"
+                    },
+                    "iconPrefix": {
+                      "type": "input",
+                      "label": "图标类名前缀",
+                      "tips": "图标类名前缀，同 Icon 组件的 class-prefix 属性",
+                      "defaultValue": "van-icon"
+                    },
+                    "dot": {
+                      "type": "switch",
+                      "label": "是否显示图标右上角小红点",
+                      "defaultValue": false
+                    },
+                    "badge": {
+                      "type": "input",
+                      "label": "图标右上角徽标的内容",
+                      "defaultValue": ""
+                    },
+                    "url": { "type": "input", "label": "点击后跳转的链接地址", "defaultValue": "" },
+                    "replace": {
+                      "type": "switch",
+                      "label": "是否在跳转时替换当前页面历史",
+                      "defaultValue": false
+                    }
+                  },
+                  "events": [
+                    { "label": "点击左侧按钮时触发", "value": "click-left" },
+                    { "label": "点击右侧按钮时触发", "value": "click-right" }
+                  ],
+                  "draggable": false
+                },
+                "block": {
+                  "_vid": "vid_7f725ae1df",
+                  "moduleName": "baseWidgets",
+                  "componentKey": "tabbar-item",
+                  "label": "底部标签栏",
+                  "adjustPosition": true,
+                  "focus": false,
+                  "styles": {
+                    "display": "flex",
+                    "justifyContent": "flex-start",
+                    "paddingTop": "0",
+                    "paddingRight": "0",
+                    "paddingLeft": "0",
+                    "paddingBottom": "0",
+                    "tempPadding": "0"
+                  },
+                  "hasResize": false,
+                  "props": {
+                    "icon": "coupon-o",
+                    "iconPrefix": "van-icon",
+                    "dot": false,
+                    "badge": "",
+                    "url": "",
+                    "replace": false
+                  },
+                  "draggable": false,
+                  "showStyleConfig": true,
+                  "animations": [],
+                  "actions": [],
+                  "events": [
+                    { "label": "点击左侧按钮时触发", "value": "click-left" },
+                    { "label": "点击右侧按钮时触发", "value": "click-right" }
+                  ],
+                  "model": {}
+                }
+              },
+              {
+                "label": "购物车",
+                "value": "cart-o",
+                "component": {
+                  "key": "tabbar-item",
+                  "moduleName": "baseWidgets",
+                  "label": "底部标签栏",
+                  "props": {
+                    "icon": {
+                      "type": "input",
+                      "label": "图标名称或图片链接",
+                      "defaultValue": "home-o"
+                    },
+                    "iconPrefix": {
+                      "type": "input",
+                      "label": "图标类名前缀",
+                      "tips": "图标类名前缀，同 Icon 组件的 class-prefix 属性",
+                      "defaultValue": "van-icon"
+                    },
+                    "dot": {
+                      "type": "switch",
+                      "label": "是否显示图标右上角小红点",
+                      "defaultValue": false
+                    },
+                    "badge": {
+                      "type": "input",
+                      "label": "图标右上角徽标的内容",
+                      "defaultValue": ""
+                    },
+                    "url": { "type": "input", "label": "点击后跳转的链接地址", "defaultValue": "" },
+                    "replace": {
+                      "type": "switch",
+                      "label": "是否在跳转时替换当前页面历史",
+                      "defaultValue": false
+                    }
+                  },
+                  "events": [
+                    { "label": "点击左侧按钮时触发", "value": "click-left" },
+                    { "label": "点击右侧按钮时触发", "value": "click-right" }
+                  ],
+                  "draggable": false
+                },
+                "block": {
+                  "_vid": "vid_3ff10885be",
+                  "moduleName": "baseWidgets",
+                  "componentKey": "tabbar-item",
+                  "label": "底部标签栏",
+                  "adjustPosition": true,
+                  "focus": false,
+                  "styles": {
+                    "display": "flex",
+                    "justifyContent": "flex-start",
+                    "paddingTop": "0",
+                    "paddingRight": "0",
+                    "paddingLeft": "0",
+                    "paddingBottom": "0",
+                    "tempPadding": "0"
+                  },
+                  "hasResize": false,
+                  "props": {
+                    "icon": "cart-o",
+                    "iconPrefix": "van-icon",
+                    "dot": false,
+                    "badge": "",
+                    "url": "",
+                    "replace": false
+                  },
+                  "draggable": false,
+                  "showStyleConfig": true,
+                  "animations": [],
+                  "actions": [],
+                  "events": [
+                    { "label": "点击左侧按钮时触发", "value": "click-left" },
+                    { "label": "点击右侧按钮时触发", "value": "click-right" }
+                  ],
+                  "model": {}
+                }
+              },
+              {
+                "label": "我的",
+                "value": "user-o",
+                "component": {
+                  "key": "tabbar-item",
+                  "moduleName": "baseWidgets",
+                  "label": "底部标签栏",
+                  "props": {
+                    "icon": {
+                      "type": "input",
+                      "label": "图标名称或图片链接",
+                      "defaultValue": "home-o"
+                    },
+                    "iconPrefix": {
+                      "type": "input",
+                      "label": "图标类名前缀",
+                      "tips": "图标类名前缀，同 Icon 组件的 class-prefix 属性",
+                      "defaultValue": "van-icon"
+                    },
+                    "dot": {
+                      "type": "switch",
+                      "label": "是否显示图标右上角小红点",
+                      "defaultValue": false
+                    },
+                    "badge": {
+                      "type": "input",
+                      "label": "图标右上角徽标的内容",
+                      "defaultValue": ""
+                    },
+                    "url": { "type": "input", "label": "点击后跳转的链接地址", "defaultValue": "" },
+                    "replace": {
+                      "type": "switch",
+                      "label": "是否在跳转时替换当前页面历史",
+                      "defaultValue": false
+                    }
+                  },
+                  "events": [
+                    { "label": "点击左侧按钮时触发", "value": "click-left" },
+                    { "label": "点击右侧按钮时触发", "value": "click-right" }
+                  ],
+                  "draggable": false
+                },
+                "block": {
+                  "_vid": "vid_0497b26bbe",
+                  "moduleName": "baseWidgets",
+                  "componentKey": "tabbar-item",
+                  "label": "底部标签栏",
+                  "adjustPosition": true,
+                  "focus": false,
+                  "styles": {
+                    "display": "flex",
+                    "justifyContent": "flex-start",
+                    "paddingTop": "0",
+                    "paddingRight": "0",
+                    "paddingLeft": "0",
+                    "paddingBottom": "0",
+                    "tempPadding": "0"
+                  },
+                  "hasResize": false,
+                  "props": {
+                    "icon": "user-o",
+                    "iconPrefix": "van-icon",
+                    "dot": false,
+                    "badge": "",
+                    "url": "",
+                    "replace": false
+                  },
+                  "draggable": false,
+                  "showStyleConfig": true,
+                  "animations": [],
+                  "actions": [],
+                  "events": [
+                    { "label": "点击左侧按钮时触发", "value": "click-left" },
+                    { "label": "点击右侧按钮时触发", "value": "click-right" }
+                  ],
+                  "model": {}
+                }
+              }
+            ],
+            "fixed": true,
+            "border": true,
+            "zIndex": "1",
+            "baseUrl": "/preview/#/",
+            "activeColor": "#fc5757",
+            "inactiveColor": "#7d7e80",
+            "modelValue": "",
+            "route": false,
+            "safeAreaInsetBottom": false
+          },
+          "draggable": false,
+          "showStyleConfig": true,
+          "animations": [],
+          "actions": [],
+          "events": [
+            { "label": "点击左侧按钮时触发", "value": "click-left" },
+            { "label": "点击右侧按钮时触发", "value": "click-right" }
+          ],
+          "model": {},
+          "focusWithChild": false
+        },
+        {
+          "_vid": "vid_7fb0ee0327",
+          "moduleName": "productComponents",
+          "componentKey": "default-product",
+          "label": "普通商品",
+          "adjustPosition": true,
+          "focus": false,
+          "styles": {
+            "display": "flex",
+            "justifyContent": "flex-start",
+            "paddingTop": "0",
+            "paddingRight": "0",
+            "paddingLeft": "0",
+            "paddingBottom": "0",
+            "tempPadding": "0"
+          },
+          "hasResize": false,
+          "props": {
+            "blockStyle": "8",
+            "isTitle": "true",
+            "iscenter": "center",
+            "isFillet": "1rem",
+            "bgColor": "#FFFFFF",
+            "textColor": "#FFFFFF",
+            "text": "成功励志",
+            "productId": "29399890,29338142,29548640,28518072,29119834,29560081,",
+            "isSlider": "wrap",
+            "productIsFillet": "1rem",
+            "floorEnd": "",
+            "titleImg": "http://img61.ddimg.cn/upload_img/00880/new/line-1687014950.png",
+            "titleLink": "http://z.dangdang.com/guan/index?page_id=793531"
+          },
+          "draggable": true,
+          "showStyleConfig": true,
+          "animations": [],
+          "actions": [],
+          "events": [
+            { "label": "点击按钮，且按钮状态不为加载或禁用时触发", "value": "click" },
+            { "label": "开始触摸按钮时触发", "value": "touchstart" }
+          ],
+          "model": {},
+          "focusWithChild": false
+        },
+        {
+          "_vid": "vid_79c2ba965e",
+          "moduleName": "baseWidgets",
+          "componentKey": "text",
+          "label": "文本",
+          "adjustPosition": true,
+          "focus": true,
+          "styles": {
+            "display": "flex",
+            "justifyContent": "flex-start",
+            "paddingTop": "5px",
+            "paddingRight": "5px",
+            "paddingLeft": "5px",
+            "paddingBottom": "5px",
+            "tempPadding": "5px"
+          },
+          "hasResize": false,
+          "props": {
+            "size": 16,
+            "text": "活动说明：  1、活动时间：2023年06月14日—2023年06月20日。  2、活动期间顾客购买专场图书享受定价基础上的5折封顶优惠，包邮商品请以单品详情页促销活动标识为准。  3、活动期间个别商品因供应商限价、库存等原因，在参与时间上会有临时调整，请以商品详情页促销活动标识为准。  4、当当所服务的客户为以终端消费为目的的个人、企、事业单位及其他社会团体，不包括经销商，如发现经销商购物，当当有权拒绝为其提供服务，由此产生的一切后果由经销商自行承担；  5、以上活动不支持由顾客行为形成的团购，凡是帐户ID、IP、使用设备、收货地址、联系方式、联系人、收货人等只要有一项相同的订单，均默认为同一顾客的订单，当当有权取消该类订单，并保留追究的权利，若对取消订单有异议，请联系客服，客服电话：400-106-6666或0527-80878888。",
+            "color": "#FFFFFF"
+          },
+          "draggable": true,
+          "showStyleConfig": true,
+          "animations": [],
+          "actions": [],
+          "events": [],
+          "model": {},
+          "focusWithChild": false
         }
       ]
     }
