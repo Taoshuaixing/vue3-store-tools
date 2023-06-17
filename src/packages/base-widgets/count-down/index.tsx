@@ -37,6 +37,7 @@ export default {
       <Sticky>
         <CountDown
           ref={(el) => registerRef(el, block._vid)}
+          {...props}
           format="DD 天 HH 时 mm 分 ss 秒"
           time={Date.parse(props.dateTime) - new Date().valueOf()}
           style={style.value}

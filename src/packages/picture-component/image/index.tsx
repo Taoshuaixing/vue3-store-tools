@@ -1,13 +1,12 @@
 /*
  * @Author: 陶帅星
  * @Date: 2022-10-01 09:45:21
- * @LastEditTime: 2021-07-13 17:14:05
+ * @LastEditTime: 2023-06-16 18:35:55
  * @LastEditors: 陶帅星
  * @Description: 图片组件
  * @FilePath: \vue3-store-tools\src\packages\base-widgets\image\index.tsx
  */
 import { Image } from 'vant';
-import { Picture } from '@element-plus/icons-vue';
 import type { VisualEditorComponent } from '@/visual-editor/visual-editor.utils';
 import {
   createEditorInputProp,
@@ -25,12 +24,8 @@ export default {
     height: true,
   },
   preview: () => (
-    <div style="text-align:center;">
-      <div style="font-size:20px;background-color:#f2f2f2;color:#ccc;display:inline-flex;width:100px;height:50px;align-items:center;justify-content:center">
-        <el-icon>
-          <Picture></Picture>
-        </el-icon>
-      </div>
+    <div style="text-align:center;width: 40%;">
+      <Image src="//img61.ddimg.cn/upload_img/00858/cms_shop/dd-product-default-1598151693.png" />
     </div>
   ),
   render: ({ props, block, styles }) => {
@@ -50,6 +45,10 @@ export default {
     width: createEditorInputProp({ label: '宽度', defaultValue: 100 }),
     height: createEditorInputProp({ label: '高度', defaultValue: 100 }),
     errorIcon: createEditorInputProp({ label: '失败时提示的图标名称或图片链接' }),
+    // isPadding: createEditorSwitchProp({
+    //   label: '是否取消上下边距',
+    //   defaultValue: false,
+    // }),
     fit: createEditorSelectProp({
       label: '图片填充模式',
       options: [

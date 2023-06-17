@@ -5,7 +5,7 @@
   >
     <!--    左侧logo start-->
     <el-col
-      :span="6"
+      :span="8"
       class="flex items-center"
     >
       <div class="logo"></div>
@@ -15,7 +15,7 @@
     <!--    中间操作页面部分 start-->
     <el-col
       class="flex items-center"
-      :span="12"
+      :span="8"
     >
       <template
         v-for="(toolItem, toolIndex) in tools"
@@ -40,14 +40,14 @@
     <!--    中间操作页面部分 end-->
     <!--    右侧工具栏 start-->
     <el-col
-      :span="6"
+      :span="8"
       class="right-tools flex flex-row-reverse items-center"
     >
       <!-- runtime -->
       <el-tooltip
         class="item"
         effect="dark"
-        content="预览"
+        content="运行"
         placement="bottom"
       >
         <el-button
@@ -194,5 +194,9 @@ const runPreview = () => {
   .right-tools>* {
     margin-left: 8px;
   }
+}
+
+.w-1\/9 {
+  width: 18.111111%;
 }
 </style>

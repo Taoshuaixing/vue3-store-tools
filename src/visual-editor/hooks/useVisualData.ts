@@ -18,6 +18,7 @@ import type {
 
 import { visualConfig } from '@/visual.config';
 import { CacheEnum } from '@/enums';
+import initJson from '@/init.json';
 
 // 保存到本地JSON数据的key
 export const localKey = CacheEnum.PAGE_DATA_KEY;
@@ -65,7 +66,8 @@ const defaultValue: VisualEditorModelValue = {
 };
 
 export const initVisualData = () => {
-  const localData = JSON.parse(sessionStorage.getItem(localKey) as string);
+  // console.log(initJson);
+  const localData = JSON.parse(sessionStorage.getItem(localKey) as string) || initJson;
   const jsonData: VisualEditorModelValue = Object.keys(localData?.pages || {}).length
     ? localData
     : defaultValue;

@@ -6,14 +6,15 @@
  * @update: 2022/5/7 10:46
  */
 import { reactive } from 'vue';
-import { ElMessage, ElRadio, ElRadioGroup } from 'element-plus';
-import { useQRCode } from '@vueuse/integrations/useQRCode';
+import { ElMessage, ElRadio, ElRadioGroup, ElMessageBox } from 'element-plus';
+// import { useQRCode } from '@vueuse/integrations/useQRCode';
 import { useClipboard } from '@vueuse/core';
+
 import {
-  DocumentCopy,
-  Cellphone,
-  RefreshLeft,
-  RefreshRight,
+  // DocumentCopy,
+  // Cellphone,
+  // RefreshLeft,
+  // RefreshRight,
   Position,
   Delete,
   ChatLineSquare,
@@ -96,75 +97,97 @@ export const useTools = () => {
           .catch((err) => ElMessage.error(`复制失败：${err}`));
       },
     },
-    {
-      title: '真机预览',
-      icon: Cellphone,
-      onClick: () => {
-        const qrcode = useQRCode(`${location.origin}/preview`);
-        useModal({
-          title: '预览二维码（暂不可用）',
-          props: {
-            width: 300,
-          },
-          footer: null,
-          content: () => (
-            <div class={'flex justify-center'}>
-              <img width={220} height={220} src={qrcode.value} />
-            </div>
-          ),
-        });
-      },
-    },
-    {
-      title: '复制页面',
-      icon: DocumentCopy,
-      onClick: () => {
-        ElMessage({
-          showClose: true,
-          type: 'info',
-          duration: 2000,
-          message: '敬请期待！',
-        });
-      },
-    },
-    {
-      title: '撤销',
-      icon: RefreshLeft,
-      onClick: () => {
-        ElMessage({
-          showClose: true,
-          type: 'info',
-          duration: 2000,
-          message: '敬请期待！',
-        });
-      },
-    },
-    {
-      title: '重做',
-      icon: RefreshRight,
-      onClick: () => {
-        ElMessage({
-          showClose: true,
-          type: 'info',
-          duration: 2000,
-          message: '敬请期待！',
-        });
-      },
-    },
+    // {
+    //   title: '真机预览',
+    //   icon: Cellphone,
+    //   onClick: () => {
+    //     const qrcode = useQRCode(`${location.origin}/preview`);
+    //     useModal({
+    //       title: '预览二维码（暂不可用）',
+    //       props: {
+    //         width: 300,
+    //       },
+    //       footer: null,
+    //       content: () => (
+    //         <div class={'flex justify-center'}>
+    //           <img width={220} height={220} src={qrcode.value} />
+    //         </div>
+    //       ),
+    //     });
+    //   },
+    // },
+    // {
+    //   title: '复制页面',
+    //   icon: DocumentCopy,
+    //   onClick: () => {
+    //     ElMessage({
+    //       showClose: true,
+    //       type: 'info',
+    //       duration: 2000,
+    //       message: '敬请期待！',
+    //     });
+    //   },
+    // },
+    // {
+    //   title: '撤销',
+    //   icon: RefreshLeft,
+    //   onClick: () => {
+    //     ElMessage({
+    //       showClose: true,
+    //       type: 'info',
+    //       duration: 2000,
+    //       message: '敬请期待！',
+    //     });
+    //   },
+    // },
+    // {
+    //   title: '重做',
+    //   icon: RefreshRight,
+    //   onClick: () => {
+    //     ElMessage({
+    //       showClose: true,
+    //       type: 'info',
+    //       duration: 2000,
+    //       message: '敬请期待！',
+    //     });
+    //   },
+    // },
     {
       title: '清空页面',
       icon: Delete,
       onClick: () => {
-        ElMessage({
-          showClose: true,
-          type: 'info',
-          duration: 2000,
-          message: '敬请期待！',
-        });
+        ElMessageBox.confirm('确认清空页面？', 'Warning', {
+          confirmButtonText: '确认',
+          cancelButtonText: '取消',
+          type: 'warning',
+          center: true,
+        })
+          .then(() => {
+            if (currentPage.value.blocks.length !== 0) {
+              currentPage.value.blocks = [];
+              ElMessage({
+                type: 'success',
+                message: '页面已清空！',
+              });
+            } else {
+              ElMessage({
+                type: 'warning',
+                message: '已是空页面！',
+              });
+            }
+            console.log(currentPage);
+          })
+          .catch(() => {
+            ElMessage({
+              type: 'info',
+              message: '已取消',
+            });
+          });
       },
     },
+
     {
-      title: '预览',
+      title: '运行',
       icon: Position,
       onClick: () => {
         localStorage.setItem(localKey, JSON.stringify(jsonData));

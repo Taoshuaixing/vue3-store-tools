@@ -1,0 +1,311 @@
+{
+  "pages": {
+    "/": {
+      "title": "首页",
+      "path": "/",
+      "config": { "bgColor": "", "bgImage": "", "keepAlive": false },
+      "blocks": [
+        {
+          "_vid": "vid_2898e08f8c",
+          "moduleName": "productComponents",
+          "componentKey": "four-product",
+          "label": "推荐商品",
+          "adjustPosition": true,
+          "focus": false,
+          "styles": {
+            "display": "flex",
+            "justifyContent": "flex-start",
+            "paddingTop": "0",
+            "paddingRight": "0",
+            "paddingLeft": "0",
+            "paddingBottom": "0",
+            "tempPadding": "0"
+          },
+          "hasResize": false,
+          "props": {
+            "tabs": [
+              {
+                "label": "坑位1",
+                "value": "29353542",
+                "component": {
+                  "key": "card-item",
+                  "moduleName": "productComponents",
+                  "label": "推荐商品",
+                  "props": {
+                    "productId": { "type": "input", "label": "坑位展示品", "defaultValue": "" },
+                    "bottomText": {
+                      "type": "input",
+                      "label": "底部文案",
+                      "tips": "四个字为最佳体验",
+                      "defaultValue": "爆品推荐"
+                    },
+                    "topText": {
+                      "type": "input",
+                      "label": "品说明文案",
+                      "defaultValue": "童书新书"
+                    },
+                    "bgColor": {
+                      "type": "input",
+                      "label": "坑位背景颜色",
+                      "tips": "支持渐变颜色",
+                      "defaultValue": "#ffc5da"
+                    },
+                    "textColor": {
+                      "type": "input",
+                      "label": "文案颜色",
+                      "tips": "支持渐变颜色",
+                      "defaultValue": "#333"
+                    }
+                  }
+                },
+                "block": {
+                  "_vid": "vid_81228bc44b",
+                  "moduleName": "productComponents",
+                  "componentKey": "card-item",
+                  "label": "推荐商品",
+                  "adjustPosition": true,
+                  "focus": false,
+                  "styles": {
+                    "display": "flex",
+                    "justifyContent": "flex-start",
+                    "paddingTop": "0",
+                    "paddingRight": "0",
+                    "paddingLeft": "0",
+                    "paddingBottom": "0",
+                    "tempPadding": "0"
+                  },
+                  "hasResize": false,
+                  "props": {
+                    "bottomText": "爆品推荐",
+                    "topText": "童书新书",
+                    "bgColor": "#ffc5da",
+                    "textColor": "#333",
+                    "productId": "29353542"
+                  },
+                  "draggable": true,
+                  "showStyleConfig": true,
+                  "animations": [],
+                  "actions": [],
+                  "events": [],
+                  "model": {}
+                }
+              },
+              {
+                "label": "坑位2",
+                "value": "25214219",
+                "component": {
+                  "key": "card-item",
+                  "moduleName": "productComponents",
+                  "label": "推荐商品",
+                  "props": {
+                    "productId": { "type": "input", "label": "坑位展示品", "defaultValue": "" },
+                    "bottomText": {
+                      "type": "input",
+                      "label": "底部文案",
+                      "tips": "四个字为最佳体验",
+                      "defaultValue": "爆品推荐"
+                    },
+                    "topText": {
+                      "type": "input",
+                      "label": "品说明文案",
+                      "defaultValue": "童书新书"
+                    },
+                    "bgColor": {
+                      "type": "input",
+                      "label": "坑位背景颜色",
+                      "tips": "支持渐变颜色",
+                      "defaultValue": "#ffc5da"
+                    },
+                    "textColor": {
+                      "type": "input",
+                      "label": "文案颜色",
+                      "tips": "支持渐变颜色",
+                      "defaultValue": "#333"
+                    }
+                  }
+                },
+                "block": {
+                  "_vid": "vid_571f89827f",
+                  "moduleName": "productComponents",
+                  "componentKey": "card-item",
+                  "label": "推荐商品",
+                  "adjustPosition": true,
+                  "focus": false,
+                  "styles": {
+                    "display": "flex",
+                    "justifyContent": "flex-start",
+                    "paddingTop": "0",
+                    "paddingRight": "0",
+                    "paddingLeft": "0",
+                    "paddingBottom": "0",
+                    "tempPadding": "0"
+                  },
+                  "hasResize": false,
+                  "props": {
+                    "bottomText": "爆品推荐",
+                    "topText": "童书新书",
+                    "bgColor": "#ffc5da",
+                    "textColor": "#333",
+                    "productId": "25214219"
+                  },
+                  "draggable": true,
+                  "showStyleConfig": true,
+                  "animations": [],
+                  "actions": [],
+                  "events": [],
+                  "model": {}
+                }
+              },
+              {
+                "label": "坑位3",
+                "value": "25344877",
+                "component": {
+                  "key": "card-item",
+                  "moduleName": "productComponents",
+                  "label": "推荐商品",
+                  "props": {
+                    "productId": { "type": "input", "label": "坑位展示品", "defaultValue": "" },
+                    "bottomText": {
+                      "type": "input",
+                      "label": "底部文案",
+                      "tips": "四个字为最佳体验",
+                      "defaultValue": "爆品推荐"
+                    },
+                    "topText": {
+                      "type": "input",
+                      "label": "品说明文案",
+                      "defaultValue": "童书新书"
+                    },
+                    "bgColor": {
+                      "type": "input",
+                      "label": "坑位背景颜色",
+                      "tips": "支持渐变颜色",
+                      "defaultValue": "#ffc5da"
+                    },
+                    "textColor": {
+                      "type": "input",
+                      "label": "文案颜色",
+                      "tips": "支持渐变颜色",
+                      "defaultValue": "#333"
+                    }
+                  }
+                },
+                "block": {
+                  "_vid": "vid_7dba6c19e6",
+                  "moduleName": "productComponents",
+                  "componentKey": "card-item",
+                  "label": "推荐商品",
+                  "adjustPosition": true,
+                  "focus": false,
+                  "styles": {
+                    "display": "flex",
+                    "justifyContent": "flex-start",
+                    "paddingTop": "0",
+                    "paddingRight": "0",
+                    "paddingLeft": "0",
+                    "paddingBottom": "0",
+                    "tempPadding": "0"
+                  },
+                  "hasResize": false,
+                  "props": {
+                    "bottomText": "爆品推荐",
+                    "topText": "童书新书",
+                    "bgColor": "#ffc5da",
+                    "textColor": "#333",
+                    "productId": "25344877"
+                  },
+                  "draggable": true,
+                  "showStyleConfig": true,
+                  "animations": [],
+                  "actions": [],
+                  "events": [],
+                  "model": {}
+                }
+              },
+              {
+                "label": "坑位4",
+                "value": "29353542",
+                "component": {
+                  "key": "card-item",
+                  "moduleName": "productComponents",
+                  "label": "推荐商品",
+                  "props": {
+                    "productId": { "type": "input", "label": "坑位展示品", "defaultValue": "" },
+                    "bottomText": {
+                      "type": "input",
+                      "label": "底部文案",
+                      "tips": "四个字为最佳体验",
+                      "defaultValue": "爆品推荐"
+                    },
+                    "topText": {
+                      "type": "input",
+                      "label": "品说明文案",
+                      "defaultValue": "童书新书"
+                    },
+                    "bgColor": {
+                      "type": "input",
+                      "label": "坑位背景颜色",
+                      "tips": "支持渐变颜色",
+                      "defaultValue": "#ffc5da"
+                    },
+                    "textColor": {
+                      "type": "input",
+                      "label": "文案颜色",
+                      "tips": "支持渐变颜色",
+                      "defaultValue": "#333"
+                    }
+                  }
+                },
+                "block": {
+                  "_vid": "vid_841ca8e22b",
+                  "moduleName": "productComponents",
+                  "componentKey": "card-item",
+                  "label": "推荐商品",
+                  "adjustPosition": true,
+                  "focus": false,
+                  "styles": {
+                    "display": "flex",
+                    "justifyContent": "flex-start",
+                    "paddingTop": "0",
+                    "paddingRight": "0",
+                    "paddingLeft": "0",
+                    "paddingBottom": "0",
+                    "tempPadding": "0"
+                  },
+                  "hasResize": false,
+                  "props": {
+                    "bottomText": "爆品推荐",
+                    "topText": "童书新书",
+                    "bgColor": "#ffc5da",
+                    "textColor": "#333",
+                    "productId": "29353542"
+                  },
+                  "draggable": true,
+                  "showStyleConfig": true,
+                  "animations": [],
+                  "actions": [],
+                  "events": [],
+                  "model": {}
+                }
+              }
+            ]
+          },
+          "draggable": true,
+          "showStyleConfig": true,
+          "animations": [],
+          "actions": [],
+          "events": [
+            { "label": "点击按钮，且按钮状态不为加载或禁用时触发", "value": "click" },
+            { "label": "开始触摸按钮时触发", "value": "touchstart" }
+          ],
+          "model": {}
+        }
+      ]
+    }
+  },
+  "models": [],
+  "actions": {
+    "fetch": { "name": "接口请求", "apis": [] },
+    "dialog": { "name": "对话框", "handlers": [] }
+  }
+}
