@@ -175,7 +175,7 @@ export const useTools = () => {
                 message: '已是空页面！',
               });
             }
-            console.log(currentPage);
+            // console.log(currentPage);
           })
           .catch(() => {
             ElMessage({
@@ -187,7 +187,7 @@ export const useTools = () => {
     },
 
     {
-      title: '运行',
+      title: '预览',
       icon: Position,
       onClick: () => {
         localStorage.setItem(localKey, JSON.stringify(jsonData));

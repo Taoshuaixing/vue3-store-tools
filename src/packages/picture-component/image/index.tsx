@@ -1,11 +1,13 @@
 /*
  * @Author: 陶帅星
  * @Date: 2022-10-01 09:45:21
- * @LastEditTime: 2023-06-16 18:35:55
+ * @LastEditTime: 2023-06-17 22:51:21
  * @LastEditors: 陶帅星
  * @Description: 图片组件
  * @FilePath: \vue3-store-tools\src\packages\base-widgets\image\index.tsx
  */
+import { onMounted, computed } from 'vue';
+
 import { Image } from 'vant';
 import type { VisualEditorComponent } from '@/visual-editor/visual-editor.utils';
 import {
@@ -28,12 +30,22 @@ export default {
       <Image src="//img61.ddimg.cn/upload_img/00858/cms_shop/dd-product-default-1598151693.png" />
     </div>
   ),
-  render: ({ props, block, styles }) => {
+  render: ({ props, styles, block }) => {
     const { registerRef } = useGlobalProperties();
+    const style = computed(() => ({
+      padding: props.isPadding ? '0 3px' : '10px 3px',
+    }));
+    onMounted(() => {
+      const compEl = window.$$refs[block._vid]?.$el;
+      compEl.parentNode.parentNode.parentNode.style.padding = '0';
+      compEl.parentNode.parentNode.parentNode.style.margin = '0';
+    });
 
     return () => (
       <div style={styles}>
-        <Image ref={(el) => registerRef(el, block._vid)} {...props} />
+        <div style={style.value}>
+          <Image ref={(el) => registerRef(el, block._vid)} {...props} />
+        </div>
       </div>
     );
   },
@@ -45,10 +57,10 @@ export default {
     width: createEditorInputProp({ label: '宽度', defaultValue: 100 }),
     height: createEditorInputProp({ label: '高度', defaultValue: 100 }),
     errorIcon: createEditorInputProp({ label: '失败时提示的图标名称或图片链接' }),
-    // isPadding: createEditorSwitchProp({
-    //   label: '是否取消上下边距',
-    //   defaultValue: false,
-    // }),
+    isPadding: createEditorSwitchProp({
+      label: '是否取消上下边距',
+      defaultValue: false,
+    }),
     fit: createEditorSelectProp({
       label: '图片填充模式',
       options: [
@@ -82,6 +94,7 @@ export default {
     iconSize: createEditorInputProp({ label: '加载图标和失败图标的大小' }),
     lazyLoad: createEditorSwitchProp({
       label: '是否开启图片懒加载',
+      defaultValue: true,
       tips: '须配合 Lazyload 组件使用',
     }),
     loadingIcon: createEditorInputProp({ label: '加载时提示的图标名称或图片链接' }),

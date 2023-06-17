@@ -4,7 +4,7 @@
  * @Author: 陶帅星
  * @Date: 2023-06-09 15:37:36
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-06-15 16:50:06
+ * @LastEditTime: 2023-06-17 17:50:14
  */
 import List from './list.vue';
 import type { VisualEditorComponent } from '@/visual-editor/visual-editor.utils';
@@ -84,19 +84,19 @@ export default {
     }),
     topImg: createEditorInputProp({
       label: '标题图片',
-      defaultValue: 'http://img61.ddimg.cn/upload_img/00880/new/app_tsx67_08-1686128095.jpg',
+      defaultValue: '',
     }),
     contentBgImg: createEditorInputProp({
       label: '列表背景图',
-      defaultValue: 'http://img61.ddimg.cn/upload_img/00880/new/app_tsx67_09-1686128095.jpg',
+      defaultValue: '',
     }),
     bottomImg: createEditorInputProp({
       label: '底部图片',
-      defaultValue: 'http://img61.ddimg.cn/upload_img/00880/new/app_tsx67_10-1686128095.jpg',
+      defaultValue: '',
     }),
     bottomLink: createEditorInputProp({
       label: '底部图片跳转链接',
-      defaultValue: 'http://m.dangdang.com/pages/ddReading/bookListSquare/bookListSquareList',
+      defaultValue: '',
     }),
     listBgColor: createEditorColorProp({
       label: '列表背景颜色',
