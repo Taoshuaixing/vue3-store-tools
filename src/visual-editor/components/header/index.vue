@@ -96,7 +96,7 @@
               placement="bottom"
             >
               <a
-                href="https://github.com/buqiyuan/vite-vue3-lowcode"
+                href="https://github.com/Taoshuaixing/vue3-store-tools"
                 target="_blank"
               >
                 <img
@@ -116,7 +116,7 @@
               placement="bottom"
             >
               <a
-                href="https://gitee.com/buqiyuan/vite-vue3-lowcode"
+                href="https://gitee.com/Taoshuaixing/vue3-store-tools"
                 target="_blank"
               >
                 <img
@@ -145,31 +145,30 @@
 </template>
 
 <script lang="ts" setup>
-import { VideoPlay } from '@element-plus/icons-vue';
-import Preview from './preview.vue';
-import { useTools } from './useTools';
-import { useVisualData, localKey } from '@/visual-editor/hooks/useVisualData';
-import { BASE_URL } from '@/visual-editor/utils';
+  import { VideoPlay } from '@element-plus/icons-vue';
+  import Preview from './preview.vue';
+  import { useTools } from './useTools';
+  import { useVisualData, localKey } from '@/visual-editor/hooks/useVisualData';
+  import { BASE_URL } from '@/visual-editor/utils';
 
-defineOptions({
-  name: 'PageHeader',
-});
+  defineOptions({
+    name: 'PageHeader',
+  });
 
-const isShowH5Preview = ref(false);
+  const isShowH5Preview = ref(false);
 
-const tools = useTools();
+  const tools = useTools();
 
-const { jsonData } = useVisualData();
+  const { jsonData } = useVisualData();
 
-const runPreview = () => {
-  sessionStorage.setItem(localKey, JSON.stringify(jsonData));
-  localStorage.setItem(localKey, JSON.stringify(jsonData));
-  isShowH5Preview.value = true;
-};
+  const runPreview = () => {
+    sessionStorage.setItem(localKey, JSON.stringify(jsonData));
+    localStorage.setItem(localKey, JSON.stringify(jsonData));
+    isShowH5Preview.value = true;
+  };
 </script>
 
-<style lang="scss" scoped>
-.header {
+<style lang="scss" scoped>.header {
   width: 100%;
 
   .logo {
@@ -198,5 +197,4 @@ const runPreview = () => {
 
 .w-1\/9 {
   width: 18.111111%;
-}
-</style>
+}</style>

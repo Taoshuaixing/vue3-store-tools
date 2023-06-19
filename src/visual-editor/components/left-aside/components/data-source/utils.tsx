@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-07-02 23:12:37
  * @LastEditors: 陶帅星
  * @Description:
- * @FilePath: /vite-vue3-lowcode/src/visual-editor/components/left-aside/components/data-source/utils.tsx
+ * @FilePath: /vue3-store-tools/src/visual-editor/components/left-aside/components/data-source/utils.tsx
  */
 import { ElMessage } from 'element-plus';
 import type { FetchApiItem, VisualEditorModel } from '@/visual-editor/visual-editor.utils';

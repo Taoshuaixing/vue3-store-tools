@@ -1,5 +1,5 @@
 {
-  "name": "vite-vue3-lowcode",
+  "name": "vue3-store-tools",
   "version": "0.0.1",
   "private": false,
   "description": "A Vite2.x + Vue3.x + TypeScript LowCode",
@@ -49,10 +49,8 @@
     "pinia": "^2.1.3",
     "qrcode": "^1.5.3",
     "qs": "^6.11.2",
-    "swiper": "^9.4.1",
     "vant": "3.5.2",
     "vue": "3.2.37",
-    "vue-awesome-swiper": "^5.0.1",
     "vue-router": "^4.2.2",
     "vuedraggable": "^4.1.0"
   },
@@ -106,7 +104,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/buqiyuan/vite-vue3-lowcode.git"
+    "url": "git+ssh://git@github.com/Taoshuaixing/vue3-store-tools.git"
   },
   "keywords": [
     "Vite",
@@ -117,9 +115,9 @@
   "author": "buqiyuan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/buqiyuan/vite-vue3-lowcode/issues"
+    "url": "https://github.com/Taoshuaixing/vue3-store-tools/issues"
   },
-  "homepage": "https://github.com/buqiyuan/vite-vue3-lowcode#readme",
+  "homepage": "https://github.com/Taoshuaixing/vue3-store-tools#readme",
   "engines": {
     "node": ">=14"
   },

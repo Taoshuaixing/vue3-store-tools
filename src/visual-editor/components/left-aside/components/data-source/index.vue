@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-07-02 23:13:00
  * @LastEditors: 陶帅星
  * @Description: 数据源管理
- * @FilePath: /vite-vue3-lowcode/src/visual-editor/components/left-aside/components/data-source/index.vue
+ * @FilePath: /vue3-store-tools/src/visual-editor/components/left-aside/components/data-source/index.vue
 -->
 <template>
   <el-tabs
@@ -28,15 +28,15 @@
 </template>
 
 <script setup lang="tsx" name="基本组件">
-import { DataBoard } from '@element-plus/icons-vue';
-import DataModel from './data-model.vue';
-import DataFetch from './data-fetch.vue';
+  import { DataBoard } from '@element-plus/icons-vue';
+  import DataModel from './data-model.vue';
+  import DataFetch from './data-fetch.vue';
 
-defineOptions({
-  label: '数据源',
-  order: 2,
-  icon: DataBoard,
-});
+  defineOptions({
+    label: '数据源',
+    order: 2,
+    icon: DataBoard,
+  });
 </script>
 
 <style lang="scss" scoped>
@@ -51,5 +51,4 @@ defineOptions({
     contain: layout;
     content-visibility: auto;
   }
-}
-</style>
+}</style>

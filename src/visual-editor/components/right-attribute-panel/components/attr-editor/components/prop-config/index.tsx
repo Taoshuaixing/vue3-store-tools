@@ -4,7 +4,7 @@
  * @LastEditTime: 2023-06-14 17:59:14
  * @LastEditors: 陶帅星
  * @Description: 组件属性配置
- * @FilePath: /vite-vue3-lowcode/src/visual-editor/components/right-attribute-panel/components/attr-editor/components/prop-config/index.tsx
+ * @FilePath: /vue3-store-tools/src/visual-editor/components/right-attribute-panel/components/attr-editor/components/prop-config/index.tsx
  */
 
 import { computed, defineComponent, PropType } from 'vue';

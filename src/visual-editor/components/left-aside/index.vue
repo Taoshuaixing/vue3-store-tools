@@ -4,7 +4,7 @@
  * @LastEditTime: 2023-06-08 17:39:44
  * @LastEditors: 陶帅星
  * @Description: 左侧边栏
- * @FilePath: /vite-vue3-lowcode/src/visual-editor/components/left-aside/index.vue
+ * @FilePath: /vue3-store-tools/src/visual-editor/components/left-aside/index.vue
 -->
 <template>
   <el-collapse
@@ -56,8 +56,7 @@ const tabs = Object.entries(components)
   })
   .sort((a, b) => a.order - b.order);
 console.log(tabs);
-const handleChange = (val: string) => {
-}
+const handleChange = (val: string) => { };
 const activeName = ref(tabs[3].name);
 </script>
 
@@ -92,5 +91,4 @@ const activeName = ref(tabs[3].name);
   color: #fc5757;
 }
 
-// :color="'#fc5757'"
-</style>
+// :color="'#fc5757'"</style>

@@ -4,7 +4,7 @@
  * @LastEditTime: 2022-07-02 22:46:59
  * @LastEditors: 陶帅星
  * @Description: 表单规则
- * @FilePath: /vite-vue3-lowcode/src/visual-editor/components/right-attribute-panel/components/form-rule/index.tsx
+ * @FilePath: /vue3-store-tools/src/visual-editor/components/right-attribute-panel/components/form-rule/index.tsx
  */
 import { defineComponent } from 'vue';
 import { ElCard, ElTooltip } from 'element-plus';

@@ -198,7 +198,7 @@ export const useTools = () => {
       title: '反馈',
       icon: ChatLineSquare,
       onClick: () => {
-        window.open('https://github.com/buqiyuan/vite-vue3-lowcode/issues/new');
+        window.open('https://github.com/Taoshuaixing/vue3-store-tools/issues/new');
       },
     },
   ];
