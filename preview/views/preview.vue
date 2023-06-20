@@ -1,7 +1,7 @@
 <!--
  * @Author: 陶帅星
  * @Date: 2022-10-01 09:45:21
- * @LastEditTime: 2023-06-20 17:20:20
+ * @LastEditTime: 2023-06-20 17:42:16
  * @LastEditors: 陶帅星
  * @Description: 效果预览页面
  * @FilePath: \vue3-store-tools\preview\views\preview.vue
@@ -42,8 +42,9 @@ export default defineComponent({
   setup () {
     const jsonData: VisualEditorModelValue = JSON.parse(
       localStorage.getItem(CacheEnum.PAGE_DATA_KEY) as string,
-    );
+    ) || initJson;//预览页面初始化数据
     console.log(jsonData);
+    console.log(initJson);
 
     if (!jsonData || !Object.keys(jsonData.pages)) {
       Toast.fail('当前没有可以预览的页面！');
@@ -55,7 +56,7 @@ export default defineComponent({
     console.log('currentPage:', currentPage);
 
     const state = reactive({
-      blocks: currentPage?.blocks || initJson.pages[route.value.path].blocks,
+      blocks: currentPage?.blocks,
     });
 
     // 如果当前页面路由匹配不到，则重定向到首页

@@ -4,7 +4,7 @@
  * @Author: 陶帅星
  * @Date: 2023-03-23 14:42:54
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-06-20 14:28:03
+ * @LastEditTime: 2023-06-20 17:39:53
 -->
 <template>
   <router-view #="{ Component, route }">
@@ -22,6 +22,8 @@ import { defineComponent, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import { CacheEnum } from '@/enums';
 import { VisualEditorModelValue } from '@/visual-editor/visual-editor.utils';
+import initJson from '@/init.json';
+
 
 export default defineComponent({
   name: 'App',
@@ -30,7 +32,7 @@ export default defineComponent({
     const route = useRoute();
     const jsonData: VisualEditorModelValue = JSON.parse(
       localStorage.getItem(CacheEnum.PAGE_DATA_KEY) as string,
-    );
+    ) || initJson;//预览页面初始化数据
 
     // 不需要缓存的页面
     const notNeedcachePages = Object.keys(jsonData.pages).filter(
@@ -59,4 +61,5 @@ export default defineComponent({
 <style>
 body::-webkit-scrollbar {
   width: 0;
-}</style>
+}
+</style>
