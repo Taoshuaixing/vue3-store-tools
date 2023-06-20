@@ -739,6 +739,138 @@
           "focusWithChild": false
         },
         {
+          "_vid": "vid_33a24679c4",
+          "moduleName": "baseWidgets",
+          "componentKey": "button",
+          "label": "按钮",
+          "adjustPosition": true,
+          "focus": false,
+          "styles": {
+            "display": "flex",
+            "justifyContent": "center",
+            "paddingTop": "0px",
+            "paddingRight": "0px",
+            "paddingLeft": "0px",
+            "paddingBottom": "0px",
+            "tempPadding": "0px"
+          },
+          "hasResize": false,
+          "props": {
+            "text": "更多书单",
+            "type": "default",
+            "size": "small",
+            "native-type": "button",
+            "loading-type": "circular",
+            "url": "http://m.dangdang.com/pages/ddReading/bookListSquare/bookListSquareList",
+            "round": true,
+            "square": false,
+            "block": false,
+            "color": "linear-gradient(to right, #F247AD, #FCE190)",
+            "disabled": false,
+            "hairline": false,
+            "loading": false
+          },
+          "draggable": true,
+          "showStyleConfig": true,
+          "animations": [],
+          "actions": [],
+          "events": [
+            { "label": "点击按钮，且按钮状态不为加载或禁用时触发", "value": "click" },
+            { "label": "开始触摸按钮时触发", "value": "touchstart" }
+          ],
+          "model": {},
+          "focusWithChild": false
+        },
+        {
+          "_vid": "vid_19619b5853",
+          "moduleName": "baseWidgets",
+          "componentKey": "float-window",
+          "label": "浮窗",
+          "adjustPosition": true,
+          "focus": false,
+          "styles": {
+            "display": "flex",
+            "justifyContent": "flex-start",
+            "paddingTop": "0",
+            "paddingRight": "0",
+            "paddingLeft": "0",
+            "paddingBottom": "0",
+            "tempPadding": "0"
+          },
+          "hasResize": false,
+          "props": {
+            "dateTime": "2023-06-20T02:54:43.444Z",
+            "src": "https://img60.ddimg.cn/2023/6/12/2023061212583792859.gif",
+            "link": "#",
+            "top-bottom": 50,
+            "left-right": 0,
+            "width-height": 5
+          },
+          "draggable": false,
+          "showStyleConfig": true,
+          "animations": [],
+          "actions": [],
+          "events": [],
+          "model": {},
+          "focusWithChild": false
+        },
+        {
+          "_vid": "vid_2fb0c7c474",
+          "moduleName": "pictureComponents",
+          "componentKey": "swipe",
+          "label": "轮播图",
+          "adjustPosition": true,
+          "focus": false,
+          "styles": {
+            "display": "flex",
+            "justifyContent": "flex-start",
+            "paddingTop": "0",
+            "paddingRight": "0",
+            "paddingLeft": "0",
+            "paddingBottom": "0",
+            "tempPadding": "0"
+          },
+          "hasResize": false,
+          "props": {
+            "images": [
+              {
+                "label": "https://img62.ddimg.cn/2023/6/9/2023060910473422114.jpg",
+                "value": "https://h5.dangdang.com/mix_20230605_ifay?"
+              },
+              {
+                "label": "http://img61.ddimg.cn/upload_img/00896/ts/1242x366-1686103988.jpg",
+                "value": "https://h5.dangdang.com/mix_20230601_25ha?"
+              },
+              {
+                "label": "https://img60.ddimg.cn/2023/6/12/202306121448104271.JPG",
+                "value": "https://z.dangdang.com/guan/index?page_id=970325"
+              },
+              {
+                "label": "http://img60.ddimg.cn/vip01/23cx609_1242x366.jpg",
+                "value": "http://e.dangdang.com/h5/12y39y6z.html?"
+              }
+            ],
+            "height": "150",
+            "autoplay": "3000",
+            "duration": "500",
+            "indicatorColor": "#1989fa",
+            "initialSwipe": "0",
+            "loop": true,
+            "showIndicators": true,
+            "stopPropagation": true,
+            "touchable": true,
+            "lazyRender": false,
+            "vertical": false
+          },
+          "draggable": true,
+          "showStyleConfig": false,
+          "animations": [],
+          "actions": [],
+          "events": [{ "label": "每一页轮播结束后触发", "value": "change" }],
+          "model": {},
+          "focusWithChild": false
+        },
+        {
           "_vid": "vid_3cde34784d",
           "moduleName": "pictureComponents",
           "componentKey": "image",
@@ -824,7 +956,7 @@
           "componentKey": "default-product",
           "label": "普通商品",
           "adjustPosition": true,
-          "focus": false,
+          "focus": true,
           "styles": {
             "display": "flex",
             "justifyContent": "flex-start",
@@ -1384,7 +1516,7 @@
           "componentKey": "text",
           "label": "文本",
           "adjustPosition": true,
-          "focus": true,
+          "focus": false,
           "styles": {
             "display": "flex",
             "justifyContent": "flex-start",

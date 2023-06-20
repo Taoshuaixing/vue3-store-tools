@@ -1,7 +1,7 @@
 /*
  * @Author: 陶帅星
  * @Date: 2022-10-14 12:24:12
- * @LastEditTime: 2021-07-13 17:12:11
+ * @LastEditTime: 2023-06-20 15:05:35
  * @LastEditors: 陶帅星
  * @Description: 轮播图组件
  * @FilePath: \vue3-store-tools\src\packages\base-widgets\swipe\index.tsx
@@ -41,8 +41,13 @@ export default {
         >
           {props.images?.map((item) => (
             <>
-              <SwipeItem key={item}>
-                <img style={{ width: '100%' }} src={item} />
+              <SwipeItem key={item.label}>
+                <a href={item.value}>
+                  <img
+                    style={{ width: '100%', objectFit: 'cover', borderRadius: '1rem' }}
+                    src={item.label}
+                  />
+                </a>
               </SwipeItem>
             </>
           ))}

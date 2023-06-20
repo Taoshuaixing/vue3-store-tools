@@ -1,7 +1,7 @@
 /*
  * @Author: 陶帅星
  * @Date: 2022-10-14 12:24:12
- * @LastEditTime: 2021-06-21 23:04:42
+ * @LastEditTime: 2023-06-20 14:51:56
  * @LastEditors: 陶帅星
  * @Description:
  * @FilePath: \vue3-store-tools\src\packages\base-widgets\swipe\createFieldProps.ts
@@ -12,14 +12,23 @@ import {
   createEditorCrossSortableProp,
 } from '@/visual-editor/visual-editor.props';
 
+const initData: any = [
+  {
+    label: '//img61.ddimg.cn/upload_img/00858/cms_shop/dd-product-default-1598151693.png',
+    value: '',
+  },
+  {
+    label: '//img61.ddimg.cn/upload_img/00858/cms_shop/dd-product-default-1598151693.png',
+    value: '',
+  },
+];
 export const createFieldProps = () => ({
   images: createEditorCrossSortableProp({
     label: '图片列表',
     labelPosition: 'top',
-    defaultValue: [
-      'https://img.yzcdn.cn/vant/apple-1.jpg',
-      'https://img.yzcdn.cn/vant/apple-2.jpg',
-    ],
+    defaultValue: initData.map((item) => {
+      return { label: item.label, value: item.value };
+    }),
   }),
   // width: createEditorInputProp({ label: '滑块宽度，单位为 px', defaultValue: 'auto' }),
   height: createEditorInputProp({ label: '滑块高度，单位为 px', defaultValue: '200' }),
