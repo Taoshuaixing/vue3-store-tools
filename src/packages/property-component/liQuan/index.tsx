@@ -1,7 +1,7 @@
 /*
  * @Author: 陶帅星
  * @Date: 2022-10-01 09:45:21
- * @LastEditTime: 2023-06-16 16:44:44
+ * @LastEditTime: 2023-06-20 16:36:16
  * @LastEditors: 陶帅星
  * @Description: 图片组件
  * @FilePath: \vue3-store-tools\src\packages\base-widgets\image\index.tsx
@@ -36,7 +36,7 @@ export default {
   props: {
     price: createEditorInputProp({
       label: '金额',
-      defaultValue: '100ss',
+      defaultValue: '100',
     }),
     priceBold: createEditorSwitchProp({
       label: '金额是否加粗显示',

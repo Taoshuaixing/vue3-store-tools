@@ -190,6 +190,77 @@
           "focusWithChild": false
         },
         {
+          "_vid": "vid_4b6e550be8",
+          "moduleName": "propertyComponents",
+          "componentKey": "liQuan",
+          "label": "礼券",
+          "adjustPosition": true,
+          "focus": true,
+          "styles": {
+            "display": "flex",
+            "justifyContent": "flex-start",
+            "paddingTop": "0",
+            "paddingRight": "0",
+            "paddingLeft": "0",
+            "paddingBottom": "0",
+            "tempPadding": "0"
+          },
+          "hasResize": false,
+          "props": {
+            "price": "80",
+            "menKan": "每满200-80",
+            "startTime": "2023-06-09 11:00:00 am",
+            "btnText": "立即购买",
+            "bgColor": "#ffebea",
+            "wordColor": "#f3414c",
+            "btnBgColor": "#f3414c",
+            "lineBorderColor": "#f3414c"
+          },
+          "draggable": true,
+          "showStyleConfig": true,
+          "animations": [],
+          "actions": [],
+          "events": [],
+          "model": {},
+          "focusWithChild": false
+        },
+        {
+          "_vid": "vid_4d8177a4b4",
+          "moduleName": "propertyComponents",
+          "componentKey": "youHuiMa",
+          "label": "优惠码",
+          "adjustPosition": true,
+          "focus": false,
+          "styles": {
+            "display": "flex",
+            "justifyContent": "flex-start",
+            "paddingTop": "0",
+            "paddingRight": "0",
+            "paddingLeft": "0",
+            "paddingBottom": "0",
+            "tempPadding": "0"
+          },
+          "hasResize": false,
+          "props": {
+            "price": "100",
+            "menKan": "每满300-100",
+            "yhmText": "BDGSJXJFD",
+            "btnText": "点击复制",
+            "bgColor": "#ffebea",
+            "wordColor": "#f3414c",
+            "btnBgColor": "#f3414c",
+            "lineBorderColor": "#f3414c",
+            "yhmFontSize": 18
+          },
+          "draggable": true,
+          "showStyleConfig": true,
+          "animations": [],
+          "actions": [],
+          "events": [],
+          "model": {},
+          "focusWithChild": false
+        },
+        {
           "_vid": "vid_9aedd9dd91",
           "moduleName": "baseWidgets",
           "componentKey": "divider",
@@ -956,7 +1027,7 @@
           "componentKey": "default-product",
           "label": "普通商品",
           "adjustPosition": true,
-          "focus": true,
+          "focus": false,
           "styles": {
             "display": "flex",
             "justifyContent": "flex-start",
