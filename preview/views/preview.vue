@@ -1,7 +1,7 @@
 <!--
  * @Author: 陶帅星
  * @Date: 2022-10-01 09:45:21
- * @LastEditTime: 2023-06-20 10:52:32
+ * @LastEditTime: 2023-06-20 17:20:20
  * @LastEditors: 陶帅星
  * @Description: 效果预览页面
  * @FilePath: \vue3-store-tools\preview\views\preview.vue
@@ -45,17 +45,17 @@ export default defineComponent({
     );
     console.log(jsonData);
 
-    // if (!jsonData || !Object.keys(jsonData.pages)) {
-    //   Toast.fail('当前没有可以预览的页面！');
-    // }
+    if (!jsonData || !Object.keys(jsonData.pages)) {
+      Toast.fail('当前没有可以预览的页面！');
+    }
 
     const route = router.currentRoute;
 
-    const currentPage = jsonData.pages[route.value.path] || initJson.pages[route.value.path];
+    const currentPage = jsonData.pages[route.value.path];
     console.log('currentPage:', currentPage);
 
     const state = reactive({
-      blocks: currentPage?.blocks,
+      blocks: currentPage?.blocks || initJson.pages[route.value.path].blocks,
     });
 
     // 如果当前页面路由匹配不到，则重定向到首页
