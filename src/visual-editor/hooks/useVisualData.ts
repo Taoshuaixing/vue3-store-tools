@@ -66,7 +66,7 @@ const defaultValue: VisualEditorModelValue = {
 };
 
 export const initVisualData = () => {
-  // console.log(initJson);
+  console.log(initJson);
   const localData = JSON.parse(sessionStorage.getItem(localKey) as string) || initJson;
   const jsonData: VisualEditorModelValue = Object.keys(localData?.pages || {}).length
     ? localData
