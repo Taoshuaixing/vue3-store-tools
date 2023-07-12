@@ -1,9 +1,22 @@
+<!--
+ * @Descripttion:
+ * @version:
+ * @Author: 陶帅星
+ * @Date: 2023-07-12 11:08:54
+ * @LastEditors: 陶帅星
+ * @LastEditTime: 2023-07-12 18:20:08
+-->
+
 # vue3-store-tools
-基于vue3 + vite + ts H5卖场工具平台
+
+基于 vue3 + vite + ts H5 卖场工具平台
 
 ### 实际项目的展示版（阉割版），过滤了敏感数据，敏感模块，剔除登录，权限管理，新建专题等功能，着重展示拖拽面板的搭建，物料库的组成，属性面板的控制。
 
-## 竟品项目：通天塔（京东），鲁班（政采云），宜搭（阿里），微搭（腾讯），星夜（字节跳动）
+### 竟品项目：通天塔（京东），鲁班（政采云），宜搭（阿里），微搭（腾讯），星夜（字节跳动）
+
+- [在线预览](https://taoshuaixing.github.io/vue3-store-tools/#/)
+- [国内访问](http://www.tsxweb.cn/vue3-store-tools/#/)
 
 ## 克隆项目
 
@@ -19,19 +32,33 @@ npm install
 
 ```
 
+## 运行
+
 - run
 
 ```bash
 npm run dev
 ```
 
+## 打包
+
 - build
 
 ```bash
-pnpm build
+npm run build
+```
+
+## 部署
+
+- deploy
+
+```bash
+npm run deploy
 ```
 
 ## 技术栈
+
+```bash
 
 - 编程语言：[TypeScript 4.x](https://www.typescriptlang.org/zh/) + [JavaScript](https://www.javascript.com/)
 - 构建工具：[Vite 2.x](https://cn.vitejs.dev/)
@@ -46,9 +73,12 @@ pnpm build
 - 代码规范：[EditorConfig](http://editorconfig.org) + [Prettier](https://prettier.io/) + [ESLint](https://eslint.org/) + [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript#translation)
 - 提交规范：[Commitizen](http://commitizen.github.io/cz-cli/) + [Commitlint](https://commitlint.js.org/#/)
 - 单元测试：[vue-test-utils](https://next.vue-test-utils.vuejs.org/) + [jest](https://jestjs.io/) + [vue-jest](https://github.com/vuejs/vue-jest) + [ts-jest](https://kulshekhar.github.io/ts-jest/)
-- 自动部署：[GitHub Actions](https://docs.github.com/cn/actions/learn-github-actions)
+- 自动部署：[GitHub Pages](https://pages.github.com/)
+```
 
 ### 提交规范
+
+```bash
 
 - `feat` 增加新功能
 - `fix` 修复问题/BUG
@@ -64,3 +94,4 @@ pnpm build
 - `ci` 持续集成
 - `types` 类型定义文件更改
 - `wip` 开发中
+```
