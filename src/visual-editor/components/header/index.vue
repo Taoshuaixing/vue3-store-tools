@@ -1,30 +1,15 @@
 <template>
-  <el-row
-    type="flex"
-    class="header"
-  >
+  <el-row type="flex" class="header">
     <!--    左侧logo start-->
-    <el-col
-      :span="8"
-      class="flex items-center"
-    >
+    <el-col :span="8" class="flex items-center">
       <div class="logo"></div>
       <h3 class="font-semibold">H5卖场工具</h3>
     </el-col>
     <!--    左侧logo end-->
     <!--    中间操作页面部分 start-->
-    <el-col
-      class="flex items-center"
-      :span="8"
-    >
-      <template
-        v-for="(toolItem, toolIndex) in tools"
-        :key="toolIndex"
-      >
-        <div
-          :class="[`w-1/${tools.length}`]"
-          class="w-1/9"
-        >
+    <el-col class="flex items-center" :span="8">
+      <template v-for="(toolItem, toolIndex) in tools" :key="toolIndex">
+        <div :class="[`w-1/${tools.length}`]" class="w-1/9">
           <div
             class="tool-item flex flex-col items-center cursor-pointer"
             @click="toolItem.onClick"
@@ -39,17 +24,9 @@
     </el-col>
     <!--    中间操作页面部分 end-->
     <!--    右侧工具栏 start-->
-    <el-col
-      :span="8"
-      class="right-tools flex flex-row-reverse items-center"
-    >
+    <el-col :span="8" class="right-tools flex flex-row-reverse items-center">
       <!-- runtime -->
-      <el-tooltip
-        class="item"
-        effect="dark"
-        content="运行"
-        placement="bottom"
-      >
+      <el-tooltip class="item" effect="dark" content="运行" placement="bottom">
         <el-button
           type="primary"
           :icon="VideoPlay"
@@ -60,22 +37,9 @@
         />
       </el-tooltip>
       <!-- github -->
-      <el-tooltip
-        class="item"
-        effect="dark"
-        content="github"
-        placement="bottom"
-      >
-        <a
-          href="https://github.com/Taoshuaixing/vue3-store-tools"
-          target="_blank"
-        >
-          <img
-            :src="`${BASE_URL}github.svg`"
-            width="40"
-            height="40"
-            alt=""
-          />
+      <el-tooltip class="item" effect="dark" content="github" placement="bottom">
+        <a href="https://github.com/Taoshuaixing/vue3-store-tools" target="_blank">
+          <img :src="`${BASE_URL}github.svg`" width="40" height="40" alt="" />
         </a>
       </el-tooltip>
       <!-- <el-popover
@@ -168,33 +132,35 @@
   };
 </script>
 
-<style lang="scss" scoped>.header {
-  width: 100%;
+<style lang="scss" scoped>
+  .header {
+    width: 100%;
 
-  .logo {
-    width: 25%;
-    height: 100%;
-    background-image: url('@/assets/h5store.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+    .logo {
+      width: 25%;
+      height: 100%;
+      background-image: url('@/assets/h5store.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
 
-  .tool-item {
-    .title {
-      margin-top: 4px;
-      font-size: 12px;
+    .tool-item {
+      .title {
+        margin-top: 4px;
+        font-size: 12px;
+      }
+    }
+
+    .el-button {
+      font-size: 22px;
+    }
+
+    .right-tools > * {
+      margin-left: 8px;
     }
   }
 
-  .el-button {
-    font-size: 22px;
+  .w-1\/9 {
+    width: 18.111111%;
   }
-
-  .right-tools>* {
-    margin-left: 8px;
-  }
-}
-
-.w-1\/9 {
-  width: 18.111111%;
-}</style>
+</style>

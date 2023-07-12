@@ -44,7 +44,7 @@ const Modal = defineComponent({
     });
 
     const methods = {
-      service: (options: ModalOptions) => {
+      service: (options: any) => {
         state.options = options;
         methods.show();
       },
